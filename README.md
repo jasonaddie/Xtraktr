@@ -1,12 +1,12 @@
-# JumpStart Bootstrap Starter Project
+# Xtraktr
 
-The Bootstrap Starter Project is a Ruby on Rails application with Bootstrap 3, Devise authorization and the most commonly used gems already installed and ready to go.  
+Xtraktr is a Ruby on Rails application with Bootstrap 3, Devise authorization and the most commonly used gems already installed and ready to go.  
 
 
 ## Current Versions
 Look at the Gemfile for a complete list.
-* Ruby 2.1.2
-* Rails 3.2.18
+* Ruby 2.3.4
+* Rails 3.2.22
 * Bootstrap 3
 * Capistrano 2.12
 * Devise 2.0.4
@@ -18,12 +18,12 @@ Look at the Gemfile for a complete list.
 ## Requirements
 * git
 * rbenv - to install and manage Ruby versions
-* Ruby 2.1.2 - only tested on 2.1.2
+* Ruby 2.3.4 - only tested on 2.3.4
 * nginx - for staging/production server
 * mongo db - for document database (install instructions [here](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-14-04))
 * R - for processing data files (sudo apt-get install r-base)
-* ElasticSearch - is a search server based on Lucene (install instructions [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-repositories.html))
-* JRE - elasticsearch require java to be installed (install instructions [here](https://www.digitalocean.com/community/tutorials/how-to-manually-install-oracle-java-on-a-debian-or-ubuntu-vps), [here2](http://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_server_jre.html#CACJHCDD))
+* ElasticSearch - is a search server based on Lucene (install instructions [here](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/deb.html))
+* JRE - elasticsearch require java to be installed (install instructions [here](https://www.digitalocean.com/community/tutorials/how-to-manually-install-oracle-java-on-a-debian-or-ubuntu-vps), [here2](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04))
 
 Environment variables
 You will need the following [Environment Variables](https://help.ubuntu.com/community/EnvironmentVariables) set. 
