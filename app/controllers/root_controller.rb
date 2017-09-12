@@ -1,7 +1,10 @@
 class RootController < ApplicationController
+  before_filter :allow_time_series, only: [:explore_time_series, :explore_time_series_dashboard, :explore_time_series_show]
+
+
   def index
     @datasets = Dataset.meta_only.is_public.recent.sorted.limit(6)
-    @time_series = TimeSeries.meta_only.is_public.recent.sorted.limit(3)
+    @time_series = TimeSeries.meta_only.is_public.recent.sorted.limit(3) if @use_time_series
 
     @categories = Category.sorted
     @highlights = Highlight.for_home_page
@@ -80,7 +83,7 @@ class RootController < ApplicationController
       redirect_to root_path, :notice => t('app.msgs.does_not_exist')
     else
       @datasets = Dataset.meta_only.is_public.sorted_public_at.by_owner(@owner.id)
-      @time_series = TimeSeries.meta_only.is_public.sorted_public_at.by_owner(@owner.id)
+      @time_series = TimeSeries.meta_only.is_public.sorted_public_at.by_owner(@owner.id) if @use_time_series
       @show_title = false
 
       @css.push("list.css", "dashboard.css", 'tabs.css')
@@ -567,5 +570,6 @@ class RootController < ApplicationController
       format.json { render json: data }
     end
   end
+
 
 end

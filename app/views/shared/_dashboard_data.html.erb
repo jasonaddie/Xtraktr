@@ -53,7 +53,7 @@
             <%= t('app.menu.explore_data') %>
         <% end %>
 
-        <% if @dataset.time_series_datasets.present? %>
+        <% if @dataset.time_series_datasets.present? && @use_time_series %>
           <%= link_to url_dataset_to_times_series_dashboard(@dataset, @dataset.time_series_datasets.first),  title: t('app.menu.titles.dataset_to_time_series') do %>
             <%= image_tag 'svg/timeseries.svg' %>
             <%= t('app.menu.time_series') %>
@@ -110,7 +110,7 @@
     </li>
     <li role="presentation">
       <a href="#download" aria-controls="download" role="tab" data-toggle="tab"><%= t('.tabs.download') %></a>
-    </li>    
+    </li>
   </ul>
 
   <div class="tab-content">
@@ -337,7 +337,7 @@
       <div class="download-text"><%= t('app.common.download_data_explanation') %></div>
       <% if @dataset.urls.present? && @dataset.urls.codebook.present? %>
         <div class="download-wrapper" >
-          <div class="download" data-id="<%= @dataset.id.to_s %>" data-lang="<%= @dataset.current_locale %>" data-download-type="public">                              
+          <div class="download" data-id="<%= @dataset.id.to_s %>" data-lang="<%= @dataset.current_locale %>" data-download-type="public">
             <ul>
               <li><div class="type" data-type='csv' title="<%= t('download_data_options.title.csv') %>" data-placement="bottom"><%= t('download_data_options.text.csv') %></div></li>
               <li><div class="type" data-type='r' title="<%= t('download_data_options.title.r') %>" data-placement="bottom"><%= t('download_data_options.text.r') %></div></li>

@@ -176,7 +176,11 @@ class ApplicationController < ActionController::Base
     # get public question count
     @public_question_count = Stats.public_question_count
 
-    @xtraktr_url = "http://xtraktr.jumpstart.ge"
+    @xtraktr_url = "https://xtraktr.forset.ge"
+
+    # indicate whether or not the time series feature is usable
+    @use_time_series = false
+
   end
 
 	def initialize_gon
@@ -191,6 +195,16 @@ class ApplicationController < ActionController::Base
     gon.get_highlight_desc_link = highlights_get_description_path
     gon.language = params[:language] if params[:language].present?
 	end
+
+
+  ################################################
+
+  # if accessing a time series page and it is not allowed, redirect to home page
+  def allow_time_series
+    if !@use_time_series
+      redirect_to root_path(:locale => I18n.locale)
+    end
+  end
 
   ################################################
 

@@ -1,4 +1,5 @@
 class TimeSeriesQuestionsController < ApplicationController
+  before_filter :allow_time_series
   before_filter :authenticate_user!
   before_filter :load_owner # set @owner variable
   before_filter {load_time_series(params[:time_series_id])} # set @time_series variable using @owner
@@ -198,11 +199,11 @@ class TimeSeriesQuestionsController < ApplicationController
         elsif request.format.xlsx?
           data = @time_series.generate_answers_xlsx
         end
-        
+
         filename << "-#{I18n.t('time_series_questions.mass_changes.answers.header')}"
         filename << "-#{I18n.l Time.now, :format => :file}"
       end
- 
+
       respond_to do |format|
         format.xlsx { send_data data, :filename=> "#{clean_filename(filename)}.xlsx" }
         format.csv { send_data data, :filename=> "#{clean_filename(filename)}.csv" }

@@ -1,4 +1,5 @@
 class TimeSeriesController < ApplicationController
+  before_filter :allow_time_series
   before_filter :authenticate_user!
   before_filter :load_owner # set @owner variable
   before_filter :load_time_series, except: [:index, :new, :create] # set @time_series variable using @owner

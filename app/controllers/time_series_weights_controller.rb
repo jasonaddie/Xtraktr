@@ -1,4 +1,5 @@
 class TimeSeriesWeightsController < ApplicationController
+  before_filter :allow_time_series
   before_filter :authenticate_user!
   before_filter :load_owner # set @owner variable
   before_filter {load_time_series(params[:time_series_id])} # set @time_series variable using @owner

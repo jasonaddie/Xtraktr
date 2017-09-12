@@ -9,7 +9,7 @@
       each_name = @elastic ? :each_with_hit : :each
       records =  @elastic ? @datasets.records : @datasets
 
-      records.__send__(each_name) do |dataset, hit| 
+      records.__send__(each_name) do |dataset, hit|
   %>
       <li>
         <div class="caption">
@@ -42,7 +42,7 @@
             <div class="source meta"><span><%= "#{model_class.human_attribute_name(:source)}: " %></span><%= dataset.source %></div>
             <div class="upload meta"><span><%= "#{model_class.human_attribute_name(:user_id)}: " %></span><%= link_to dataset.user.name, owner_dashboard_path(dataset.user) %></div>
           </div>
-          <% if with_time_series_link && dataset.time_series_datasets.present? %>
+          <% if with_time_series_link && dataset.time_series_datasets.present? && @use_time_series %>
             <div class="time-series" title="<%= t('app.menu.titles.dataset_to_time_series') %>" data-placement="left"  data-class="tooltip-time-series">
               <% ts = dataset.time_series_datasets.first %>
               <%= link_to  explore_time_series_dashboard_path(ts.time_series_owner, ts.time_series_permalink) do %>
