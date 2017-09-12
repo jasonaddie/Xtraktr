@@ -66,7 +66,7 @@
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu" role="menu">
-                <% if @acting_as_user.role?(@data_editor_role) %>         
+                <% if @acting_as_user.role?(@data_editor_role) %>
                   <li>
                     <%= link_to new_dataset_path(@acting_as_user) do %>
                       <i class="menu_new_dataset"></i>
@@ -84,7 +84,7 @@
                       <i class="menu_time_series"></i>
                       <%= t('app.menu.time_series') %>
                     <% end %>
-                  </li>  
+                  </li>
                 <% end %>
                 <li role="separator" class="divider"></li>
                 <li>
@@ -93,7 +93,7 @@
                       <%= t('app.menu.settings') %>
                     <% end %>
                 </li>
-                <% if @acting_as_user.role?(@data_editor_role) %>    
+                <% if @acting_as_user.role?(@data_editor_role) %>
                   <li>
                     <%= link_to owner_dashboard_path(@acting_as_user) do %>
                       <i class="menu_owner_dashboard"></i>
@@ -178,7 +178,7 @@
                         <%= link_to '',"https://twitter.com/share?text=#{title}" , class: 'twitter', onclick:"javascript:window.open(this.href,
                                     '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" %>
                       </div>
-                      <%= link_to t('app.common.powered_by_jumpstart').html_safe, "http://www.jumpstart.ge",  :target => "_blank", class: 'powered-by' %>
+                      <%= link_to t('app.common.powered_by_org').html_safe, "https://forset.ge",  :target => "_blank", class: 'powered-by' %>
                     </div>
                   </div>
                 </div>

@@ -893,10 +893,10 @@ en:
         app_slogan: 'Helping to solve by measuring'
         app_description: 'In collaboration with a wide range of partners, UNICEF Georgia gathers evidence on the situation of children in Georgia. It uses this knowledge to inform national and global decision-making with the objective of improving children’s well-being.'
       added_on: "Added on: %{date}"
-      jumpstart: JumpStart Georgia
-      jumpstart_address: "5 Shevchenko Street, Apt 2, 0108 Tbilisi, Georgia"
-      powered_by_jumpstart: Powered By <span>Jumpstart Georgia</span>
-      js_link_title: JumpStart Georgia - We communicate data better!
+      org: ForSet
+      org_address: "Impact Hub Tbilisi, 8 Egnate Ninoshvili Street, 0102, Tbilisi, Georgia"
+      powered_by_org: Powered By <span>ForSet</span>
+      logo_link_title: ForSet - Communicating With Data
       question: Question
       questions: Questions
       question_code: Code

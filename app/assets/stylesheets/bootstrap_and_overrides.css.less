@@ -99,6 +99,14 @@ footer {
   .right {
     text-align: right;
   }
+
+  a.org-logo {
+    padding-right:5px;
+    padding-bottom:5px;
+    img{
+      height: 32px;
+    }
+  }
 }
 
 /* form group admin navigation buttons */
@@ -507,8 +515,8 @@ footer {
               i.menu_new_dataset { width:18px; background:transparent url(/assets/svg/user_menu.svg) no-repeat -33px center; }
               i.menu_time_series { background:transparent url(/assets/svg/user_menu.svg) no-repeat -52px center; }
               i.menu_user_settings { background:transparent url(/assets/svg/user_menu.svg) no-repeat -68px center; }
-              i.menu_admin { background:transparent url(/assets/svg/user_menu.svg) no-repeat -84px center; }              
-              i.menu_organization { background:transparent url(/assets/svg/user_menu.svg) no-repeat -100px center; }                            
+              i.menu_admin { background:transparent url(/assets/svg/user_menu.svg) no-repeat -84px center; }
+              i.menu_organization { background:transparent url(/assets/svg/user_menu.svg) no-repeat -100px center; }
             }
           }
         }
@@ -796,14 +804,14 @@ footer {
         &.open  a.dropdown-toggle { background-color:@f9f9f9; }
         &.sidebar { border-bottom:0px; }
       }
-      .lang { 
-        display: table-cell;  
+      .lang {
+        display: table-cell;
         height:51px;
         a {
-          font:10px "prime_en";      
+          font:10px "prime_en";
           &:lang(ka) {
             font:10px 'prime_ka','sans-serif';
-          }  
+          }
         }
       }
 
