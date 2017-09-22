@@ -1,8 +1,8 @@
 ##################################
 ##### SET THESE VARIABLES ########
 ##################################
-root = "/home/xtraktr-staging/Xtraktr-Staging/current" # path to application current folder
-sock_name = "unicorn_Xtraktr-Staging" # must be unique name with no '.'
+root = "/home/deploy/Xtraktr/current" # path to application current folder
+sock_name = "unicorn_Xtraktr" # must be unique name with no '.'
 port_num = 8132 # must be a unique port number for this application
 tout = 1200 # time in seconds before process dies - need a long time for data uploads
 ##################################
