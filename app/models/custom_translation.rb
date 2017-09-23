@@ -132,6 +132,7 @@ class CustomTranslation
   # - <96> = —
   # - <97> = —
   # - \xa0 = space
+  # - \xC2 = space
   # - \x85 = ...
   # if string = '' or '\\N' return nil
   def clean_text(str, options={})
@@ -158,6 +159,7 @@ class CustomTranslation
             .gsub("<97>", dash).gsub("\\x97", dash)
             .gsub("\\x85", ellipsis)
             .gsub("\\xa0", space).chomp.strip
+            .gsub("\\xC2", space).chomp.strip
 
       y = nil if y.empty? || y == "\\N"
       return y
@@ -176,14 +178,14 @@ class CustomTranslation
         [ "...", ["\\x85"] ],
         [ " ", ["\\xa0"] ]
       ]
-      replacements.each {|r| 
+      replacements.each {|r|
         with = r[0]
-        r[1].each{|what|          
+        r[1].each{|what|
           x.gsub!(what, with)
         }
       }
-      
-     
+
+
       x = nil if x.empty? || x == "\\N"
       return x
     else
