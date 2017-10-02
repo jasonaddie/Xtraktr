@@ -1,12 +1,12 @@
 # JumpStart Bootstrap Starter Project
 
-The Bootstrap Starter Project is a Ruby on Rails application with Bootstrap 3, Devise authorization and the most commonly used gems already installed and ready to go.  
+The Bootstrap Starter Project is a Ruby on Rails application with Bootstrap 3, Devise authorization and the most commonly used gems already installed and ready to go.
 
 
 ## Current Versions
 Look at the Gemfile for a complete list.
-* Ruby 2.1.2
-* Rails 3.2.18
+* Ruby 2.3.4
+* Rails 3.2.22
 * Bootstrap 3
 * Capistrano 2.12
 * Devise 2.0.4
@@ -18,15 +18,15 @@ Look at the Gemfile for a complete list.
 ## Requirements
 * git
 * rbenv - to install and manage Ruby versions
-* Ruby 2.1.2 - only tested on 2.1.2
+* Ruby 2.3.4 - tested on 2.1.2 and 2.3.4
 * nginx - for staging/production server
 * mongo db - for document database (install instructions [here](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-14-04))
 * R - for processing data files (sudo apt-get install r-base)
-* ElasticSearch - is a search server based on Lucene (install instructions [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-repositories.html))
+* ElasticSearch 1.x - is a search server based on Lucene (install instructions [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-14-04))
 * JRE - elasticsearch require java to be installed (install instructions [here](https://www.digitalocean.com/community/tutorials/how-to-manually-install-oracle-java-on-a-debian-or-ubuntu-vps), [here2](http://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_server_jre.html#CACJHCDD))
 
 Environment variables
-You will need the following [Environment Variables](https://help.ubuntu.com/community/EnvironmentVariables) set. 
+You will need the following [Environment Variables](https://help.ubuntu.com/community/EnvironmentVariables) set.
 * APPLICATION_FROM_EMAIL - email address to send all emails from
 * APPLICATION_FROM_PWD - password of above email address
 * APPLICATION_ERROR_TO_EMAIL - email address to send application errors to
@@ -48,7 +48,7 @@ After you add environment variables, do the following in order for your applicat
 ## Internationalization/Translations
 The application comes ready to work with two language site translations: Georgian and English. You can add more languages by adding more locale translation files to the [/config/locales/](/config/locales/) folder. The template file at [/app/views/layouts/application.html.erb](/app/views/layouts/application.html.erb) is setup to show all available languages. Please read the [Rails I18n](http://guides.rubyonrails.org/i18n.html) for information on how to use translations throughout your application.
 
-In order for the application to know which language to use for the site translations, the [/config/routes.rb](/config/routes.rb) file has been updated to force a the locale of the language to be at the beginning of the URL. For instance, /en/admin/users instead of /admin/users. If the URL does not include a language locale, the default locale that is set in [/config/application.rb](/config/application.rb) will be used.  In the routes file, there is a 'scope ":locale"' statement. All routes statements that you enter by hand or that are created when you run rails g scaffold must be contained within this scope statement (all scaffold statements add routes to the top of the file so you will have to move them by hand). 
+In order for the application to know which language to use for the site translations, the [/config/routes.rb](/config/routes.rb) file has been updated to force a the locale of the language to be at the beginning of the URL. For instance, /en/admin/users instead of /admin/users. If the URL does not include a language locale, the default locale that is set in [/config/application.rb](/config/application.rb) will be used.  In the routes file, there is a 'scope ":locale"' statement. All routes statements that you enter by hand or that are created when you run rails g scaffold must be contained within this scope statement (all scaffold statements add routes to the top of the file so you will have to move them by hand).
 
 
 
@@ -68,7 +68,7 @@ By default, the application comes with two roles: User and Admin. The roles are 
 
 The roles are setup to use inheritance. This means that if your application has a requirement that a user has the role of User, a user with the role of Admin will also be allowed access. The [/app/models/user.rb](/app/models/user.rb) file has a method called 'role?' that compares the current user's role to what is required and if the user's role is >= the required role, the user will be granted access. You can see this in action by looking at the top of [/app/controllers/admin_controller.rb](/app/controllers/admin_controller.rb). This code says that the user can only continue if they are an Admin.
 
-By default, no login link appears on the site. You can add one if you want with a link like: 
+By default, no login link appears on the site. You can add one if you want with a link like:
 
 ````ruby
 link_to(t('helpers.links.sign_in2'), new_user_session_path)
@@ -89,14 +89,14 @@ Omniauth login allows users to login in with 3rd party systems like facebook or 
 
 
 ## Deployment with Capistrano
-[Capistrano](https://github.com/capistrano/capistrano/wiki) is used to deploy the application to a staging and production enviornment. 
+[Capistrano](https://github.com/capistrano/capistrano/wiki) is used to deploy the application to a staging and production enviornment.
 
 The config file at [/config/deploy.rb](/config/deploy.rb) is the basic setup for capistrano deploying. The file is set up to:
 * deploy to multiple environments, default is staging
 * only keep the last 2 releases
 * only compile and send the assets if the assets have changed
 
-To setup the config files for the staging and production server, look in the [/config/deploy](/config/deploy) folder. The staging.rb and production.rb files contain the variables that are needed for deployment (server user name, server folder location, github project name, etc). 
+To setup the config files for the staging and production server, look in the [/config/deploy](/config/deploy) folder. The staging.rb and production.rb files contain the variables that are needed for deployment (server user name, server folder location, github project name, etc).
 
 Within the /config/deploy folder are folders for each server you can deploy to (staging and production) that contain more configuration.
 * nginx.conf
@@ -135,7 +135,7 @@ To add the tinymce editor to a textarea control, do the following:
     ````
 * add the class 'tinymce' to the textarea box
 
-To render the text that is saved use the following (assuming content has the text): 
+To render the text that is saved use the following (assuming content has the text):
 
 ````ruby
 simple_format_no_tags(content, {}, {sanitize: false})
@@ -168,9 +168,9 @@ Also, the translation of the DataTable interface into Georgian is located at [/p
 [Unicorn](http://unicorn.bogomips.org/) is a Rails server that this application is setup to use in staging and production environments.
 
 ### Maintenance Mode
-The nginx config file located at [/config/deploy/staging/nginx.conf](/config/deploy/staging/nginx.conf) and [/config/deploy/production/nginx.conf](/config/deploy/production/nginx.conf) is setup to look for a file in the [/public](/public) folder called maintenance.html.  If this file is found, the file will automatically be shown instead of processing whatever request the user is asking for. 
+The nginx config file located at [/config/deploy/staging/nginx.conf](/config/deploy/staging/nginx.conf) and [/config/deploy/production/nginx.conf](/config/deploy/production/nginx.conf) is setup to look for a file in the [/public](/public) folder called maintenance.html.  If this file is found, the file will automatically be shown instead of processing whatever request the user is asking for.
 
-In the /public folder, there is a file called [maintenance_disabled.html](/public/maintenance_disabled.html). This file is a plain html file that is setup to have a similar look as the [/app/views/layout/application.html.erb](/app/views/layout/application.html.erb). The content of this file is a simple message to the user indicating that the site is down and for how long. 
+In the /public folder, there is a file called [maintenance_disabled.html](/public/maintenance_disabled.html). This file is a plain html file that is setup to have a similar look as the [/app/views/layout/application.html.erb](/app/views/layout/application.html.erb). The content of this file is a simple message to the user indicating that the site is down and for how long.
 
 To turn on maintenance mode, either rename the file and deploy or simply rename the file on the server.
 
@@ -190,7 +190,7 @@ This is a short description on how to use this repo as the start of a new projec
     * git commit -am ‘_________’
 * push new project to repo for first time
     * go to github and copy the clone url for the new project
-    * run: 
+    * run:
         * git remote add origin [clone url here]
         * git push -u origin master
 
