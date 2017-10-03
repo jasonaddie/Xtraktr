@@ -10,16 +10,16 @@ default: &default
     raise_not_found_error: false
 
 development:
-    <<: *default
+  <<: *default
 
 staging:
-    <<: *default
+  <<: *default
 
 production:
-    <<: *default
+  <<: *default
 
 test:
-    <<: *default
+  <<: *default
   sessions:
     default:
       database: <%= ENV["TEST_DB_NAME"] %>

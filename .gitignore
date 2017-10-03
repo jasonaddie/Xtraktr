@@ -17,6 +17,5 @@
 # ignore file uploads
 /public/system/*
 
-#ignore db config
-/config/mongoid.yml
-
+# ignore .env
+/.env
