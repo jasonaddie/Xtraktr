@@ -53,6 +53,7 @@ gem "autoprefixer-rails" # no need to prefix css, it will automatically do it
 gem "rubyXL"
 gem 'descriptive_statistics', '~> 2.4.0', :require => 'descriptive_statistics/safe'
 gem 'test-unit', '~> 3.0' # to access console
+gem 'dotenv-rails', '~> 2.2', '>= 2.2.1' # environment variables
 
 # Gems used only for assets and not required
 # in production environments by default.

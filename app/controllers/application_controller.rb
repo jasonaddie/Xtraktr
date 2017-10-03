@@ -152,8 +152,7 @@ class ApplicationController < ActionController::Base
 	  @enable_omniauth = false#@is_xtraktr
 
     # get the id for addthis sharing
-    @addthis_id =  @is_xtraktr ? (Rails.env.production? ? ENV['XTRAKTR_ADDTHIS_PROFILE_ID'] : ENV['XTRAKTR_ADDTHIS_PROFILE_ID_DEV'])
-                            : (Rails.env.production? ? ENV['UNICEF_ADDTHIS_PROFILE_ID']  : ENV['UNICEF_ADDTHIS_PROFILE_ID_DEV'])
+    @addthis_id =  @is_xtraktr ? ENV['XTRAKTR_ADDTHIS_PROFILE_ID'] : nil
 
 
     # indicate which role has access to edit datasets/time series

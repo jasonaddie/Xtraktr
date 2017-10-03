@@ -130,6 +130,10 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     dynamic_form (1.1.4)
     elasticsearch (5.0.4)
       elasticsearch-api (= 5.0.4)
@@ -343,6 +347,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.2)
   descriptive_statistics (~> 2.4.0)
   devise (~> 3.4.1)
+  dotenv-rails (~> 2.2, >= 2.2.1)
   dynamic_form (~> 1.1.4)
   elasticsearch-model (~> 0.1.9)
   elasticsearch-rails (~> 0.1.9)

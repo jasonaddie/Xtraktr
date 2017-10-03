@@ -1,22 +1,30 @@
 default: &default
   sessions:
     default:
-      database:
-      user:
-      password:
+      database: <%= ENV["DB_NAME"] %>
+      user: <%= ENV["DB_USER"] %>
+      password: <%= ENV["DB_PASSWORD"] %>
       hosts:
         - localhost:27017
   options:
     raise_not_found_error: false
 
 development:
-  <<: *default
+    <<: *default
 
 staging:
-  <<: *default
+    <<: *default
 
 production:
-  <<: *default
+    <<: *default
+
+test:
+    <<: *default
+  sessions:
+    default:
+      database: <%= ENV["TEST_DB_NAME"] %>
+      user: <%= ENV["TEST_DB_USER"] %>
+      password: <%= ENV["TEST_DB_PASSWORD"] %>
 
 # complete list of options
 # stage:

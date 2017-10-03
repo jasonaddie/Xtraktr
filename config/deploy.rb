@@ -42,13 +42,13 @@ namespace :deploy do
     sudo "ln -nfs #{current_path}/config/deploy/#{ngnix_conf_file_loc} /etc/nginx/sites-enabled/#{application}"
     sudo "ln -nfs #{current_path}/config/deploy/#{unicorn_init_file_loc} /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
-    put File.read("config/mongoid.template.yml"), "#{shared_path}/config/mongoid.yml"
-    puts "Now edit the config files in #{shared_path}."
+    put File.read(".env.example"), "#{shared_path}/.env"
+    puts "Now add the environment variables in #{shared_path}/.env."
   end
   after "deploy:setup", "deploy:setup_config"
 
   task :symlink_config, roles: :app do
-    run "ln -nfs #{shared_path}/config/mongoid.yml #{release_path}/config/mongoid.yml"
+    run "ln -nfs #{shared_path}/.env #{release_path}/.env"
 		puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>"
 		puts "If this is first time, be sure to run the following so app starts on server bootup: sudo update-rc.d unicorn_#{application} defaults"
 		puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>"

@@ -47,7 +47,7 @@ BootstrapStarter::Application.configure do
 
   # Disable delivery errors, bad email addresses will be ignored
   config.action_mailer.raise_delivery_errors = false
-	config.action_mailer.default_url_options = { :host => 'xtraktr.jumpstart.ge' }
+	config.action_mailer.default_url_options = { :host => ENV['APPLICATION_EMAIL_URL_HOST'] }
 	config.action_mailer.delivery_method = :smtp
   # need this so can use url_helpers in modules
   Rails.application.routes.default_url_options = config.action_mailer.default_url_options
@@ -66,5 +66,5 @@ BootstrapStarter::Application.configure do
 	config.middleware.use ExceptionNotifier,
 		:email_prefix => "[Xtraktr App Error (#{Rails.env})] ",
 		:sender_address => ENV['APPLICATION_ERROR_FROM_EMAIL'],
-		:exception_recipients => [ENV['APPLICATION_ERROR_TO_EMAIL']]
+		:exception_recipients => [ENV['APPLICATION_FEEDBACK_TO_EMAIL']]
 end

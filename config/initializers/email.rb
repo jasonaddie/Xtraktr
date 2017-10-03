@@ -1,8 +1,8 @@
 if Rails.env.production? || Rails.env.staging?
 	ActionMailer::Base.smtp_settings = {
-		:address              => "smtp.gmail.com",
+    :address              => ENV['APPLICATION_EMAIL_SMTP_ADDRESS'],
 		:port                 => 587,
-		:domain               => 'www.jumpstart.ge',
+    :domain               => ENV['APPLICATION_EMAIL_DOMAIN'],
 		:user_name            => ENV['APPLICATION_FEEDBACK_FROM_EMAIL'],
 		:password             => ENV['APPLICATION_FEEDBACK_FROM_PWD'],
 		:authentication       => 'plain',
