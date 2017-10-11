@@ -101,7 +101,7 @@ module ProcessDataFile
             # only add if the code is present
             if row[0].present? && row[0].strip.present?
 
-              question_codes << [clean_text(row[0], format_code: true), clean_text(row[0])]
+              question_codes << [clean_text(row[0], format_code: true, is_binary: !is_spreadsheet), clean_text(row[0], is_binary: !is_spreadsheet)]
               ln = question_codes.length-1
 
               # determine the data type
@@ -119,7 +119,7 @@ module ProcessDataFile
               # mongo does not allow '.' in key names, so replace with '|'
               self.questions_attributes = [{code: question_codes[ln][0],
                                             original_code: question_codes[ln][1],
-                                            text_translations: {self.default_language => clean_text(row[1])},
+                                            text_translations: {self.default_language => clean_text(row[1], is_binary: !is_spreadsheet)},
                                             sort_order: i+1,
                                             data_type: data_type
                                           }.merge(!is_spreadsheet && data_type == DATA_TYPE_VALUES[:numerical] ? { exclude: true } : {})]
@@ -165,8 +165,8 @@ module ProcessDataFile
                 # create sort order that is based on order they are listed in data file
                 sort_order += 1
                 # - add the answer to the question
-                question.answers_attributes  = [{value: clean_text(row[1]),
-                                                text_translations: { self.default_language => clean_text(row[2]) },
+                question.answers_attributes  = [{value: clean_text(row[1], is_binary: !is_spreadsheet),
+                                                text_translations: { self.default_language => clean_text(row[2], is_binary: !is_spreadsheet) },
                                                 sort_order: sort_order
                                               }]
                 # update question to indciate it has answers
@@ -454,10 +454,10 @@ module ProcessDataFile
 
           CSV.foreach(file_questions, headers: true).each_with_index do |row, i| # row format: question code, question text, data_type(c|n)
 
-            code = clean_text(row[0], format_code: true)
+            code = clean_text(row[0], format_code: true, is_binary: !is_spreadsheet)
 
             if code.present? # only add if the code is present and unknown
-              question_codes << [code, clean_text(row[0])]
+              question_codes << [code, clean_text(row[0], is_binary: !is_spreadsheet)]
               if unknown_codes.include?(code)
                 data_type = DATA_TYPE_VALUES[:unknown] # determine the data type
                 if !is_spreadsheet && row.length > 2 && row[2].present?

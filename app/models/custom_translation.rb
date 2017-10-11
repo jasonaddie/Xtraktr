@@ -137,6 +137,7 @@ class CustomTranslation
   # if string = '' or '\\N' return nil
   def clean_text(str, options={})
     options[:format_code] = false if options[:format_code].nil?
+    options[:is_binary] = true if options[:is_binary].nil?
     single_quote = "'"
     double_quote = '"'
     dash = "-"
@@ -144,7 +145,8 @@ class CustomTranslation
     ellipsis = "..."
 
     if !str.nil? && str.length > 0
-      x = str.dup.encode('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: '')
+      x = str.dup
+      x = x.encode('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: '') if options[:is_binary] == true
 
       if options[:format_code] == true
         x.gsub!('.', '|')
@@ -167,6 +169,7 @@ class CustomTranslation
       return str
     end
   end
+
   def clean_string_for_uploads(str)
     if str.class == String && str.present?
 
