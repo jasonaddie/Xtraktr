@@ -53,7 +53,7 @@
             <span><%= model_class.human_attribute_name(:address) %>:</span>
             <%= @owner.address %>
           </div>
-        <% end %>        
+        <% end %>
         <% if @owner.is_user? && @owner.belongs_to_groups?%>
           <div class="organizations">
             <span><%= model_class.human_attribute_name(:organizations) %>:</span>
@@ -87,9 +87,11 @@
       <li role="presentation" class="active">
         <a href="#user_datasets" aria-controls="user_datasets" role="tab" data-toggle="tab"><%= t('.tabs.datasets', num: @datasets.length).html_safe %></a>
       </li>
-      <li role="presentation">
-        <a href="#user_time_series" aria-controls="user_time_series" role="tab" data-toggle="tab"><%= t('.tabs.time_series', num: @time_series.length).html_safe %></a>
-      </li>
+      <% if @use_time_series %>
+        <li role="presentation">
+          <a href="#user_time_series" aria-controls="user_time_series" role="tab" data-toggle="tab"><%= t('.tabs.time_series', num: @time_series.length).html_safe %></a>
+        </li>
+      <% end %>
     </ul>
 
     <div class="tab-content">
@@ -103,15 +105,17 @@
         <% end %>
       </div>
 
-      <div role="tabpanel" class="tab-pane fade list" id="user_time_series">
-        <% if @time_series.present? %>
-        <%= render partial: 'root/explore_data_time_series', locals: {with_pagination: false, with_time_series_link: false} %>
-        <% else %>
-          <p>
-            <%= t(".#{locale_key}.no_time_series") %>
-          </p>
-        <% end %>
-      </div>
+      <% if @use_time_series %>
+        <div role="tabpanel" class="tab-pane fade list" id="user_time_series">
+          <% if @time_series.present? %>
+          <%= render partial: 'root/explore_data_time_series', locals: {with_pagination: false, with_time_series_link: false} %>
+          <% else %>
+            <p>
+              <%= t(".#{locale_key}.no_time_series") %>
+            </p>
+          <% end %>
+        </div>
+      <% end %>
     </div>
 
   </div>
