@@ -25,7 +25,7 @@ module ProcessDataFile
   }
   @@spreadsheet_question_code = 'Q'
   @@spreadsheet_question_code_orig = 'VAR'
-
+  @@force_all_categorical_answers = true
 
   #######################
   # process a data file
@@ -802,7 +802,7 @@ private
         items = data_items.map{|x| x[index]}.select{|x| x.present?}.uniq
         items.sort! if items.map{|x| x.class}.uniq.length == 1
 
-        if items.all?{|item| !is_number?(item)}
+        if @@force_all_categorical_answers || items.all?{|item| !is_number?(item)}
           items.each do |uniq_answer|
             answers << [code, uniq_answer, uniq_answer]
           end
