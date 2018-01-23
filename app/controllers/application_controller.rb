@@ -183,6 +183,9 @@ class ApplicationController < ActionController::Base
     # indicate if pagination should be used on explore pages
     @pagination_on_explore = false
 
+    # indicate if need to require login/agreement info to download
+    @download_requires_agreement = false
+
   end
 
 	def initialize_gon

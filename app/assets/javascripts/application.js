@@ -269,6 +269,8 @@ function download_request (url, data) {
     data: data,
     dataType: "json"
   }).done(function (d) {
+    console.log('success')
+    console.log(d)
     if (d.agreement) {
       window.location.href = d.url;
     } else {

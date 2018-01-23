@@ -505,23 +505,30 @@ class RootController < ApplicationController
     @dataset_type = params[:type]
     @dataset_locale = params[:lang]
     @download_type = params[:download_type]
-    if sign_in
-      if current_user.valid?
-        current_user.agreement(@dataset_id, @dataset_type, @dataset_locale, @download_type)
-        mapper = FileMapper.create({ dataset_id: @dataset_id, dataset_type: @dataset_type, dataset_locale: @dataset_locale, download_type: @download_type })
-        data[:url] = "/#{I18n.locale}/download/#{mapper.key}"
+    if @download_requires_agreement
+      if sign_in
+        if current_user.valid?
+          current_user.agreement(@dataset_id, @dataset_type, @dataset_locale, @download_type)
+          mapper = FileMapper.create({ dataset_id: @dataset_id, dataset_type: @dataset_type, dataset_locale: @dataset_locale, download_type: @download_type })
+          data[:url] = "/#{I18n.locale}/download/#{mapper.key}"
+        else
+          @mod = Agreement.new({ dataset_id: @dataset_id, dataset_type: @dataset_type, dataset_locale: @dataset_locale, download_type: @download_type  })
+          data[:agreement] = false
+          @user = current_user
+          @flags = [false, false, current_user.provider.blank?, true, false]
+          data[:form] = render_to_string "settings/_settings", :layout => false
+        end
       else
+        @flags = [true, @enable_omniauth, true, true, true]
         @mod = Agreement.new({ dataset_id: @dataset_id, dataset_type: @dataset_type, dataset_locale: @dataset_locale, download_type: @download_type  })
-        data[:agreement] = false
-        @user = current_user
-        @flags = [false, false, current_user.provider.blank?, true, false]
-        data[:form] = render_to_string "settings/_settings", :layout => false
+        data[:form] = render_to_string "devise/registrations/new", :layout => false, :locals => { explanation: true }
       end
     else
-      @flags = [true, @enable_omniauth, true, true, true]
-      @mod = Agreement.new({ dataset_id: @dataset_id, dataset_type: @dataset_type, dataset_locale: @dataset_locale, download_type: @download_type  })
-      data[:form] = render_to_string "devise/registrations/new", :layout => false, :locals => { explanation: true }
+      data[:agreement] = true
+      mapper = FileMapper.create({ dataset_id: @dataset_id, dataset_type: @dataset_type, dataset_locale: @dataset_locale, download_type: @download_type })
+      data[:url] = "/#{I18n.locale}/download/#{mapper.key}"
     end
+
     respond_to do |format|
       format.json { render json: data }
     end
