@@ -3,11 +3,13 @@ class RobotsGenerator
   # Use the config/robots.txt in production.
   # Disallow everything for all other environments.
   def self.call(env)
-    body = if Rails.env.production?
-      File.read Rails.root.join('config', 'robots.txt')
-    else
-      "User-agent: *\nDisallow: /"
-    end
+    # body = if Rails.env.production?
+    #   File.read Rails.root.join('config', 'robots.txt')
+    # else
+    #   "User-agent: *\nDisallow: /"
+    # end
+
+    body = "User-agent: *\nDisallow: /"
 
     headers = {
       'Content-Type'  => 'text/plain',
