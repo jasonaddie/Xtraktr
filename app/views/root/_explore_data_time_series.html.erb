@@ -1,13 +1,13 @@
 <%-
   model_class = TimeSeries
-  with_pagination = with_pagination.nil? ? true : with_pagination
+  with_pagination = with_pagination.nil? ? @pagination_on_explore : with_pagination
 -%>
 <ul>
   <% if @time_series.present?
       each_name = @elastic ? :each_with_hit : :each
       records =  @elastic ? @time_series.records : @time_series
 
-      records.__send__(each_name) do |time_series, hit| 
+      records.__send__(each_name) do |time_series, hit|
   %>
       <li>
         <div class="caption">

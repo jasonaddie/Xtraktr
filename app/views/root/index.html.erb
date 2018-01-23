@@ -4,6 +4,7 @@
       <div class="slogan"><span><%= t("app.common.#{@app_key_name}.app_name") %>:</span> <%= t("app.common.#{@app_key_name}.app_slogan") %></div>
       <div class="desc"><%= t("app.common.#{@app_key_name}.app_description") %></div>
     </div>
+<% if false %>
     <div class="categories">
       <div class="boxic">
         <form role="search" class="search" action="<%= explore_data_path %>">
@@ -28,6 +29,7 @@
         <% end %>
       </div>
     </div>
+<% end %>
   </div>
   <div class="jsrow">
     <div class="recents">

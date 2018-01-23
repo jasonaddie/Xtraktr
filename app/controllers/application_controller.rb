@@ -180,6 +180,9 @@ class ApplicationController < ActionController::Base
     # indicate whether or not the time series feature is usable
     @use_time_series = false
 
+    # indicate if pagination should be used on explore pages
+    @pagination_on_explore = false
+
   end
 
 	def initialize_gon

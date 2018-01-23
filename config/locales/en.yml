@@ -885,9 +885,9 @@ en:
         tooltip: Download as XLSX
     common:
       xtraktr:
-        app_name: Xtraktr
-        app_slogan: "Find, Share, Explore & Visualize Your Data"
-        app_description: "Looking for data about an issue? Find it. Have data on an issue? Share it. Xtraktr enables you to put your data on the map so others can find and use it. Analyze, visualize, embed, and share your findings. With Xtraktr, translating your dataset into other languages is easy. Open your data to the world and make it truly accessible. "
+        app_name: State Alumni Survey
+        app_slogan: "Results of the A-SMYLE/FLEX/YES Alumni Impact Survey"
+        app_description: "This is data collected through the A-SMYLE/FLEX/YES Alumni Impact Survey, which was conducted by the American Councils in September 2016. The survey was sent out via emails provided by the alumni. Participation in the survey was voluntary. Overall, 7,524 respondents participated in the survey."
       unicef:
         app_name: UNICEF Georgia Data Portal
         app_slogan: 'Helping to solve by measuring'

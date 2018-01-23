@@ -1,5 +1,5 @@
 <%-
-  with_pagination = with_pagination.nil? ? true : with_pagination
+  with_pagination = with_pagination.nil? ? @pagination_on_explore : with_pagination
   with_time_series_link = with_time_series_link.nil? ? true : with_time_series_link
   model_class = Dataset
   s_model_class = Stats

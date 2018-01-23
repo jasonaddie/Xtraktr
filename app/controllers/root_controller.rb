@@ -171,7 +171,8 @@ class RootController < ApplicationController
 
     logger.debug query.to_json
 
-    @datasets = Dataset.search(query).page(params[:page]).per(per_page)
+    @datasets = Dataset.search(query)
+    @datasets = @datasets.page(params[:page]).per(per_page) if @pagination_on_explore
 
     @show_title = false
     if !request.xhr?
@@ -361,7 +362,8 @@ class RootController < ApplicationController
 
     logger.debug query.to_json
 
-    @time_series = TimeSeries.search(query).page(params[:page]).per(per_page)
+    @time_series = TimeSeries.search(query)
+    @time_series = @time_series.page(params[:page]).per(per_page) if @pagination_on_explore
 
     # TODO do we need meta_only here
 
