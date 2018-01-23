@@ -66,7 +66,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
   def new
-    @flags = [false, true, true, false, true]
+    @flags = [false, @enable_omniauth, true, false, true]
     super
   end
   def sign_up_params

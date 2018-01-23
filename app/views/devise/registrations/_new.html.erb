@@ -19,7 +19,7 @@
     <input id="user_account" name="account" type="hidden" value="1">
   <% end %>
 
-  <% if @flags[1] %>
+  <% if @flags[1] || @enable_omniauth %>
     <div class="r clear<%= @flags[0] ? ' js-hide' : '' %> ghost-box">
       <div id="choose_provider" class="radio_buttons input form-group horizontal">
         <div class="radio radio-box selected" tabindex="0">

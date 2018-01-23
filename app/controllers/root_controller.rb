@@ -518,7 +518,7 @@ class RootController < ApplicationController
         data[:form] = render_to_string "settings/_settings", :layout => false
       end
     else
-      @flags = [true, true, true, true, true]
+      @flags = [true, @enable_omniauth, true, true, true]
       @mod = Agreement.new({ dataset_id: @dataset_id, dataset_type: @dataset_type, dataset_locale: @dataset_locale, download_type: @download_type  })
       data[:form] = render_to_string "devise/registrations/new", :layout => false, :locals => { explanation: true }
     end
