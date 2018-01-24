@@ -3,7 +3,7 @@
 -%>
 
 <%-
-  subnav_left render(partial: 'shared/language_switcher', locals: {langs: @dataset.language_objects, current_locale: @dataset.current_locale, redirect: true })
+  # subnav_left render(partial: 'shared/language_switcher', locals: {langs: @dataset.language_objects, current_locale: @dataset.current_locale, redirect: true })
 -%>
 <div class="article explore-data">
   <% if @questions.present? %>
@@ -50,7 +50,7 @@
             <div class="form-explore-weight-by" style="display:none;">
               <%= label_tag 'weighted_by_code' do %>
                 <%= t('.form.weighted_by_code') %><i class="q" title="<%= t('.instructions.weight') %>"></i>
-              <% end %>   
+              <% end %>
               <select data-live-search="true" data-width="100%" class="selectpicker-weight" data-container="body" id="weighted_by_code" name="weighted_by_code">
                 <% @dataset.weights.each do |weight| %>
                   <%
@@ -86,18 +86,18 @@
         </div>
         <div id='jumpto-map'>
           <label><%= t('.jumpto.map') %> <span></span></label><i class="q" data-title-broken="<%= t('.jumpto.hint.map_broken') %>" data-title-filtered="<%= t('.jumpto.hint.map_filtered') %>" data-title-both="<%= t('.jumpto.hint.map_broken_filtered') %>"></i>
-          <select data-live-search="true" data-width="100%" class="selectpicker" data-container="body"></select>          
+          <select data-live-search="true" data-width="100%" class="selectpicker" data-container="body"></select>
         </div>
         <div id="jumpto-loader"></div>
       </div>
-    </div><div id="explore-data-content" class="tabs style2">    
+    </div><div id="explore-data-content" class="tabs style2">
       <% tabs_display_css = '' %>
       <% if @question_code.nil? %>
         <% tabs_display_css = 'hide' %>
         <div class="instructions"><%= simple_format(t(".instructions.question")) %></div>
       <% end %>
 
-      <div class="tab-container <%= tabs_display_css %>">      
+      <div class="tab-container <%= tabs_display_css %>">
         <div class="tab-header">
           <div class="tab-caption"><%= t('.tabs.chart') %></div>
           <button type="button" class="navbar-toggle tab-toggle collapsed" data-toggle="collapse" data-target=".tab-collapse">
@@ -178,7 +178,7 @@
               <div class="download-text"><%= t('app.common.download_data_explanation') %></div>
               <% if @dataset.urls.present? && @dataset.urls.codebook.present? %>
                 <div class="download-wrapper" >
-                  <div class="download" data-id="<%= @dataset.id.to_s %>" data-lang="<%= @dataset.current_locale %>" data-download-type="public">                                    
+                  <div class="download" data-id="<%= @dataset.id.to_s %>" data-lang="<%= @dataset.current_locale %>" data-download-type="public">
                     <ul>
                       <li><div class="type" data-type='csv' title="<%= t('download_data_options.title.csv') %>" data-placement="bottom"><%= t('download_data_options.text.csv') %></div></li>
                       <li><div class="type" data-type='r' title="<%= t('download_data_options.title.r') %>" data-placement="bottom"><%= t('download_data_options.text.r') %></div></li>

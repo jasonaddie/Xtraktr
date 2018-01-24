@@ -6,7 +6,7 @@
   show_share = true if show_share.nil?
   show_private_questions = false if show_private_questions.nil?
   show_questions_no_answers = false if show_questions_no_answers.nil?
-  subnav_left render(partial: 'shared/language_switcher', locals: {langs: @dataset.language_objects, current_locale: @dataset.current_locale, share: show_share})
+  # subnav_left render(partial: 'shared/language_switcher', locals: {langs: @dataset.language_objects, current_locale: @dataset.current_locale, share: show_share})
 -%>
 
 <div class="article dashboard">
