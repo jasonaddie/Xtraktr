@@ -1,11 +1,22 @@
 #!/bin/sh
+### BEGIN INIT INFO
+# Provides:          Data-Portal_unicorn_initialization
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Data-Portal unicorn initialization
+# Description:       This file provides methods to manage a unicorn
+#                    process for a rails application.
+### END INIT INFO
+
 set -e
 
 ##################################
 ##### SET THESE VARIABLES ########
 ##################################
-AS_USER=data-app # name of user on server
-APP_ROOT=/home/data-app/Data-App/current # path to application current folder
+AS_USER=deploy # name of user on server
+APP_ROOT=/home/deploy/Data-Portal/current # path to application current folder
 # update the name of the enviroment at '-E _____' to production, staging, etc
 CMD="cd $APP_ROOT; bundle exec unicorn -D -c $APP_ROOT/config/deploy/production/unicorn.rb -E production"
 ##################################

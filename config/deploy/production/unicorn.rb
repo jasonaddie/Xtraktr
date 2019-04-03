@@ -1,8 +1,8 @@
 ##################################
 ##### SET THESE VARIABLES ########
 ##################################
-root = "/home/data-app/Data-App/current" # path to application current folder
-sock_name = "unicorn_Data-App" # must be unique name with no '.'
+root = "/home/deploy/Data-Portal/current" # path to application current folder
+sock_name = "unicorn_Data-Portal" # must be unique name with no '.'
 port_num = 8140 # must be a unique port number for this application
 tout = 1200 # time in seconds before process dies - need a long time for data uploads
 ##################################
