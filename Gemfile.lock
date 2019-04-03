@@ -53,6 +53,13 @@ GIT
     formtastic-bootstrap (3.0.0.rc.1)
       formtastic (>= 2.2)
 
+GIT
+  remote: https://github.com/norman/unidecoder.git
+  revision: 0463b341b3208dfbeeaaf306aaf8baf9981e983c
+  branch: v2.0
+  specs:
+    unidecoder (1.1.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -337,7 +344,6 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
-    unidecoder (1.1.2)
     warden (1.2.3)
       rack (>= 1.0)
     whenever (0.9.2)
@@ -394,10 +400,10 @@ DEPENDENCIES
   twitter-bootstrap-rails!
   uglifier (>= 1.0.3)
   unicorn (~> 4.8.3)
-  unidecoder
+  unidecoder!
   useragent!
   whenever
   zipruby-compat!
 
 BUNDLED WITH
-   1.10.6
+   1.17.3

@@ -36,7 +36,7 @@ gem "kaminari", "~> 0.16.1" # paging
 gem 'rails_autolink', '~> 1.1.6' # convert string url into link
 gem 'spreadsheet', '~> 1.0.1' # read in spreadsheet format
 gem 'roo', '~> 1.13.2' # read in spreadsheet format
-gem "unidecoder", :branch => "v2.0" #convert utf8 to ascii for permalinks
+gem "unidecoder", :git => "https://github.com/norman/unidecoder.git", :branch => "v2.0" #convert utf8 to ascii for permalinks
 gem 'active_model_serializers', '~> 0.9.3' # easily create json serialized model data
 #gem 'mongoid_search', :git => 'https://github.com/mauriciozaffari/mongoid_search.git', :branch => "master" # search mongo collections
 gem 'elasticsearch-rails', '~> 0.1.8' # rails integration of elasticsearch (full text search)
