@@ -5,55 +5,55 @@ ka:
       user:
         one: "მომხმარებელი"
         other: "მომხმარებელი"
-      page_content: 
+      page_content:
         one: "ტექსტი გვერდებისთვის"
         other: "ტექსტი გვერდებისთვის"
-      dataset: 
+      dataset:
         one: "მონაცემები"
         other: "მონაცემები"
-      shapeset: 
+      shapeset:
         one: "რუკის კონტურული ფორმები"
         other: "რუკის კონტურული ფორმები"
-      question: 
+      question:
         one: "შეკითხვა"
         other: "შეკითხვა"
-      time_series: 
+      time_series:
         one: "პერიოდული შედარება"
         other: "პერიოდული შედარება"
-      time_series_question: 
+      time_series_question:
         one: "შეკითხვა"
         other: "შეკითხვა"
-      time_series_answer: 
+      time_series_answer:
         one: "პასუხი"
         other: "პასუხი"
-      api_version: 
+      api_version:
         one: API ვერსია
         other: API ვერსია
-      api_method: 
+      api_method:
         one: API მეთოდი
         other: API ვერსია
-      api_key: 
+      api_key:
         one: API-ის დაშვების გასაღები
         other: API-ის დაშვების გასაღები
-      category: 
+      category:
         one: "კატეგორია"
         other: "კატეგორია"
-      category_mapper: 
+      category_mapper:
         one: "კატეგორიები"
         other: "კატეგორიები"
-      group: 
+      group:
         one: "ჯგუფი"
         other: "ჯგუფი"
-      weight: 
+      weight:
         one: "შეწონვა"
         other: "შეწონვა"
-      time_series_group: 
+      time_series_group:
         one: "ჯგუფი"
         other: "ჯგუფი"
-      time_series_weight: 
+      time_series_weight:
         one: "შეწონვა"
         other: "შეწონვა"
-      time_series_weight_assignment: 
+      time_series_weight_assignment:
         one: "შეწონვის მინიჭება"
         other: "შეწონვის მინიჭება"
     attributes:
@@ -152,7 +152,7 @@ ka:
         is_weight: "ეს შეკითხვა შეიცავს შეწონვებს"
         data_type: Data Type
         data_type_categorical: Categorical Data Type
-        data_type_numerical: Numerical Data Type        
+        data_type_numerical: Numerical Data Type
       answer:
         value: "მნიშვნელობა"
         text: "პასუხი"
@@ -168,7 +168,7 @@ ka:
         type: Number Type
         width: Bar Width
         min: Min Value
-        max: Max Value        
+        max: Max Value
       group:
         title: "სახელი"
         description: "აღწერა"
@@ -340,7 +340,7 @@ ka:
         sort_order: "პასუხების გამოჩენის თანმიმდევრობა"
         default_text: "ეს არის პასუხის ტექსტი მთავარი ენიდან, რომელიც მოწოდებულია რათა თარგმანის გასაადვილებლად"
       numerical:
-        title: "Click the language abbreviation to switch to the language you want to enter the x-axis title for. If you leave this field blank, no x-axis title will be shown."        
+        title: "Click the language abbreviation to switch to the language you want to enter the x-axis title for. If you leave this field blank, no x-axis title will be shown."
       group:
         title: "ჯგუფის სახელწოდება გამოჩნდება კოდირების დოკუმენტში, მონაცემების გვერდზე და შეკითხვების ჩამოსაშლელ ჩამონათვალში "
         description: "ჯგუფის აღწერა გამოჩნდება კოდირების დოკუმენტში, მონაცემების გვერდზე, შეკითხვების ჩამოსაშლელ ჩამონათვალში და დიაგრამების სათაურებში, სურვილის შემთხვევაში. "
@@ -537,7 +537,7 @@ ka:
           title_x_of_y: "%{dataset}: %{num} %{total}-დან"
           title_filter: "პასუხების ჯამური რაოდენობა: %{nums}"
           title_weighted: "შეუწონელი პასუხების ჯამური რაოდენობა*: %{x_of_y}"
-          title_filter_weighted: "შეუწონელი პასუხების ჯამური რაოდენობა* (%{totals} შესაძლებლიდან): %{nums}"          
+          title_filter_weighted: "შეუწონელი პასუხების ჯამური რაოდენობა* (%{totals} შესაძლებლიდან): %{nums}"
   explore_data:
     chart_type_bar: მონაცემთა სვეტოვანი დიაგრამით გამოსახვა
     chart_type_pie: მონაცემთა წრიული დიაგრამით გამოსახვა
@@ -687,7 +687,7 @@ ka:
           title: "პასუხების ჯამური რაოდენობა: %{num} %{total}-იდან"
           title_filter: "პასუხების ჯამური რაოდენობა %{total}-იდან: %{nums}"
           title_weighted: "შეუწონელი პასუხების ჯამური რაოდენობა*: %{num} %{total}-იდან"
-          title_filter_weighted: "შეუწონელი პასუხების ჯამური რაოდენობა %{total}-0იდან*: %{nums}"          
+          title_filter_weighted: "შეუწონელი პასუხების ჯამური რაოდენობა %{total}-0იდან*: %{nums}"
   datatable:
     search: "ძებნა"
     search_footer: "%{name}-ს მოძებნა"
@@ -870,9 +870,9 @@ ka:
       powered_by_xtraktr: "შექმნილია Xtraktr-ით"
       powered_by_xtraktr_title: "მონაცემები შექმნილია Xtraktr-ის პლატფორმის გამოყენებით. გაიგეთ მეტი და დაამატეთ თქვენი მონაცემები Xtraktr-ს."
       weighted_footnote: "მიკუთვნებული შეწონვა: "
-      download_data_explanation: 'სიღრმისეული ანალიზისთვის შეგიძლიათ მონაცემთა შემდეგ ფორმატში ჩამოტვირთვა.'      
+      download_data_explanation: 'სიღრმისეული ანალიზისთვის შეგიძლიათ მონაცემთა შემდეგ ფორმატში ჩამოტვირთვა.'
       show_more: ვრცლად
-      show_less: მოკლედ      
+      show_less: მოკლედ
       data_type: Data Type
       categorical: Categorical
       numerical: Numerical
@@ -903,8 +903,8 @@ ka:
             saved: "Question data type settings were saved."
             no_data_to_save: "Nothing to save."
             not_saved: "An error occurred while saving the question type settings."
-            validation_error_for_all: "None of the questions were saved due to validation errors."      
-            validation_error_for_some: "All questions were saved except the following due to validation errors: %{codes}"                 
+            validation_error_for_all: "None of the questions were saved due to validation errors."
+            validation_error_for_some: "All questions were saved except the following due to validation errors: %{codes}"
       mass_change_answer_saved: "პასუხის პარამეტრები შენახულია"
       mass_change_answer_not_saved: "პასუხების პარამეტრების შენახვისას წარმოიშვა პრობლემა"
       sort_saved: "დახარისხების წყობა შენახულია"
@@ -1076,7 +1076,7 @@ ka:
       header_latest_time_series: "უახლესი პერიოდული შედარება"
       no_time_series: "ამ მომენტისთვის ვებგვერდზე არ შექმნილა პერიოდული შედარება."
       wms_title: "კეთილდღეობის <br />მონიტორინგის კვლევა"
-      wms_slogan: "შინამეურნეობების<br />კეთილდღეობის შედარება<br />2009, 2011 და <br />2013 წლებში"
+      wms_slogan: "შინამეურნეობების<br />კეთილდღეობის შედარება<br />2009, 2011, 2013 და <br />2015 წლებში"
       header_highlights: "რჩეული ფაქტები"
       header_categories: "კატეგორიების დათვალიერება"
       search_datasets: "მონაცემთა ძებნა"
@@ -1110,7 +1110,7 @@ ka:
         this: "დახარისხება"
         title: "სახელწოდება"
         publish: "აქ გამოქვეყნების თარიღი"
-        relevant: შესაბამისობა        
+        relevant: შესაბამისობა
       no_data: "ამ მომენტისთვის ვებგვერდზე არ შექმნილა პერიოდული შედარება."
       no_match: "ბოდიში, თქვენი მოთხოვნის შესაბამისი პერიოდული შედარება ვერ მოიძებნა"
     explore_data_time_series:
@@ -1167,16 +1167,16 @@ ka:
 
         For numerical questions, a histogram chart will be used during analysis. You can set the histogram bar size and the min and max value of the chart.
       no_questions: There are no questions on file for this dataset.
-      no_answer: Question does not have predefined answers and, therefore, cannot be selected as a categorical type.     
+      no_answer: Question does not have predefined answers and, therefore, cannot be selected as a categorical type.
       no_data: Question does not have answers that are not predefined answers and, therefore, cannot be selected as a numerical type.
-      percent: Percent   
+      percent: Percent
       integer: Integer
       decimal: Decimal
       hints:
         title: Click the language abbreviation to switch to the language you want to enter the x-axis title for. If you leave this field blank, no x-axis title will be shown.
         width: The bar width is how many values you want to contain in each histgram bar. Default value is 10.
         min: The value you want to start with on the histogram chart. Default value is the minimum value in the data.
-        max: The value you want to end with on the histogram chart. Default value is the maximum value in the data.         
+        max: The value you want to end with on the histogram chart. Default value is the maximum value in the data.
         view_active: View the question results in a chart
         view_disabled: You must select a data type in order to view the chart
     mass_changes_answers:
@@ -1274,7 +1274,7 @@ ka:
         ჯგუფებისა და შეკითხვების დალაგება შესაძლებელია ორნაირად:
 
         1) მოკიდეთ ხელი და გადააადგილეთ თქვენთვის სასურველ ადგილას;
-        2) მონიშნეთ ის სტრიქონ(ებ)ი, რომელთა გადააადგილებაც გსურთ და ცხრილის ზემოთ მოცემული პარამეტრების საშუალებით აირჩიეთ მიმართულება.  
+        2) მონიშნეთ ის სტრიქონ(ებ)ი, რომელთა გადააადგილებაც გსურთ და ცხრილის ზემოთ მოცემული პარამეტრების საშუალებით აირჩიეთ მიმართულება.
   questions:
     index:
       title: "შეკითხვების და მათი პასუხების რედაქტირება"
@@ -1539,7 +1539,7 @@ ka:
           chart: There is a chart for each answer in the filtered by question. Use the drop down to quickly jump to the answer you want to explore.
           map_broken: There is a chart for each answer in the broken down by question. Use the drop down to quickly jump to the answer you want to explore.
           map_filtered: There is a chart for each answer in the filtered by question. Use the drop down to quickly jump to the answer you want to explore.
-          map_broken_filtered: There is a chart for each combination of answers from the broken down by question and filtered by question. Use the drop down to quickly jump to the answer you want to explore.        
+          map_broken_filtered: There is a chart for each combination of answers from the broken down by question and filtered by question. Use the drop down to quickly jump to the answer you want to explore.
       tabs:
         map: "რუკა"
         chart: "დიაგრამა"
@@ -1570,11 +1570,11 @@ ka:
         no_filter: "ფილტრი არ არის"
         can_exclude: გამორიცხე "არ ვიცი" & "უარი პასუხზე"
         can_exclude_hint: ანალიზიდან წაშალე პასუხები "არ ვიცი" & "უარი პასუხზე"
-        no_weight: No Weight        
+        no_weight: No Weight
       jumpto:
         chart: "დიაგრამაზე გადასვლა"
         hint:
-          chart: There is a chart for each answer in the filtered by question. Use the drop down to quickly jump to the answer you want to explore.        
+          chart: There is a chart for each answer in the filtered by question. Use the drop down to quickly jump to the answer you want to explore.
       tabs:
         chart: "დიაგრამა"
         table: "ცხრილი"
@@ -1584,7 +1584,7 @@ ka:
         filter: შეკითხვებით გაფილტრვის  არჩევის დროს თითოეული პასუხისთვის ცალკე დიაგრამა იქნება ნაჩვენები
         weight: შეწონვის გამოყენება ანალიზის შედეგს მოარგებს მთელს მოსახლეობას და არა მარტო რესპოდენტებს
         generate: დააჭირეთ და დაიწყეთ ანალიზი
-        reset: დააჭირეთ მონიშვნების გასაუქმებლად     
+        reset: დააჭირეთ მონიშვნების გასაუქმებლად
     dashboard_data:
       tabs:
         highlights: "რჩეული ფაქტები"
@@ -1631,7 +1631,7 @@ ka:
         title_datalist: "ყველა მონაცემის ნახვა"
       v3:
         title_site: "გადასვლა %{app_name} -ზე"
-        title_datalist: "ყველა მონაცემის ნახვა"        
+        title_datalist: "ყველა მონაცემის ნახვა"
   export_data:
     dataset: "მონაცემთა ცხრილი: %{title}"
     download_from: "ჩამოტვირთულია აქედან: %{app_name} at %{url}."
@@ -1667,7 +1667,7 @@ ka:
         - CSV: %{csv}, რომელიც დაფორმატებულია R-ში ჩასატვირთად, ამიტომაც სვეტის სათაურები არიან ცვლადები, ხოლო პასუხები - პასუხის მნიშვნელობები და არა - პასუხის ტექსტი.
 
         - R: კოდირებული ფაილი, რომელიც გაიშვება R-ში და ჩატვირთავს მონაცემებს CSV-დან თითოეული ცვლადის შექმნით.
-             მნიშვნელოვანია - R-ში კოდირებული ფაილის გაშვებამდე, თქვენ უნდა განაახლოთ 'setwd'. 
+             მნიშვნელოვანია - R-ში კოდირებული ფაილის გაშვებამდე, თქვენ უნდა განაახლოთ 'setwd'.
   download_data_options:
     text:
       csv: CSV
@@ -1680,4 +1680,4 @@ ka:
       spss: SPSS-ისთვის დაფორმატებული მონაცემები
       stata: STATA-სთვის დაფორმატებული მონაცემები
       r: R-ისთვის დაფორმატებული მონაცემები
-      original: მონაცემთა ფაილის ორიგინალი 
+      original: მონაცემთა ფაილის ორიგინალი
