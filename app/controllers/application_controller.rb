@@ -75,8 +75,7 @@ logger.debug "////////////////////////// BROWSER = #{@user_agent}"
 	  @enable_omniauth = @is_xtraktr
 
     # get the id for addthis sharing
-    @addthis_id =  @is_xtraktr ? (Rails.env.production? ? ENV['XTRAKTR_ADDTHIS_PROFILE_ID'] : ENV['XTRAKTR_ADDTHIS_PROFILE_ID_DEV'])
-                            : (Rails.env.production? ? ENV['UNICEF_ADDTHIS_PROFILE_ID']  : ENV['UNICEF_ADDTHIS_PROFILE_ID_DEV'])
+    @addthis_id =  @is_xtraktr ? ENV['XTRAKTR_ADDTHIS_PROFILE_ID'] : nil
 
 
     # indicate which role has access to edit datasets/time series
@@ -257,7 +256,7 @@ logger.debug "////////////////////////// BROWSER = #{@user_agent}"
     if @questions.present?
 
       # initialize variables
-      @question_code = nil #@questions.map{|x| x.code}.sample 
+      @question_code = nil #@questions.map{|x| x.code}.sample
       @broken_down_by_code = nil
       @filtered_by_code = nil
 
@@ -393,7 +392,7 @@ logger.debug "////////////////////////// BROWSER = #{@user_agent}"
       options["language"] = params["language"] if params["language"].present?
       if options['dataset_id'].present?
         output[:type] = 'dataset'
-        
+
         options["private_user_id"] = Base64.urlsafe_encode64(current_user.id.to_s) if use_admin_link.to_s == 'true'
         data = Api::V3.dataset_analysis(options['dataset_id'], options['question_code'], options)
          if data.present? && data[:dataset].present?

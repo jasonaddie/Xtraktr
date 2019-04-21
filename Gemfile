@@ -52,6 +52,9 @@ gem 'mongoid-slug', '~> 4.0.0' # permalink urls with mongoid
 gem "autoprefixer-rails" # no need to prefix css, it will automatically do it
 gem "rubyXL"
 gem 'descriptive_statistics', '~> 2.4.0', :require => 'descriptive_statistics/safe'
+
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.2' # env variable management
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

@@ -18,5 +18,7 @@
 /public/system/*
 
 #ignore db config
-/config/mongoid.yml
+# /config/mongoid.yml
 
+# ignore .env
+/.env

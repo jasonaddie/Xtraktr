@@ -259,11 +259,6 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
     require "omniauth-facebook"
-  
 
-    if Rails.env.production?
-      config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET']
-    else
-      config.omniauth :facebook, ENV['DEV_FACEBOOK_APP_ID'], ENV['DEV_FACEBOOK_APP_SECRET'] 
-    end  
+    config.omniauth :facebook, ENV['XTRATKR_FACEBOOK_APP_ID'], ENV['XTRATKR_FACEBOOK_APP_SECRET'], scope: 'email', info_fields: 'email,first_name,last_name, picture'
 end
