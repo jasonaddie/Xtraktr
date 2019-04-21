@@ -1,7 +1,7 @@
 class Api::V1Controller < ApplicationController
   before_filter :restrict_access, except: [:index, :documentation]
   before_filter :set_background
-  after_filter :record_request, except: [:index, :documentation]
+  # after_filter :record_request, except: [:index, :documentation]
 
 
 
@@ -135,7 +135,7 @@ private
   end
 
   # make sure the access token is valid
-  def restrict_access    
+  def restrict_access
     @user_api_key = ApiKey.find_by(key: params[:access_token])
     if @user_api_key.nil?
       render json: {errors: [{status: '401', detail: I18n.t('api.msgs.no_key', url: new_user_session_url) }]}

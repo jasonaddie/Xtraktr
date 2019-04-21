@@ -70,6 +70,7 @@ group :development do
   gem 'rb-inotify', '~> 0.8.8' # rails dev boost needs this
   gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git' # speed up loading page in dev mode
   gem 'exception_notification_extension', :git => 'git@github.com:JumpStartGeorgia/exception_notification_extension.git' # speed up loading page in dev mode
+  gem 'test-unit', '~> 3.0'
 end
 
 group :staging, :production do

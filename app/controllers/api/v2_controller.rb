@@ -1,7 +1,7 @@
 class Api::V2Controller < ApplicationController
   before_filter :restrict_access, except: [:index, :documentation]
   before_filter :set_background
-  after_filter :record_request, except: [:index, :documentation]
+  # after_filter :record_request, except: [:index, :documentation]
 
 
 
