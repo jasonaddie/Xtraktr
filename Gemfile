@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
+ruby "2.3.4"
+
 gem 'bundler'
-gem "rails", "3.2.22"
+gem "rails", "3.2.22.5"
 gem "mongoid", "~> 3.1.7"
 
 #gem 'smarter_csv' # format csv into array of hashes
@@ -39,8 +41,8 @@ gem 'roo', '~> 1.13.2' # read in spreadsheet format
 gem "unidecoder", :git => "https://github.com/norman/unidecoder.git", :branch => "v2.0" #convert utf8 to ascii for permalinks
 gem 'active_model_serializers', '~> 0.9.3' # easily create json serialized model data
 #gem 'mongoid_search', :git => 'https://github.com/mauriciozaffari/mongoid_search.git', :branch => "master" # search mongo collections
-gem 'elasticsearch-rails', '~> 0.1.8' # rails integration of elasticsearch (full text search)
-gem 'elasticsearch-model', '~> 0.1.8' # rails model integration of elasticsearch (full text search)
+gem 'elasticsearch-rails', '~> 0.1.9' # rails integration of elasticsearch (full text search)
+gem 'elasticsearch-model', '~> 0.1.9' # rails model integration of elasticsearch (full text search)
 gem 'whenever', '~> 0.9.7' # schedule cron jobs
 # gem 'zipruby', '~> 0.3.6' # create zip files
 # have to use this because zipruby and rubyzip use the same class names
@@ -67,7 +69,7 @@ end
 group :development do
   # gem 'thin' # webserver for development
  	# gem "mailcatcher", "0.5.12" # small smtp server for dev, http://mailcatcher.me/
-  gem 'rb-inotify', '~> 0.8.8' # rails dev boost needs this
+  gem 'rb-inotify', '~> 0.9.7' # rails dev boost needs this
   gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git' # speed up loading page in dev mode
   gem 'exception_notification_extension', :git => 'git@github.com:JumpStartGeorgia/exception_notification_extension.git' # speed up loading page in dev mode
   gem 'test-unit', '~> 3.0'
