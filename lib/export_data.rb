@@ -86,6 +86,8 @@ module ExportData
   def self.create_all_files(dataset, use_processed_csv=false) # create all files for a dataset that do not exist yet
     start = Time.now
 
+    log("create_all_files", nil, { status: "START"} )
+
     # only contine if the dataset is valid
     if dataset.valid?
 
@@ -108,6 +110,7 @@ module ExportData
       end
       # create files for each locale in the dataset
       dataset.languages.each do |locale|
+        log("create_all_files", start, { status: "- #{locale} locale - START"} )
         dataset.current_locale = locale
         # set the file paths for this dataset
         set_dataset_file_paths(dataset)
@@ -125,6 +128,7 @@ module ExportData
         stata(dataset, use_processed_csv)
         r(dataset, use_processed_csv)
 
+        log("create_all_files", start, { status: "- #{locale} locale - END"} )
       end
 
       dataset.current_locale = current_locale
@@ -873,7 +877,7 @@ private
       end
     end
 
-    #######
+    #######all que
     # now transpose the csv data
     # - use the csvtool command to transpose the files
     #    instead of doing it in ruby which will take up a lot of memory
