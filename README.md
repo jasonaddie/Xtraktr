@@ -21,6 +21,7 @@ Look at the Gemfile for a complete list.
 * nginx - for staging/production server
 * mongo db - for document database (install instructions [here](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-14-04))
 * R - for processing data files (sudo apt-get install r-base)
+* csvtool - to quickly transpose CSV files during the export data process (install with `sudo apt-get install csvtool`)
 * ElasticSearch 1.x - is a search server based on Lucene (install instructions [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-14-04))
 * JRE - elasticsearch require java to be installed (install instructions [here](https://www.digitalocean.com/community/tutorials/how-to-manually-install-oracle-java-on-a-debian-or-ubuntu-vps), [here2](http://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_server_jre.html#CACJHCDD))
 
