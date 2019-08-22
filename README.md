@@ -27,11 +27,11 @@ Look at the Gemfile for a complete list.
 
 Environment variables
 You will need the following [Environment Variables](https://help.ubuntu.com/community/EnvironmentVariables) set.
-* APPLICATION_FEEDBACK_FROM_EMAIL - email address to send all emails from
-* APPLICATION_FEEDBACK_FROM_PWD - password of above email address
 * APPLICATION_ERROR_FROM_EMAIL - email address to send emails from (most likely will be same as feedback from)
+* APPLICATION_FEEDBACK_FROM_EMAIL - email address to send all emails from
 * APPLICATION_FEEDBACK_TO_EMAIL - email to send feedback to
-* APPLICATION_ERROR_TO_EMAIL - email address to send application errors to
+* APPLICATION_EMAIL_SMTP_AUTH_USER - smtp user name
+* APPLICATION_EMAIL_SMTP_AUTH_PASSWORD - smtp password
 * APPLICATION_EMAIL_SMTP_ADDRESS - smtp address like smtp.gmail.com
 * APPLICATION_EMAIL_DOMAIN - smtp email domain like gmail.com
 * APPLICATION_EMAIL_URL_HOST - application url that will be used to create links in emails
