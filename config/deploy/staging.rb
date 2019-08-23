@@ -1,3 +1,5 @@
+### TODO - update nginx to have both non-ssl and ssl
+
 ##################################
 ##### SET THESE VARIABLES ########
 ##################################
