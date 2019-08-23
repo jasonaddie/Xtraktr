@@ -40,7 +40,6 @@ namespace :deploy do
 
   task :setup_config, roles: :app do
     sudo "ln -nfs #{current_path}/config/deploy/#{ngnix_conf_file_loc} /etc/nginx/sites-enabled/#{application}"
-    sudo "ln -nfs #{current_path}/config/deploy/#{ngnix_conf_file_ssl_loc} /etc/nginx/sites-enabled/#{application}_SSL"
     sudo "ln -nfs #{current_path}/config/deploy/#{unicorn_init_file_loc} /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
     put File.read(".env.example"), "#{shared_path}/.env"
