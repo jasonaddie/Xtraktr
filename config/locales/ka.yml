@@ -153,6 +153,10 @@ ka:
         data_type: Data Type
         data_type_categorical: Categorical Data Type
         data_type_numerical: Numerical Data Type
+        data_types:
+          unknown: Unknown
+          categorical: Categorical
+          numerical: Numerical
       answer:
         value: "მნიშვნელობა"
         text: "პასუხი"

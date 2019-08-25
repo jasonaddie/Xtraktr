@@ -1,7 +1,7 @@
 class Question < CustomTranslation
 
   #############################  Constants
-  
+
   DATA_TYPE_VALUES = { :unknown => 0, :categorical => 1, :numerical => 2 }
 
   #############################
@@ -25,7 +25,7 @@ class Question < CustomTranslation
   # whether or not the questions has answers that can be analazyed previously - has_code_answers_for_analysis
   field :is_analysable, type: Boolean, default: false
   # whether or not the questions has data that is not defined in answers
-  field :has_data_without_answers, type: Boolean, default: true  
+  field :has_data_without_answers, type: Boolean, default: true
   # whether or not the question should not be included in the analysis
   field :exclude, type: Boolean, default: false
   # whether or not the question is tied to a shapeset
@@ -45,7 +45,7 @@ class Question < CustomTranslation
   # question type, possible values = [nil, categorical, numerical]
   field :data_type, type: Integer, default: 0
   # statistics on numerical data_type
-  field :descriptive_statistics, type: Object  
+  field :descriptive_statistics, type: Object
 
   embedded_in :dataset
 
@@ -102,7 +102,7 @@ class Question < CustomTranslation
 
   #############################
   attr_accessible :code, :text, :original_code, :has_code_answers, :is_analysable, :is_mappable, :has_can_exclude_answers, :has_map_adjustable_max_range,
-      :answers_attributes, :exclude, :text_translations, :notes, :notes_translations, :group_id, :sort_order, :is_weight, :numerical_attributes, 
+      :answers_attributes, :exclude, :text_translations, :notes, :notes_translations, :group_id, :sort_order, :is_weight, :numerical_attributes,
       :data_type, :descriptive_statistics
 
   #############################
@@ -224,7 +224,7 @@ class Question < CustomTranslation
   def group
     self.dataset.groups.find(self.group_id) if self.group_id.present?
   end
-  
+
   # create json for groups
   def json_for_groups(selected=false)
     {
@@ -257,9 +257,14 @@ class Question < CustomTranslation
   def has_type?
     return data_type != DATA_TYPE_VALUES[:unknown]
   end
+  def data_type_name
+    key = data_type_s
+    key = DATA_TYPE_VALUES.keys.first if !key.present?
+    I18n.t("mongoid.attributes.question.data_types.#{data_type_s}")
+  end
   def data_type_s
     vals = DATA_TYPE_VALUES
-    if data_type.is_a? Integer 
+    if data_type.is_a? Integer
       vals.keys.each {|x|
         return x.to_s if vals[x] == data_type
       }
@@ -268,12 +273,12 @@ class Question < CustomTranslation
   end
   def self.type(t)
     vals = Question::DATA_TYPE_VALUES
-    if t.is_a? Integer 
+    if t.is_a? Integer
       vals.keys.each {|x|
-        return x if vals[x] == t 
+        return x if vals[x] == t
       }
     elsif t.is_a? Symbol
-      return vals[t] if vals.has_key?(t) 
+      return vals[t] if vals.has_key?(t)
     end
     nil
   end
