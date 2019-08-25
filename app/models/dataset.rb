@@ -5,7 +5,7 @@ class Dataset < CustomTranslation
 
   include Mongoid::Document
   include Mongoid::Timestamps
-  include Mongoid::Paperclip  
+  include Mongoid::Paperclip
   include Mongoid::Slug
 
   include Elasticsearch::Model
@@ -333,7 +333,7 @@ class Dataset < CustomTranslation
       else
         return nil
       end
-    end      
+    end
 
     # get hash of data [data, formatted_data, frequency_data, frequency_data_total] for the provided code
     def code_data_all(code)
@@ -344,7 +344,7 @@ class Dataset < CustomTranslation
         return nil
       end
     end
-    
+
     # get the formatted_data array for the provided code
     def code_formatted_data(code)
       x = where(:code => code.downcase).first if code.present?
@@ -619,7 +619,7 @@ class Dataset < CustomTranslation
       end
       # make sure this does not run again
       self.check_questions_for_changes_status = false
-      
+
       self.save
     end
   end
@@ -647,7 +647,7 @@ class Dataset < CustomTranslation
   end
 
   # process the datafile and save all of the information from it
-  def reprocess_file    
+  def reprocess_file
     reprocess_data_file
     update_flags
     self.check_questions_for_changes_status = true
@@ -684,6 +684,11 @@ class Dataset < CustomTranslation
 
   def update_flags
     logger.debug "==== update dataset flags"
+
+    # update the list of questions with bad answers
+    logger.debug "==== updating list of questions with bad answers"
+    self.questions_with_bad_answers = self.questions.select{|x| x.categorical_type? && x.missing_answers.present?}.map{|x| x.code}
+
     logger.debug "==== - bad answers = #{self.questions_with_bad_answers.present?}; no answers = #{self.questions.with_no_code_answers.present?}; no question text = #{self.no_question_text_count}"
     logger.debug "==== - has_warnings was = #{self.has_warnings}"
     self.has_warnings = self.questions_with_bad_answers.present? ||
@@ -800,7 +805,7 @@ class Dataset < CustomTranslation
     if self.changed? && !(self.changed.include?('reset_download_files') && self.reset_download_files == false)
       logger.debug "========== dataset changed!, setting reset_download_files = true"
       self.reset_download_files = true
-    end     
+    end
     return true
   end
 
@@ -883,7 +888,7 @@ class Dataset < CustomTranslation
     x = only(:_slugs).find(id)
     x.present? ? x.slug : nil
   end
-  
+
   def self.get_default_language(id)
     x = only(:default_language).find(id)
     x.present? ? x.default_language : nil
@@ -950,8 +955,8 @@ class Dataset < CustomTranslation
   def update_question_type(code, data_type, meta)
     question = questions.with_code(code)
     items = data_items.with_code(code)
-          
-    if question.present? && items.present?          
+
+    if question.present? && items.present?
       question.data_type = data_type
 
       if data_type == Question::DATA_TYPE_VALUES[:unknown]
@@ -967,7 +972,7 @@ class Dataset < CustomTranslation
         question.numerical = nil
         question.descriptive_statistics = nil
         items.formatted_data = nil
-        
+
         total = 0
         frequency_data = {}
         keys = []
@@ -993,9 +998,9 @@ class Dataset < CustomTranslation
             question.numerical.update_attributes(meta)
           end
         end
-        
+
         predefined_answers = question.answers.map { |f| f.value }
-        num = question.numerical  
+        num = question.numerical
         items.formatted_data = []
         vfd = [] # only valid formatted data for calculating stats
         fd = Array.new(num.size) { Array.new(2, 0) } #Array.new(num.size, [0,0])
@@ -1015,22 +1020,22 @@ class Dataset < CustomTranslation
 
               index = tmpD == num.min_range ? 0 : ((tmpD-num.min_range)/num.width-0.00001).floor
               fd[index][0] += 1
-            else 
+            else
               items.formatted_data.push(nil);
             end
-          else 
+          else
             items.formatted_data.push(nil)
           end
 
         }
         total = 0
         fd.each {|x| total+=x[0]}
-        fd.each_with_index {|x,i| 
+        fd.each_with_index {|x,i|
            fd[i][1] = (x[0].to_f/total*100).round(2) }
 
         items.frequency_data = fd;
         vfd.extend(DescriptiveStatistics) # descriptive statistics
-        
+
         question.descriptive_statistics = {
           :number => vfd.number.to_i,
           :min => num.integer? ? vfd.min.to_i : vfd.min,
@@ -1048,15 +1053,15 @@ class Dataset < CustomTranslation
       items.save
     end
   end
-    
+
   def self.calculate_percentile(array=[],percentile=0.0)
-    # multiply items in the array by the required percentile 
+    # multiply items in the array by the required percentile
     # (e.g. 0.75 for 75th percentile)
     # round the result up to the next whole number
     # then subtract one to get the array item we need to return
     array ? array.sort[((array.length * percentile).ceil)-1] : nil
   end
-  def is_numeric?(obj) 
+  def is_numeric?(obj)
      obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
   end
   ##########################################
@@ -1080,7 +1085,7 @@ class Dataset < CustomTranslation
     return self.var_arranged_items
   end
 
-  
+
   # returnt an array of sorted gruops and questions, that match the provided options
   # options:
   # - question_type - type of questions to get (download, analysis, analysis_with_exclude_questions, or all)
@@ -1132,7 +1137,7 @@ class Dataset < CustomTranslation
       Rails.logger.debug "#{indent}=============== -- include questions"
       # get questions that are assigned to groups
       # - if group_id not provided, then getting questions that are not assigned to group
- 
+
       tmp_items = case options[:question_type]
         when 'download'
           self.questions.where(:can_download => true, :group_id => options[:group_id])
@@ -1198,7 +1203,7 @@ class Dataset < CustomTranslation
     if options[:include_questions] == true
       # get questions that are assigned to groups
       # - if group_id not provided, then getting questions that are not assigned to group
- 
+
       tmp_items = case options[:question_type]
         when 'download'
           self.questions.where(:can_download => true, :group_id => options[:group_id])
@@ -1219,7 +1224,7 @@ class Dataset < CustomTranslation
 
     # sort these items
     # way to sort: sort only items that have sort_order, then add groups with no sort_order, then add questions with no sort_order
-    items = items.select{|x| x["sort_order"].present? }.sort{|x,y| x["sort_order"] <=> y["sort_order"] } + 
+    items = items.select{|x| x["sort_order"].present? }.sort{|x,y| x["sort_order"] <=> y["sort_order"] } +
       items.select{|x| x["parent_id"].present? && x["sort_order"].nil?} +
       items.select{|x| x["code"].present? && x["sort_order"].nil?}
 
@@ -1411,17 +1416,17 @@ class Dataset < CustomTranslation
     end
     worksheet.add_cell(0, index, QUESTION_HEADERS[:exclude])
 
-    # add questions 
+    # add questions
     r_index = 1
     self.questions.each do |question|
-      
+
       worksheet.add_cell(r_index, 0, question.original_code)
       c_index = 1
       locales.each do |locale|
         worksheet.add_cell(r_index, c_index, question.text_translations[locale]) if question.text_translations[locale].present?
         c_index += 1
       end
-      worksheet.add_cell(r_index, c_index, (question.exclude == true ? 'Y' : nil))         
+      worksheet.add_cell(r_index, c_index, (question.exclude == true ? 'Y' : nil))
 
       r_index += 1
     end
@@ -1483,9 +1488,9 @@ class Dataset < CustomTranslation
     end
     worksheet.add_cell(0, index, ANSWER_HEADERS[:exclude])
     index += 1
-    worksheet.add_cell(0, index, ANSWER_HEADERS[:can_exclude])    
+    worksheet.add_cell(0, index, ANSWER_HEADERS[:can_exclude])
 
-    # add questions 
+    # add questions
     r_index = 1
     self.questions.with_code_answers.each do |question|
       question.answers.sorted.each do |answer|
@@ -1497,8 +1502,8 @@ class Dataset < CustomTranslation
           worksheet.add_cell(r_index, c_index, answer.text_translations[locale]) if answer.text_translations[locale].present?
           c_index += 1
         end
-        worksheet.add_cell(r_index, c_index, (answer.exclude == true ? 'Y' : nil))         
-        worksheet.add_cell(r_index, c_index+1, (answer.can_exclude == true ? 'Y' : nil))         
+        worksheet.add_cell(r_index, c_index, (answer.exclude == true ? 'Y' : nil))
+        worksheet.add_cell(r_index, c_index+1, (answer.can_exclude == true ? 'Y' : nil))
         r_index += 1
       end
     end
@@ -1530,7 +1535,7 @@ class Dataset < CustomTranslation
       workbook = RubyXL::Parser.parse_buffer(infile)
       rows = workbook[0]
     end
-    
+
 
     rows.each do |row|
       startRow = Time.now
@@ -1646,7 +1651,7 @@ class Dataset < CustomTranslation
       workbook = RubyXL::Parser.parse_buffer(infile)
       rows = workbook[0]
     end
-    
+
 
     rows.each do |row|
       startRow = Time.now
