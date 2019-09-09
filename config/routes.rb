@@ -5,6 +5,9 @@ BootstrapStarter::Application.routes.draw do
   # user robots generator to avoid non-production sites from being indexed
   match '/robots.txt' => RobotsGenerator
 
+  # upload images through tinymce wysiwyg
+  post '/tinymce_assets' => 'tinymce_assets#create'
+
   devise_for :users, skip: [:sessions, :passwords, :registrations, :confirmations], :path_names => {:sign_in => 'login', :sign_out => 'logout'}, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
 	#--------------------------------
 	# all resources should be within the scope block below
@@ -108,7 +111,7 @@ BootstrapStarter::Application.routes.draw do
 
     # api
     match '/api', to: 'api#index', as: :api, via: :get
-    namespace :api do   
+    namespace :api do
       ### v1
       match '/v1', to: 'v1#index', as: :v1, via: :get
       match '/v1/documentation(/:method)', to: 'v1#documentation', as: :v1_documentation, via: :get

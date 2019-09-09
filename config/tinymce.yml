@@ -4,10 +4,10 @@ default:
   convert_urls: false
   width: "100%"
   menubar: false
-  plugins: "autolink paste fullscreen table code link anchor lists hr"
+  plugins: "autolink paste fullscreen table code link anchor lists hr uploadimage"
   toolbar_items_size: 'small'
   toolbar1: "cut copy paste searchreplace | undo redo | removeformat | fullscreen code"
-  toolbar2: "formatselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | outdent indent blockquote | link unlink anchor | hr | table"
+  toolbar2: "formatselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | outdent indent blockquote | link unlink anchor | uploadimage | hr | table"
   content_css: /css/tinymce.css
   paste_auto_cleanup_on_paste: true
   paste_remove_spans: true
@@ -20,10 +20,10 @@ advanced:
   width: "100%"
   theme_modern_blockformats: "p,h1,h2,h3,h4,h5,h6,blockquote,div,code"
   menubar: false
-  plugins: "autolink paste fullscreen table code link anchor lists hr sh4tinymce"
+  plugins: "autolink paste fullscreen table code link anchor lists hr uploadimage sh4tinymce"
   toolbar_items_size: 'small'
   toolbar1: "cut copy paste searchreplace | undo redo | removeformat | fullscreen code"
-  toolbar2: "formatselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | outdent indent blockquote | link unlink anchor | hr | table | sh4tinymce"
+  toolbar2: "formatselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | outdent indent blockquote | link unlink anchor | uploadimage | hr | table | sh4tinymce"
   content_css: ['/css/tinymce.css', '/assets/api.css']
   paste_auto_cleanup_on_paste: true
   paste_remove_spans: true
