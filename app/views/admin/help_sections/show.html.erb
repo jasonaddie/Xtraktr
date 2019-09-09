@@ -1,0 +1,41 @@
+<%- model_class = HelpSection -%>
+<% title t '.title', :default => model_class.model_name.human %>
+
+
+<div class="form-group form-group-admin-buttons">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              admin_help_sections_path, :class => 'btn btn-default'  %>
+  <%= link_to '',
+              edit_admin_help_section_path(@help_section),
+              :title => t("helpers.links.edit"),
+              :class => 'btn btn-edit' %>
+  <%= link_to '',
+              admin_help_section_path(@help_section),
+              :title => t("helpers.links.destroy"),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm")) },
+              :class => 'btn btn-delete' %>
+  <%= link_to t('helpers.links.admin'), admin_path, :class => 'btn btn-default' %>
+</div>
+
+<p><strong><%= model_class.human_attribute_name(:title) %>:</strong>
+<%= @help_section.title %></p>
+
+<p><strong><%= model_class.human_attribute_name(:summary) %>:</strong>
+<%= @help_section.summary %></p>
+
+<p><strong><%= model_class.human_attribute_name(:permalink) %>:</strong>
+<%= @help_section.permalink %></p>
+
+<p><strong><%= model_class.human_attribute_name(:sort_order) %>:</strong>
+<%= @api_method.sort_order %></p>
+
+<p><strong><%= model_class.human_attribute_name(:public) %>:</strong>
+<%= @help_section.public %></p>
+
+<p><strong><%= model_class.human_attribute_name(:public_at) %>:</strong>
+<%= l @help_section.public_at, format: :day_first if @help_section.public_at %></p>
+
+
+
+

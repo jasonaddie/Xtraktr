@@ -33,6 +33,7 @@ BootstrapStarter::Application.routes.draw do
       resources :api_versions, :except => [:show] do
         resources :api_methods, :except => [:index]
       end
+      resources :help_sections, :except => [:show]
     end
 
     resources :datasets, path: :manage_datasets do

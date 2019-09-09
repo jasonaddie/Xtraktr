@@ -56,6 +56,9 @@ en:
       time_series_weight_assignment:
         one: Weight Assignment
         other: Weight Assignments
+      help_section:
+        one: Help Section
+        other: Help Sections
     attributes:
       user:
         email: Email Address
@@ -303,6 +306,14 @@ en:
         name: Name
         permalink: URL to Category
         sort_order: Sort Order
+      help_section:
+        permalink: Permalink
+        title: Title
+        summary: Summary
+        sort_order: Sort Order
+        public: Make Available to the Public
+        public_at: Released At
+        updated_at: Last Updated At
     hints:
       dataset:
         title: The title of your dataset
@@ -427,6 +438,12 @@ en:
         name: Name of category
         permalink: This text needs to match the name of the icon image file
         sort_order: The order the categories should appear
+      help_section:
+        permalink: Abbreviated Name Used in URL (e.g., v1)
+        title: Title of the Help Section
+        summary: A brief summary of this help section
+        public: "Select 'Yes' to make the Help Section available to the world"
+        sort_order: The order the help sections should appear
   errors:
     messages:
       required_field: "is a required field."
@@ -1041,6 +1058,7 @@ en:
       download_api_requests: Download API Request History
       download_download_requests: Download Download Request History
       categories: Categories
+      help_sections: Help Sections
     users:
       edit:
         title: Editing User
