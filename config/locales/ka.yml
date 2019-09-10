@@ -314,6 +314,7 @@ ka:
         public: "გავხადოთ საჯაროდ ხელმისაწვდომი"
         public_at: "გამოქვეყნებულია"
         updated_at: "ბოლო განახლება"
+        parent_id: Parent Section
     hints:
       dataset:
         title: "თქვენი მონაცემების სახელწოდება"
@@ -446,6 +447,7 @@ ka:
         summary: A brief summary of this help section
         public: "Select 'Yes' to make the Help Section available to the world"
         sort_order: The order the help sections should appear
+        parent_id: A Help Section can be a sub-section of another Help Section. If no parent section is selected, then this section will appear at the root level.
   errors:
     messages:
       required_field: "სავალდებულო ველი"
