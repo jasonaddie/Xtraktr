@@ -7,7 +7,9 @@ class Admin::HelpSectionsController < ApplicationController
   # GET /help_sections
   # GET /help_sections.json
   def index
-    @help_sections = HelpSection.sorted
+    @root_help_sections = HelpSection.roots.sorted
+
+    @css.push("help_section.css")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -31,6 +33,9 @@ class Admin::HelpSectionsController < ApplicationController
   def new
     @help_section = HelpSection.new
 
+    @css.push("help_section.css")
+    @js.push("help_section.js")
+
     set_tabbed_translation_form_settings('advanced')
 
     respond_to do |format|
@@ -42,6 +47,8 @@ class Admin::HelpSectionsController < ApplicationController
   # GET /help_sections/1/edit
   def edit
     @help_section = HelpSection.find(params[:id])
+    @css.push("help_section.css")
+    @js.push("help_section.js")
     set_tabbed_translation_form_settings('advanced')
   end
 
@@ -55,6 +62,8 @@ class Admin::HelpSectionsController < ApplicationController
         format.html { redirect_to admin_help_sections_path, notice: {success:  t('app.msgs.success_created', :obj => t('mongoid.models.help_section.one'))} }
         format.json { render json: @help_section, status: :created, location: @help_section }
       else
+        @css.push("help_section.css")
+        @js.push("help_section.js")
         set_tabbed_translation_form_settings('advanced')
         format.html { render action: "new" }
         format.json { render json: @help_section.errors, status: :unprocessable_entity }
@@ -72,6 +81,8 @@ class Admin::HelpSectionsController < ApplicationController
         format.html { redirect_to admin_help_sections_path, flash: {success:  t('app.msgs.success_updated', :obj => t('mongoid.models.help_section.one'))} }
         format.json { head :no_content }
       else
+        @css.push("help_section.css")
+        @js.push("help_section.js")
         set_tabbed_translation_form_settings('advanced')
         format.html { render action: "edit" }
         format.json { render json: @help_section.errors, status: :unprocessable_entity }

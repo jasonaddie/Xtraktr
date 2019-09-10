@@ -1,6 +1,12 @@
 class HelpSection
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Ancestry
+
+
+  #############################
+
+  has_ancestry
 
   #############################
 
@@ -21,7 +27,7 @@ class HelpSection
   # accepts_nested_attributes_for :help_pages, :reject_if => :all_blank, :allow_destroy => true
 
   attr_accessible :permalink, :title, :title_translations, :summary, :summary_translations,
-                  :sort_order, :public, :public_at
+                  :sort_order, :public, :public_at, :ancestry, :parent_id
                   # :help_pages_attributes,
 
   #############################

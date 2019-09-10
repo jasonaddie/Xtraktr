@@ -35,6 +35,18 @@
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="select input optional form-group" id="help_section_parent_id_input">
+          <label class="control-label" for="help_section_parent_id"><%= t(label_key + 'parent_id') %><div class="help-inline" title="<%= t(hint_key + 'parent_id') %>"><div>?</div></div>
+          </label>
+          <select name="help_section[parent_id]" id="help_section_parent_id" class="selectpicker-help-section-parent-id form-control" data-live-search="true" data-selected-text-format="count>3" data-size="7" data-width="72%">
+            <option value=""></option>
+            <% default_value = @help_section.ancestry.present? ? @help_section.parent_id : nil %>
+            <%= build_help_section_ordered_select_options(@help_section.id, default_value).html_safe %>
+          </select>
+        </div>
+      </div>
   <% end %>
 
 

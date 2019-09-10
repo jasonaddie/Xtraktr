@@ -9,7 +9,7 @@
   :class => 'btn btn-default' %>
 </div>
 
-<table class="table table-striped display">
+<table class="table table-striped display help-sections">
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:title) %></th>
@@ -20,9 +20,11 @@
     </tr>
   </thead>
   <tbody>
-    <% @help_sections.each do |help_section| %>
+    <% help_sections = build_help_section_heirarchy_list(@root_help_sections) %>
+    <% help_sections.each do |help_section| %>
       <tr>
-        <td><%= help_section.title %></td>
+        <% level = help_section.ancestry.present? ? help_section.path_ids.length+1 : 1 %>
+        <td class="l<%= level %>"><%= help_section.title %></td>
         <td><%= help_section.summary %></td>
         <td><%= help_section.permalink %></td>
         <td><%= format_public_status(help_section.public) %></td>
