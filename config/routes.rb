@@ -34,6 +34,7 @@ BootstrapStarter::Application.routes.draw do
         resources :api_methods, :except => [:index]
       end
       resources :help_sections, :except => [:show]
+      resources :help_pages
     end
 
     resources :datasets, path: :manage_datasets do

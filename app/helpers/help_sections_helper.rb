@@ -4,8 +4,8 @@ module HelpSectionsHelper
   # build a list of select options
   # that have the help sections in order and with heirarchy
   # - each heirarchy is indicated by css class
-  def build_help_section_ordered_select_options(current_item, default_value)
-    return build_options_for_help_section_level(HelpSection.roots.sorted, current_item, default_value, 1)
+  def build_help_section_ordered_select_options(default_value, current_item=nil)
+    return build_options_for_help_section_level(HelpSection.roots.sorted, default_value, current_item, 1)
   end
 
   # build an array of help sections that is ordered in the proper heirarchy
@@ -14,16 +14,38 @@ module HelpSectionsHelper
     return items.flatten
   end
 
+  # build a breadcrumb like heirarchy of the help sections
+  # that ends with the provided `end_help_section`
+  def build_help_section_breadcrumb_text(end_help_section)
+    help_sections = build_breadcrumb_item_for_help_section(end_help_section)
+    help_sections.flatten!
+
+    return help_sections.present? ? help_sections.reverse.join(' > ') : ''
+  end
+
   private
 
-  def build_options_for_help_section_level(help_sections, current_item, default_value, level=1)
+  def build_breadcrumb_item_for_help_section(help_section)
+    help_sections = []
+
+    if help_section.present?
+      help_sections << help_section.title
+      if help_section.parent_id.present?
+        help_sections << build_breadcrumb_item_for_help_section(help_section.parent)
+      end
+    end
+
+    return help_sections
+  end
+
+  def build_options_for_help_section_level(help_sections, default_value, current_item, level=1)
     html = ''
     if help_sections.present?
       help_sections.each do |help_section|
         selected = help_section.id == default_value ? 'selected=selected' : ''
         disabled = help_section.id == current_item ? 'disabled=disabled' : ''
         html += "<option value='#{help_section.id}' #{selected} #{disabled} class='l#{level}'>#{help_section.title}</option>"
-        html += build_options_for_help_section_level(help_section.children.sorted, current_item, default_value, level+1)
+        html += build_options_for_help_section_level(help_section.children.sorted, default_value, current_item, level+1)
       end
     end
 

@@ -1,9 +1,9 @@
 <%-
-  label_key = "mongoid.attributes.help_section."
-  hint_key = "mongoid.hints.help_section."
+  label_key = "mongoid.attributes.help_page."
+  hint_key = "mongoid.hints.help_page."
 -%>
 
-<%= semantic_form_for([:admin, @help_section], html: {class: 'tabbed-translation-form'}) do |f| %>
+<%= semantic_form_for([:admin, @help_page], html: {class: 'tabbed-translation-form'}) do |f| %>
   <%= f.error_messages %>
 
   <%= f.inputs do %>
@@ -15,20 +15,20 @@
         <%= f.input :sort_order, as: :number, hint: t(hint_key + 'sort_order'), min: 1, step: 5 %>
       </div>
       <div class="col-sm-4">
-        <div class="radio_buttons input optional form-group" id="help_section_public_input">
-          <label class="  control-label" for="help_section_public"><%= t(label_key + 'public') %><div class="help-inline" title="<%= t(hint_key + 'public') %>"><div>?</div></div>
+        <div class="radio_buttons input optional form-group" id="help_page_public_input">
+          <label class="  control-label" for="help_page_public"><%= t(label_key + 'public') %><div class="help-inline" title="<%= t(hint_key + 'public') %>"><div>?</div></div>
           </label>
           <div class="radio">
-            <label class="choice" for="help_section_public_true">
-              <% checked = @help_section.public? ? 'checked=checked' : '' %>
-              <input <%= checked %> id="help_section_public_true" name="help_section[public]" type="radio" value="true" />
+            <label class="choice" for="help_page_public_true">
+              <% checked = @help_page.public? ? 'checked=checked' : '' %>
+              <input <%= checked %> id="help_page_public_true" name="help_page[public]" type="radio" value="true" />
               <%= t('formtastic.yes') %>
             </label>
           </div>
           <div class="radio">
-            <label class="choice" for="help_section_public_false">
-              <% checked = @help_section.public? ? '' : 'checked=checked' %>
-              <input <%= checked %> id="help_section_public_false" name="help_section[public]" type="radio" value="false" />
+            <label class="choice" for="help_page_public_false">
+              <% checked = @help_page.public? ? '' : 'checked=checked' %>
+              <input <%= checked %> id="help_page_public_false" name="help_page[public]" type="radio" value="false" />
               <%= t('formtastic.no') %>
             </label>
           </div>
@@ -37,13 +37,12 @@
     </div>
     <div class="row">
       <div class="col-sm-4">
-        <div class="select input optional form-group" id="help_section_parent_id_input">
-          <label class="control-label" for="help_section_parent_id"><%= t(label_key + 'parent_id') %><div class="help-inline" title="<%= t(hint_key + 'parent_id') %>"><div>?</div></div>
+        <div class="select input optional form-group" id="help_page_help_section_id_input">
+          <label class="control-label" for="help_page_help_section_id"><%= t(label_key + 'help_section_id') %><div class="help-inline" title="<%= t(hint_key + 'help_section_id') %>"><div>?</div></div>
           </label>
-          <select name="help_section[parent_id]" id="help_section_parent_id" class="selectpicker-help-section-parent-id form-control" data-live-search="true" data-selected-text-format="count>3" data-size="7" data-width="72%">
+          <select name="help_page[help_section_id]" id="help_page_help_section_id" class="selectpicker-help-page-help-section-id form-control" data-live-search="true" data-selected-text-format="count>3" data-size="7" data-width="72%">
             <option value=""></option>
-            <% default_value = @help_section.ancestry.present? ? @help_section.parent_id : nil %>
-            <%= build_help_section_ordered_select_options(default_value, @help_section.id).html_safe %>
+            <%= build_help_section_ordered_select_options(@help_page.help_section_id).html_safe %>
           </select>
         </div>
       </div>
@@ -93,7 +92,7 @@
               label = t(label_key + 'title')
               hint = t(hint_key + 'title')
               if index > 0
-                label << show_default_text(@help_section.title_translations[default_locale])
+                label << show_default_text(@help_page.title_translations[default_locale])
               end
             %>
             <%= translation.input locale, hint: hint, label: label.html_safe %>
@@ -103,10 +102,21 @@
               label = t(label_key + 'summary')
               hint = t(hint_key + 'summary')
               if index > 0
-                label << show_default_text(@help_section.summary_translations[default_locale])
+                label << show_default_text(@help_page.summary_translations[default_locale])
               end
             %>
             <%= translation.input locale, hint: hint, label: label.html_safe %>
+          <% end %>
+          <%= f.fields_for :content_translations, OpenStruct.new(f.object.content_translations) do |translation| %>
+            <%
+              label = t(label_key + 'content')
+              hint = t(hint_key + 'content')
+              if index > 0
+                label << show_default_text(@help_page.content_translations[default_locale])
+              end
+            %>
+            <%= translation.input locale, :as => :text, hint: hint, required: false, rows: 10, label: label.html_safe,
+                :input_html => { class: "tinymce" } %>
           <% end %>
         </div>
       <% end %>
@@ -116,7 +126,8 @@
   <div class="form-group">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= f.submit t('helpers.links.reset'), :class => 'btn btn-warning', :type => :reset, :name => :reset %>
-    <%= link_to t('helpers.links.cancel'), admin_help_sections_path, :class => 'btn btn-warning' %>
+    <%= link_to t('helpers.links.cancel'), admin_help_pages_path, :class => 'btn btn-warning' %>
   </div>
 <% end %>
 
+<%= tinymce_assets %>

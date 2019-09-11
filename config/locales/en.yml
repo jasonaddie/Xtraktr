@@ -59,6 +59,9 @@ en:
       help_section:
         one: Help Section
         other: Help Sections
+      help_page:
+        one: Help Page
+        other: Help Pages
     attributes:
       user:
         email: Email Address
@@ -315,6 +318,16 @@ en:
         public_at: Released At
         updated_at: Last Updated At
         parent_id: Parent Section
+      help_page:
+        permalink: Permalink
+        title: Title
+        summary: Summary
+        content: Page Text
+        sort_order: Sort Order
+        public: Make Available to the Public
+        public_at: Released At
+        updated_at: Last Updated At
+        help_section_id: Help Section
     hints:
       dataset:
         title: The title of your dataset
@@ -446,6 +459,13 @@ en:
         public: "Select 'Yes' to make the Help Section available to the world"
         sort_order: The order the help sections should appear
         parent_id: A Help Section can be a sub-section of another Help Section. If no parent section is selected, then this section will appear at the root level.
+      help_page:
+        permalink: Abbreviated Name Used in URL (e.g., v1)
+        title: Title of the Help Page
+        summary: A brief summary of this help page
+        public: "Select 'Yes' to make the Help Page available to the world"
+        sort_order: The order the help pages should appear within the help section
+        help_section_id: The Help Section that this Help Page will appear under
   errors:
     messages:
       required_field: "is a required field."
@@ -1061,6 +1081,7 @@ en:
       download_download_requests: Download Download Request History
       categories: Categories
       help_sections: Help Sections
+      help_pages: Help Pages
     users:
       edit:
         title: Editing User

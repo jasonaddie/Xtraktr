@@ -1,34 +1,26 @@
-class HelpSection
+class HelpPage
   include Mongoid::Document
   include Mongoid::Timestamps
-  include Mongoid::Ancestry
-
 
   #############################
 
-  has_ancestry
-
-  #############################
-
-  has_many :help_pages, dependent: :destroy
+  belongs_to :help_section
 
   #############################
 
   field :permalink, type: String
   field :title, type: String, localize: true
   field :summary, type: String, localize: true
+  field :content, type: String, localize: true
   field :sort_order, type: Integer, default: 1
-  # whether or not can be shown to public
   field :public, type: Boolean, default: false
-  # when made public
   field :public_at, type: Date
 
   #############################
-  accepts_nested_attributes_for :help_pages, :reject_if => :all_blank, :allow_destroy => true
 
   attr_accessible :permalink, :title, :title_translations, :summary, :summary_translations,
-                  :sort_order, :public, :public_at, :parent_id,
-                  :help_pages_attributes
+                  :content, :content_translations, :help_section_id,
+                  :sort_order, :public, :public_at
 
   #############################
 
@@ -36,13 +28,14 @@ class HelpSection
   index ({ :permalink => 1})
   index ({ :title => 1})
   index ({ :sort_order => 1})
+  index ({ :help_section_id => 1})
   index ({ :public => 1})
   index ({ :public_at => 1})
 
   #############################
   # Validations
   validates_presence_of :permalink
-  validates_uniqueness_of :permalink
+  validates_uniqueness_of :permalink, scope: :help_section_id
   validate :validate_translations
 
   # validate the translation fields
@@ -83,7 +76,6 @@ class HelpSection
     end
   end
 
-
   #############################
 
   def self.is_public
@@ -97,4 +89,6 @@ class HelpSection
   def self.by_permalink(permalink)
     find_by(permalink: permalink)
   end
+
+
 end
