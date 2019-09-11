@@ -1,0 +1,48 @@
+<%- model_class = HelpPage -%>
+<% title t '.title', :default => model_class.model_name.human(:count => 2) %>
+
+<div class="form-group form-group-admin-buttons">
+  <%= link_to t('.new', :default => t("helpers.links.new")),
+              new_admin_help_page_path,
+              :class => 'btn btn-primary' %>
+  <%= link_to t('helpers.links.admin'), admin_path,
+  :class => 'btn btn-default' %>
+</div>
+
+<table class="table table-striped display help-sections">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:title) %></th>
+      <th><%= model_class.human_attribute_name(:summary) %></th>
+      <th><%= model_class.human_attribute_name(:help_section_id) %></th>
+      <th><%= model_class.human_attribute_name(:permalink) %></th>
+      <th><%= model_class.human_attribute_name(:public) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @help_pages.each do |help_page| %>
+      <tr>
+        <td><%= link_to help_page.title, admin_help_page_path(help_page) %></td>
+        <td><%= help_page.summary %></td>
+        <td><%= build_help_section_breadcrumb_text(help_page.help_section) if help_page.help_section_id %></td>
+        <td><%= help_page.permalink %></td>
+        <td><%= format_public_status(help_page.public) %></td>
+        <td>
+          <%= link_to '',
+                      edit_admin_help_page_path(help_page),
+                      :title => t('helpers.links.edit'),
+                      :class => 'btn btn-edit btn-xs' %>
+          <%= link_to '',
+                      admin_help_page_path(help_page),
+                      :title => t("helpers.links.destroy"),
+                      :method => :delete,
+                      :data => { :confirm => I18n.t("helpers.links.confirm") },
+                      :class => 'btn btn-delete btn-xs' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+

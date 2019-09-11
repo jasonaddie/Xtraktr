@@ -36,7 +36,7 @@ class Admin::HelpSectionsController < ApplicationController
     @css.push("help_section.css")
     @js.push("help_section.js")
 
-    set_tabbed_translation_form_settings('advanced')
+    set_tabbed_translation_form_settings
 
     respond_to do |format|
       format.html # new.html.erb
@@ -49,7 +49,7 @@ class Admin::HelpSectionsController < ApplicationController
     @help_section = HelpSection.find(params[:id])
     @css.push("help_section.css")
     @js.push("help_section.js")
-    set_tabbed_translation_form_settings('advanced')
+    set_tabbed_translation_form_settings
   end
 
   # POST /help_sections
@@ -64,7 +64,7 @@ class Admin::HelpSectionsController < ApplicationController
       else
         @css.push("help_section.css")
         @js.push("help_section.js")
-        set_tabbed_translation_form_settings('advanced')
+        set_tabbed_translation_form_settings
         format.html { render action: "new" }
         format.json { render json: @help_section.errors, status: :unprocessable_entity }
       end
@@ -83,7 +83,7 @@ class Admin::HelpSectionsController < ApplicationController
       else
         @css.push("help_section.css")
         @js.push("help_section.js")
-        set_tabbed_translation_form_settings('advanced')
+        set_tabbed_translation_form_settings
         format.html { render action: "edit" }
         format.json { render json: @help_section.errors, status: :unprocessable_entity }
       end

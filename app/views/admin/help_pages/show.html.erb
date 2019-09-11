@@ -1,0 +1,48 @@
+<%- model_class = HelpPage -%>
+<% title t '.title', :default => model_class.model_name.human %>
+
+
+<div class="form-group form-group-admin-buttons">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              admin_help_pages_path, :class => 'btn btn-default'  %>
+  <%= link_to '',
+              edit_admin_help_page_path(@help_page),
+              :title => t("helpers.links.edit"),
+              :class => 'btn btn-edit' %>
+  <%= link_to '',
+              admin_help_page_path(@help_page),
+              :title => t("helpers.links.destroy"),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm")) },
+              :class => 'btn btn-delete' %>
+  <%= link_to t('helpers.links.admin'), admin_path, :class => 'btn btn-default' %>
+</div>
+
+<p><strong><%= model_class.human_attribute_name(:help_section_id) %>:</strong>
+<%= build_help_section_breadcrumb_text(@help_page.help_section) if @help_page.help_section_id? %></p>
+
+<p><strong><%= model_class.human_attribute_name(:title) %>:</strong>
+<%= @help_page.title %></p>
+
+<p><strong><%= model_class.human_attribute_name(:summary) %>:</strong>
+<%= @help_page.summary %></p>
+
+<p><strong><%= model_class.human_attribute_name(:permalink) %>:</strong>
+<%= @help_page.permalink %></p>
+
+<p><strong><%= model_class.human_attribute_name(:sort_order) %>:</strong>
+<%= @help_page.sort_order %></p>
+
+<p><strong><%= model_class.human_attribute_name(:public) %>:</strong>
+<%= @help_page.public %></p>
+
+<p><strong><%= model_class.human_attribute_name(:public_at) %>:</strong>
+<%= l @help_page.public_at, format: :day_first if @help_page.public_at %></p>
+
+<p><strong><%= model_class.human_attribute_name(:content) %>:</strong></p>
+<div class="tinymce_format">
+  <%= simple_format_no_tags(@help_page.content, {}, {sanitize: false}) %>
+</div>
+
+
+

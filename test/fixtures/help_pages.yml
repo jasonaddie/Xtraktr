@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  permalink: MyString
+  title: MyString
+  summary: MyString
+  content: MyString
+  public: false
+  public_at: 2019-09-10
+
+two:
+  permalink: MyString
+  title: MyString
+  summary: MyString
+  content: MyString
+  public: false
+  public_at: 2019-09-10

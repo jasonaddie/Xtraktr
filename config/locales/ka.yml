@@ -59,6 +59,9 @@ ka:
       help_section:
         one: Help Section
         other: Help Sections
+      help_page:
+        one: Help Page
+        other: Help Pages
     attributes:
       user:
         email: "ელ. ფოსტა"
@@ -315,6 +318,16 @@ ka:
         public_at: "გამოქვეყნებულია"
         updated_at: "ბოლო განახლება"
         parent_id: Parent Section
+      help_page:
+        permalink: "პერმალინკი"
+        title: "სახელწოდება"
+        summary: "მოკლე შეჯამება"
+        content: Page Text
+        sort_order: "დახარისხების წყობა"
+        public: "გავხადოთ საჯაროდ ხელმისაწვდომი"
+        public_at: "გამოქვეყნებულია"
+        updated_at: "ბოლო განახლება"
+        help_section_id: Help Section
     hints:
       dataset:
         title: "თქვენი მონაცემების სახელწოდება"
@@ -448,6 +461,13 @@ ka:
         public: "Select 'Yes' to make the Help Section available to the world"
         sort_order: The order the help sections should appear
         parent_id: A Help Section can be a sub-section of another Help Section. If no parent section is selected, then this section will appear at the root level.
+      help_page:
+        permalink: URL-ში გამოყენებული აბრევიატურა (მაგ., v1)
+        title: Title of the Help Page
+        summary: A brief summary of this help page
+        public: "Select 'Yes' to make the Help Page available to the world"
+        sort_order: The order the help pages should appear within the help section
+        help_section_id: The Help Section that this Help Page will appear under
   errors:
     messages:
       required_field: "სავალდებულო ველი"
@@ -1063,6 +1083,7 @@ ka:
       download_download_requests: "ჩამოტვირთვის მოთხოვნათა ისტორიის ჩამოტვირთვა"
       categories: "კატეგორიები"
       help_sections: Help Sections
+      help_pages: Help Pages
     users:
       edit:
         title: "მომხმარებლის გვერდის რედაქტირება"
