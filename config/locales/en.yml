@@ -1553,6 +1553,13 @@ en:
       other_weights: Other Weights this Question Belongs To
       weight_question_explanation: Indicate which question to use as the weight by selectig the dataset that has the question and then selecting the question.
       unique_id_explanation: Select the question from each dataset that contains the unique ID of the responders. This ID will be used to assign the weight to the correct responses in each dataset.
+  support:
+    index:
+      title: Support
+    section:
+      title: 'Support Section: %{section}'
+    page:
+      title: 'Support Page: %{page}'
   shared:
     explore_data:
       no_matches: Your selections returned no data. Please try again with a different selection.

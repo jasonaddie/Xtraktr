@@ -37,6 +37,7 @@ class HelpSection
 
   # indexes
   index ({ :permalink => 1})
+  index ({ :permalink_with_ancestors => 1})
   index ({ :title => 1})
   index ({ :sort_order => 1})
   index ({ :public => 1})
@@ -45,7 +46,7 @@ class HelpSection
   #############################
   # Validations
   validates_presence_of :permalink
-  validates_uniqueness_of :permalink
+  validates_uniqueness_of :permalink, scope: :ancestry
   validate :validate_translations
 
   # validate the translation fields
@@ -143,7 +144,7 @@ class HelpSection
   end
 
   def self.by_permalink(permalink)
-    find_by(permalink: permalink)
+    find_by(permalink_with_ancestors: permalink)
   end
 
   # update the complete permalink with the parent and self permalinks

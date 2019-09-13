@@ -1,0 +1,23 @@
+<% title t '.title' %>
+
+
+<!-- intro text -->
+<div>
+  <p><%= t('.intro') %></p>
+</div>
+
+<% if @root_sections.present? %>
+  <h2><%= t('.main_sections') %></h2>
+
+  <% @root_sections.each do |section| %>
+    <div>
+      <h3><%= link_to(section.title, support_section_path(section.permalink_with_ancestors)) %></h3>
+      <p><%= section.summary %></p>
+    </div>
+  <% end %>
+
+<% else %>
+
+  <p><%= t('.no_sections') %></p>
+
+<% end %>

@@ -1,0 +1,50 @@
+<% title t('.title', section: @help_section.title) %>
+
+<!-- breadcrumb -->
+<div>
+  <%= link_to t('.support_home_page'), support_path %>
+  <%
+    bc = build_help_section_breadcrumb_links(@help_section.parent)
+    if bc.present?
+  %>
+    >
+    <%= bc.html_safe %>
+  <% end %>
+</div>
+
+<!-- summary -->
+<div>
+  <p><%= @help_section.summary %></p>
+</div>
+
+
+<!-- sections -->
+<% children = @help_section.children.is_public.sorted %>
+<% if children.present? %>
+  <div>
+    <h2><%= t('.sub_sections') %></h2>
+
+    <% children.each do |section| %>
+      <div>
+        <h3><%= link_to(section.title, support_section_path(section.permalink_with_ancestors)) %></h3>
+        <p><%= section.summary %></p>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<!-- pages -->
+<% children = @help_section.help_pages.is_public.sorted %>
+<% if children.present? %>
+  <div>
+    <h2><%= t('.pages') %></h2>
+
+    <% children.each do |page| %>
+      <div>
+        <h3><%= link_to(page.title, support_page_path(page.help_section.permalink_with_ancestors, page.permalink)) %></h3>
+        <p><%= page.summary %></p>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+

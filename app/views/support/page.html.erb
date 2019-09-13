@@ -1,0 +1,23 @@
+<% title t('.title', page: @help_page.title) %>
+
+<!-- breadcrumb -->
+<div>
+  <%= link_to t('.support_home_page'), support_path %>
+  <%
+    bc = build_help_section_breadcrumb_links(@help_page.help_section)
+    if bc.present?
+  %>
+    >
+    <%= bc.html_safe %>
+  <% end %>
+</div>
+
+<!-- summary -->
+<div>
+  <p><%= @help_page.summary %></p>
+</div>
+
+<!-- content -->
+<div class="tinymce_format">
+  <%= simple_format_no_tags(@help_page.content, {}, {sanitize: false}) %>
+</div>
