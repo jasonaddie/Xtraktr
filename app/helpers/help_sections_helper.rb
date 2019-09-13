@@ -17,25 +17,25 @@ module HelpSectionsHelper
   # build a breadcrumb like heirarchy of the help sections
   # that ends with the provided `end_help_section`
   def build_help_section_breadcrumb_text(end_help_section)
-    help_sections = build_breadcrumb_item_for_help_section(end_help_section)
-    help_sections.flatten!
+    titles = build_breadcrumb_item_for_help_section(end_help_section)
+    titles.flatten!
 
-    return help_sections.present? ? help_sections.reverse.join(' > ') : ''
+    return titles.present? ? titles.reverse.join(' > ') : ''
   end
 
   private
 
   def build_breadcrumb_item_for_help_section(help_section)
-    help_sections = []
+    titles = []
 
     if help_section.present?
-      help_sections << help_section.title
+      titles << help_section.title
       if help_section.parent_id.present?
-        help_sections << build_breadcrumb_item_for_help_section(help_section.parent)
+        titles << build_breadcrumb_item_for_help_section(help_section.parent)
       end
     end
 
-    return help_sections
+    return titles
   end
 
   def build_options_for_help_section_level(help_sections, default_value, current_item, level=1)
