@@ -90,5 +90,8 @@ class HelpPage
     find_by(permalink: permalink)
   end
 
+  def self.in_help_section(help_section_id)
+    where(help_section_id: help_section_id)
+  end
 
 end
