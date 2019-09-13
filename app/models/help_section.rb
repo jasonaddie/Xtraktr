@@ -15,6 +15,7 @@ class HelpSection
   #############################
 
   field :permalink, type: String
+  field :permalink_with_ancestors, type: String
   field :title, type: String, localize: true
   field :summary, type: String, localize: true
   field :sort_order, type: Integer, default: 1
@@ -29,6 +30,8 @@ class HelpSection
   attr_accessible :permalink, :title, :title_translations, :summary, :summary_translations,
                   :sort_order, :public, :public_at, :parent_id,
                   :help_pages_attributes
+
+  attr_accessor :update_descendant_permalink_with_ancestors, :descendants_to_update
 
   #############################
 
@@ -65,6 +68,9 @@ class HelpSection
   # Callbacks
   before_save :set_to_nil
   before_save :set_public_at
+  before_save :check_if_permalink_changing
+  after_save :update_descendant_permalink_references
+  before_validation :check_if_parent_changing
 
   # if title are '', reset value to nil so fallback works
   def set_to_nil
@@ -83,6 +89,48 @@ class HelpSection
     end
   end
 
+  # if the parent is changing, save the descendants
+  # so after the save is complete their permalink_with_ancestor
+  # value can be updated
+  # - due to parent changing, all descendant ancestry values are updated
+  #   before this item is saved and so all references to the descendants are lost
+  def check_if_parent_changing
+    # logger.debug "================ check_if_parent_changing for #{self.title}"
+    if self.ancestry_changed?
+      # logger.debug ">>> changed!"
+      update_permalink_with_ancestors
+
+      self.descendants_to_update = self.descendants.to_a
+      self.update_descendant_permalink_with_ancestors = true
+    end
+  end
+
+  # if the permalink is changing, update permalink_with_ancestors
+  def check_if_permalink_changing
+    # logger.debug "================ check_if_permalink_changing for #{self.title}"
+    if self.permalink_changed?
+      # logger.debug ">>> changed!"
+      update_permalink_with_ancestors
+
+      # indicate that the descendant permalinks should be updated after save
+      self.update_descendant_permalink_with_ancestors = true
+    end
+  end
+
+  # if the permalink changed, update the descendants of this section
+  # so that their permalink_with_ancestors is correct
+  def update_descendant_permalink_references
+    # logger.debug "================ update_descendant_permalink_references for #{self.title}"
+    # logger.debug ">> update_descendant_permalink_with_ancestors = #{self.update_descendant_permalink_with_ancestors}; descendant = #{self.descendants.present?}; descendants_to_update = #{self.descendants_to_update.present?}"
+    if self.update_descendant_permalink_with_ancestors && (self.descendants.present? || self.descendants_to_update.present?)
+      descendants = self.descendants_to_update.present? ? self.descendants_to_update : self.descendants
+      # logger.debug ">>>>>> need to update descendant permalinks; there are #{descendants.length} descendants records"
+      descendants.each do |descendant|
+        descendant.update_permalink_with_ancestors
+        descendant.save
+      end
+    end
+  end
 
   #############################
 
@@ -96,5 +144,26 @@ class HelpSection
 
   def self.by_permalink(permalink)
     find_by(permalink: permalink)
+  end
+
+  # update the complete permalink with the parent and self permalinks
+  def update_permalink_with_ancestors
+    # logger.debug "================ update_permalink_with_ancestors for #{self.title}"
+    permalinks = get_ancestry_permalinks(self)
+    permalinks.flatten!
+    self.permalink_with_ancestors = permalinks.present? ? permalinks.reverse.join('/') : nil
+  end
+
+  def get_ancestry_permalinks(help_section)
+    permalinks = []
+
+    if help_section.present?
+      permalinks << help_section.permalink
+      if help_section.parent_id.present?
+        permalinks << get_ancestry_permalinks(help_section.parent)
+      end
+    end
+
+    return permalinks
   end
 end
