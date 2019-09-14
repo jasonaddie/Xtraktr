@@ -1,0 +1,243 @@
+{
+  "sections":
+  [
+    {
+      "title": "General Information",
+      "summary": "Information that you need to know about preparing your data to load into the system.",
+      "permalink": "general"
+    },
+    {
+      "title": "Datasets",
+      "summary": "Information about how to upload a dataset file and manage all of the possible settings.",
+      "permalink": "datasets"
+    },
+    {
+      "title": "Time Series",
+      "summary": "Information about how to create a Time Series (i.e., panel) from existing Datasets in the system.",
+      "permalink": "time_series"
+    },
+    {
+      "title": "Admin Section",
+      "summary": "Information on how to manage the general admin settings like users, support page text, categories, etc.",
+      "permalink": "admin",
+      "sections": [
+        {
+          "title": "Edit Text on Site",
+          "summary": "",
+          "permalink": "site_text",
+          "pages": [
+            {
+              "title": "Listing Page",
+              "summary": "",
+              "permalink": "listing"
+            },
+            {
+              "title": "Detail Page",
+              "summary": "",
+              "permalink": "detail"
+            },
+            {
+              "title": "Form Page",
+              "summary": "",
+              "permalink": "form"
+            }
+          ]
+        },
+        {
+          "title": "Categories",
+          "summary": "",
+          "permalink": "categories",
+          "pages":[
+            {
+              "title": "Listing Page",
+              "summary": "",
+              "permalink": "listing"
+            },
+            {
+              "title": "Form Page",
+              "summary": "",
+              "permalink": "form"
+            }
+          ]
+        },
+        {
+          "title": "Help Sections",
+          "summary": "",
+          "permalink": "help_sections",
+          "pages":[
+            {
+              "title": "Listing Page",
+              "summary": "",
+              "permalink": "listing"
+            },
+            {
+              "title": "Form Page",
+              "summary": "",
+              "permalink": "form"
+            }
+          ]
+        },
+        {
+          "title": "Help Pages",
+          "summary": "",
+          "permalink": "help_pages",
+          "pages":[
+            {
+              "title": "Listing Page",
+              "summary": "",
+              "permalink": "listing"
+            },
+            {
+              "title": "Detail Page",
+              "summary": "",
+              "permalink": "detail"
+            },
+            {
+              "title": "Form Page",
+              "summary": "",
+              "permalink": "form"
+            }
+          ]
+        },
+        {
+          "title": "API Version Documentation",
+          "summary": "",
+          "permalink": "api_documentation",
+          "pages":[
+            {
+              "title": "API Version Listing Page",
+              "summary": "",
+              "permalink": "version_listing"
+            },
+            {
+              "title": "API Version Form Page",
+              "summary": "",
+              "permalink": "version_form"
+            },
+            {
+              "title": "API Method Detail Page",
+              "summary": "",
+              "permalink": "method_detail"
+            },
+            {
+              "title": "API Method Form Page",
+              "summary": "",
+              "permalink": "method_form"
+            }
+          ]
+        },
+        {
+          "title": "Shapesets",
+          "summary": "",
+          "permalink": "shapesets",
+          "pages":[
+            {
+              "title": "Listing Page",
+              "summary": "",
+              "permalink": "listing"
+            },
+            {
+              "title": "Form Page",
+              "summary": "",
+              "permalink": "form"
+            }
+          ]
+        },
+        {
+          "title": "Users",
+          "summary": "",
+          "permalink": "users",
+          "pages":[
+            {
+              "title": "Listing Page",
+              "summary": "",
+              "permalink": "listing"
+            },
+            {
+              "title": "Form Page",
+              "summary": "",
+              "permalink": "form"
+            }
+          ]
+        }
+      ],
+      "pages": [
+        {
+          "title": "Admin Home",
+          "summary": "",
+          "permalink": "home"
+        }
+      ]
+    },
+    {
+      "title": "Public Pages",
+      "summary": "Information about how to use the public pages (i.e., search, view dataset meta data, explore a dataset, etc.)",
+      "permalink": "public",
+      "pages": [
+        {
+          "title": "Home",
+          "summary": "",
+          "permalink": "home"
+        },
+        {
+          "title": "Dataset Listing",
+          "summary": "",
+          "permalink": "dataset_listing"
+        },
+        {
+          "title": "Dataset Dashboard",
+          "summary": "",
+          "permalink": "dataset_dashboard"
+        },
+        {
+          "title": "Dataset Explore Data",
+          "summary": "",
+          "permalink": "dataset_explore"
+        },
+        {
+          "title": "Time Series Dashboard",
+          "summary": "",
+          "permalink": "time_series_dashboard"
+        },
+        {
+          "type": "page",
+          "title": "Time Series Explore Data",
+          "summary": "",
+          "permalink": "time_series_explore"
+        },
+        {
+          "title": "Instructions",
+          "summary": "",
+          "permalink": "instructions"
+        },
+        {
+          "title": "API",
+          "summary": "",
+          "permalink": "api"
+        },
+        {
+          "title": "Contact",
+          "summary": "",
+          "permalink": "contact"
+        }
+      ]
+    },
+    {
+      "title": "User Accounts",
+      "summary": "Information about how to create a user account and edit the settings.",
+      "permalink": "user",
+      "pages": [
+        {
+          "title": "Create Account",
+          "summary": "",
+          "permalink": "create_account"
+        },
+        {
+          "title": "User Settings",
+          "summary": "",
+          "permalink": "settings"
+        }
+      ]
+    }
+  ]
+}

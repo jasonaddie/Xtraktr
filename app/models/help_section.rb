@@ -96,21 +96,23 @@ class HelpSection
   # - due to parent changing, all descendant ancestry values are updated
   #   before this item is saved and so all references to the descendants are lost
   def check_if_parent_changing
-    # logger.debug "================ check_if_parent_changing for #{self.title}"
+    # puts "================ check_if_parent_changing for #{self.title}"
     if self.ancestry_changed?
-      # logger.debug ">>> changed!"
+      # puts ">>> changed!"
       update_permalink_with_ancestors
 
-      self.descendants_to_update = self.descendants.to_a
-      self.update_descendant_permalink_with_ancestors = true
+      if !self.new_record?
+        self.descendants_to_update = self.descendants.to_a
+        self.update_descendant_permalink_with_ancestors = true
+      end
     end
   end
 
   # if the permalink is changing, update permalink_with_ancestors
   def check_if_permalink_changing
-    # logger.debug "================ check_if_permalink_changing for #{self.title}"
+    # puts "================ check_if_permalink_changing for #{self.title}"
     if self.permalink_changed?
-      # logger.debug ">>> changed!"
+      # puts ">>> changed!"
       update_permalink_with_ancestors
 
       # indicate that the descendant permalinks should be updated after save
@@ -121,11 +123,11 @@ class HelpSection
   # if the permalink changed, update the descendants of this section
   # so that their permalink_with_ancestors is correct
   def update_descendant_permalink_references
-    # logger.debug "================ update_descendant_permalink_references for #{self.title}"
-    # logger.debug ">> update_descendant_permalink_with_ancestors = #{self.update_descendant_permalink_with_ancestors}; descendant = #{self.descendants.present?}; descendants_to_update = #{self.descendants_to_update.present?}"
+    # puts "================ update_descendant_permalink_references for #{self.title}"
+    # puts ">> update_descendant_permalink_with_ancestors = #{self.update_descendant_permalink_with_ancestors}; descendant = #{self.descendants.present?}; descendants_to_update = #{self.descendants_to_update.present?}"
     if self.update_descendant_permalink_with_ancestors && (self.descendants.present? || self.descendants_to_update.present?)
       descendants = self.descendants_to_update.present? ? self.descendants_to_update : self.descendants
-      # logger.debug ">>>>>> need to update descendant permalinks; there are #{descendants.length} descendants records"
+      # puts ">>>>>> need to update descendant permalinks; there are #{descendants.length} descendants records"
       descendants.each do |descendant|
         descendant.update_permalink_with_ancestors
         descendant.save
@@ -149,7 +151,7 @@ class HelpSection
 
   # update the complete permalink with the parent and self permalinks
   def update_permalink_with_ancestors
-    # logger.debug "================ update_permalink_with_ancestors for #{self.title}"
+    # puts "================ update_permalink_with_ancestors for #{self.title}"
     permalinks = get_ancestry_permalinks(self)
     permalinks.flatten!
     self.permalink_with_ancestors = permalinks.present? ? permalinks.reverse.join('/') : nil
