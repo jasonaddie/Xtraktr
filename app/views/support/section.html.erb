@@ -1,4 +1,6 @@
 <% title t('.title', section: @help_section.title) %>
+<% sections = @help_section.children.is_public.sorted %>
+<% pages = @help_section.help_pages.is_public.sorted %>
 
 <!-- breadcrumb -->
 <div>
@@ -17,34 +19,37 @@
   <p><%= @help_section.summary %></p>
 </div>
 
+<% if pages.present? || sections.present? %>
+  <!-- sections -->
+  <% if sections.present? %>
+    <div>
+      <h2><%= t('.sub_sections') %></h2>
 
-<!-- sections -->
-<% children = @help_section.children.is_public.sorted %>
-<% if children.present? %>
-  <div>
-    <h2><%= t('.sub_sections') %></h2>
+      <% sections.each do |section| %>
+        <div>
+          <h3><%= link_to(section.title, support_section_path(section.permalink_with_ancestors)) %></h3>
+          <p><%= section.summary %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 
-    <% children.each do |section| %>
-      <div>
-        <h3><%= link_to(section.title, support_section_path(section.permalink_with_ancestors)) %></h3>
-        <p><%= section.summary %></p>
-      </div>
-    <% end %>
-  </div>
+  <!-- pages -->
+  <% if pages.present? %>
+    <div>
+      <h2><%= t('.pages') %></h2>
+
+      <% pages.each do |page| %>
+        <div>
+          <h3><%= link_to(page.title, support_page_path(page.help_section.permalink_with_ancestors, page.permalink)) %></h3>
+          <p><%= page.summary %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+<% else %>
+
+  <p><%= t('.no_content') %></p>
+
 <% end %>
-
-<!-- pages -->
-<% children = @help_section.help_pages.is_public.sorted %>
-<% if children.present? %>
-  <div>
-    <h2><%= t('.pages') %></h2>
-
-    <% children.each do |page| %>
-      <div>
-        <h3><%= link_to(page.title, support_page_path(page.help_section.permalink_with_ancestors, page.permalink)) %></h3>
-        <p><%= page.summary %></p>
-      </div>
-    <% end %>
-  </div>
-<% end %>
-

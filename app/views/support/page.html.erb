@@ -18,6 +18,12 @@
 </div>
 
 <!-- content -->
-<div class="tinymce_format">
-  <%= simple_format_no_tags(@help_page.content, {}, {sanitize: false}) %>
-</div>
+<% if @help_page.content.present? %>
+  <div class="tinymce_format">
+    <%= simple_format_no_tags(@help_page.content, {}, {sanitize: false}) %>
+  </div>
+<% else %>
+
+  <p><%= t('.no_content') %></p>
+
+<% end %>
