@@ -1554,6 +1554,22 @@ ka:
       other_weights: "სხვა შეწონვები, რომელთაც ეს შეკითხვა მიეკუთვნება"
       weight_question_explanation: "მიუთითეთ, რომელი შეკითხვა უნდა იყოს გამოყენებული შეწონვისათვის იმ მონაცემების არჩევით, რომელიც შეიცავს ამ შეკითხვას და შემდეგ აირჩიეთ შეკითხვა."
       unique_id_explanation: "მონიშნეთ შეკითხვა მონაცემებიდან, რომელიც შეიცავს მოპასუხეთა უნიკალურ ID-ს. ID გამოყენებულ იქნება მონაცემებში სწორი პასუხებისთვის შეწონვის გასაკეთებლად. "
+  support:
+    index:
+      title: Support
+      intro: TODO - write a brief intro for the support section...
+      main_sections: Main Support Sections
+      no_sections: At this time, no support sections have been created. Please check back soon.
+    section:
+      title: 'Support Section: %{section}'
+      support_home_page: Support Home
+      sub_sections: Support Sub-Sections
+      pages: Support Pages
+      no_content: At this time, no sub-sections or pages have been added to this section. Please check back soon.
+    page:
+      title: 'Support Page: %{page}'
+      support_home_page: Support Home
+      no_content: At this time, no content has been entered for this page. Please check back soon.
   shared:
     explore_data:
       no_matches: "თქვენ მიერ მონიშნული პარამეტრებით მონაცემები არ მოიძებნა. გთხოვთ, სცადოთ განსხვავებული პარამეტრები. "

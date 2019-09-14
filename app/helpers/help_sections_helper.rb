@@ -29,7 +29,6 @@ module HelpSectionsHelper
   def build_help_section_breadcrumb_links(end_help_section)
     links = build_breadcrumb_link_for_help_section(end_help_section)
     links.flatten!
-
     return links.present? ? links.reverse.join(' > ') : ''
   end
 
@@ -53,8 +52,9 @@ module HelpSectionsHelper
 
     if help_section.present?
       links << link_to(help_section.title, support_section_path(help_section.permalink_with_ancestors))
+
       if help_section.parent_id.present?
-        links << build_breadcrumb_item_for_help_section(help_section.parent)
+        links << build_breadcrumb_link_for_help_section(help_section.parent)
       end
     end
 
