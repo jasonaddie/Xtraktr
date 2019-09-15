@@ -5,6 +5,7 @@ class HelpPage
   #############################
 
   belongs_to :help_section
+  has_many :help_page_assignments, dependent: :destroy
 
   #############################
 
@@ -17,10 +18,12 @@ class HelpPage
   field :public_at, type: Date
 
   #############################
+  accepts_nested_attributes_for :help_page_assignments, :reject_if => :all_blank, :allow_destroy => true
 
   attr_accessible :permalink, :title, :title_translations, :summary, :summary_translations,
                   :content, :content_translations, :help_section_id,
-                  :sort_order, :public, :public_at
+                  :sort_order, :public, :public_at,
+                  :help_page_assignments_attributes
 
   #############################
 

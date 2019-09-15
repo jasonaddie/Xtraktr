@@ -1,0 +1,20 @@
+
+                    <tr class="nested-fields">
+                      <td>
+                        <%= f.input :controller, as: :string, :label => false, input_html: {size: 50} %>
+                      </td>
+                      <td>
+                        <%= f.input :action, as: :string, :label => false, input_html: {size: 50} %>
+                      </td>
+                      <td>
+                        <%= f.input :http_method, as: :select, label: false,
+                              :collection => %w( GET POST PUT PATCH DELETE ),
+                              :input_html => {class: 'selectpicker-help-page-assignment-http-method',
+                                :'data-live-search' => "true", :'data-size' => "3",
+                                :'data-width' => "72%"} %>
+                      </td>
+                      <td>
+                        <%= link_to_remove_association '', f,
+                            class: "btn btn-delete", title: t('helpers.links.remove_assignment') %>
+                      </td>
+                    </tr>

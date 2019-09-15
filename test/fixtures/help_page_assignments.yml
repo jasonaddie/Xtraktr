@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  references: 
+  controller: MyString
+  action: MyString
+  method: MyString
+
+two:
+  references: 
+  controller: MyString
+  action: MyString
+  method: MyString
