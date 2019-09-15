@@ -29,17 +29,53 @@
             {
               "title": "Listing Page",
               "summary": "",
-              "permalink": "listing"
+              "permalink": "listing",
+              "assignments": [
+                {
+                  "controller": "admin/page_contents",
+                  "action": "index",
+                  "http_method": "GET"
+                }
+              ]
             },
             {
               "title": "Detail Page",
               "summary": "",
-              "permalink": "detail"
+              "permalink": "detail",
+              "assignments": [
+                {
+                  "controller": "admin/page_contents",
+                  "action": "show",
+                  "http_method": "GET"
+                }
+              ]
             },
             {
               "title": "Form Page",
               "summary": "",
-              "permalink": "form"
+              "permalink": "form",
+              "assignments": [
+                {
+                  "controller": "admin/page_contents",
+                  "action": "new",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/page_contents",
+                  "action": "edit",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/page_contents",
+                  "action": "create",
+                  "http_method": "POST"
+                },
+                {
+                  "controller": "admin/page_contents",
+                  "action": "update",
+                  "http_method": "PUT"
+                }
+              ]
             }
           ]
         },
@@ -51,12 +87,41 @@
             {
               "title": "Listing Page",
               "summary": "",
-              "permalink": "listing"
+              "permalink": "listing",
+              "assignments": [
+                {
+                  "controller": "admin/categories",
+                  "action": "index",
+                  "http_method": "GET"
+                }
+              ]
             },
             {
               "title": "Form Page",
               "summary": "",
-              "permalink": "form"
+              "permalink": "form",
+              "assignments": [
+                {
+                  "controller": "admin/categories",
+                  "action": "new",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/categories",
+                  "action": "edit",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/categories",
+                  "action": "create",
+                  "http_method": "POST"
+                },
+                {
+                  "controller": "admin/categories",
+                  "action": "update",
+                  "http_method": "PUT"
+                }
+              ]
             }
           ]
         },
@@ -68,12 +133,41 @@
             {
               "title": "Listing Page",
               "summary": "",
-              "permalink": "listing"
+              "permalink": "listing",
+              "assignments": [
+                {
+                  "controller": "admin/help_sections",
+                  "action": "index",
+                  "http_method": "GET"
+                }
+              ]
             },
             {
               "title": "Form Page",
               "summary": "",
-              "permalink": "form"
+              "permalink": "form",
+              "assignments": [
+                {
+                  "controller": "admin/help_sections",
+                  "action": "new",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/help_sections",
+                  "action": "edit",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/help_sections",
+                  "action": "create",
+                  "http_method": "POST"
+                },
+                {
+                  "controller": "admin/help_sections",
+                  "action": "update",
+                  "http_method": "PUT"
+                }
+              ]
             }
           ]
         },
@@ -85,17 +179,53 @@
             {
               "title": "Listing Page",
               "summary": "",
-              "permalink": "listing"
+              "permalink": "listing",
+              "assignments": [
+                {
+                  "controller": "admin/help_pages",
+                  "action": "index",
+                  "http_method": "GET"
+                }
+              ]
             },
             {
               "title": "Detail Page",
               "summary": "",
-              "permalink": "detail"
+              "permalink": "detail",
+              "assignments": [
+                {
+                  "controller": "admin/help_pages",
+                  "action": "show",
+                  "http_method": "GET"
+                }
+              ]
             },
             {
               "title": "Form Page",
               "summary": "",
-              "permalink": "form"
+              "permalink": "form",
+              "assignments": [
+                {
+                  "controller": "admin/help_pages",
+                  "action": "new",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/help_pages",
+                  "action": "edit",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/help_pages",
+                  "action": "create",
+                  "http_method": "POST"
+                },
+                {
+                  "controller": "admin/help_pages",
+                  "action": "update",
+                  "http_method": "PUT"
+                }
+              ]
             }
           ]
         },
@@ -107,22 +237,80 @@
             {
               "title": "API Version Listing Page",
               "summary": "",
-              "permalink": "version_listing"
+              "permalink": "version_listing",
+              "assignments": [
+                {
+                  "controller": "admin/api_versions",
+                  "action": "index",
+                  "http_method": "GET"
+                }
+              ]
             },
             {
               "title": "API Version Form Page",
               "summary": "",
-              "permalink": "version_form"
+              "permalink": "version_form",
+              "assignments": [
+                {
+                  "controller": "admin/api_versions",
+                  "action": "new",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/api_versions",
+                  "action": "edit",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/api_versions",
+                  "action": "create",
+                  "http_method": "POST"
+                },
+                {
+                  "controller": "admin/api_versions",
+                  "action": "update",
+                  "http_method": "PUT"
+                }
+              ]
             },
             {
               "title": "API Method Detail Page",
               "summary": "",
-              "permalink": "method_detail"
+              "permalink": "method_detail",
+              "assignments": [
+                {
+                  "controller": "admin/api_methods",
+                  "action": "show",
+                  "http_method": "GET"
+                }
+              ]
             },
             {
               "title": "API Method Form Page",
               "summary": "",
-              "permalink": "method_form"
+              "permalink": "method_form",
+              "assignments": [
+                {
+                  "controller": "admin/api_methods",
+                  "action": "new",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/api_methods",
+                  "action": "edit",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/api_methods",
+                  "action": "create",
+                  "http_method": "POST"
+                },
+                {
+                  "controller": "admin/api_methods",
+                  "action": "update",
+                  "http_method": "PUT"
+                }
+              ]
             }
           ]
         },
@@ -134,12 +322,41 @@
             {
               "title": "Listing Page",
               "summary": "",
-              "permalink": "listing"
+              "permalink": "listing",
+              "assignments": [
+                {
+                  "controller": "admin/shapesets",
+                  "action": "index",
+                  "http_method": "GET"
+                }
+              ]
             },
             {
               "title": "Form Page",
               "summary": "",
-              "permalink": "form"
+              "permalink": "form",
+              "assignments": [
+                {
+                  "controller": "admin/shapesets",
+                  "action": "new",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/shapesets",
+                  "action": "edit",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/shapesets",
+                  "action": "create",
+                  "http_method": "POST"
+                },
+                {
+                  "controller": "admin/shapesets",
+                  "action": "update",
+                  "http_method": "PUT"
+                }
+              ]
             }
           ]
         },
@@ -151,12 +368,41 @@
             {
               "title": "Listing Page",
               "summary": "",
-              "permalink": "listing"
+              "permalink": "listing",
+              "assignments": [
+                {
+                  "controller": "admin/users",
+                  "action": "index",
+                  "http_method": "GET"
+                }
+              ]
             },
             {
               "title": "Form Page",
               "summary": "",
-              "permalink": "form"
+              "permalink": "form",
+              "assignments": [
+                {
+                  "controller": "admin/users",
+                  "action": "new",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/users",
+                  "action": "edit",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "admin/users",
+                  "action": "create",
+                  "http_method": "POST"
+                },
+                {
+                  "controller": "admin/users",
+                  "action": "update",
+                  "http_method": "PUT"
+                }
+              ]
             }
           ]
         }
@@ -165,7 +411,14 @@
         {
           "title": "Admin Home",
           "summary": "",
-          "permalink": "home"
+          "permalink": "home",
+          "assignments": [
+            {
+              "controller": "admin",
+              "action": "index",
+              "http_method": "GET"
+            }
+          ]
         }
       ]
     },
@@ -177,48 +430,111 @@
         {
           "title": "Home",
           "summary": "",
-          "permalink": "home"
+          "permalink": "home",
+          "assignments": [
+            {
+              "controller": "root",
+              "action": "index",
+              "http_method": "GET"
+            }
+          ]
         },
         {
           "title": "Dataset Listing",
           "summary": "",
-          "permalink": "dataset_listing"
+          "permalink": "dataset_listing",
+          "assignments": [
+            {
+              "controller": "root",
+              "action": "explore_data",
+              "http_method": "GET"
+            }
+          ]
         },
         {
           "title": "Dataset Dashboard",
           "summary": "",
-          "permalink": "dataset_dashboard"
+          "permalink": "dataset_dashboard",
+          "assignments": [
+            {
+              "controller": "root",
+              "action": "explore_data_dashboard",
+              "http_method": "GET"
+            }
+          ]
         },
         {
           "title": "Dataset Explore Data",
           "summary": "",
-          "permalink": "dataset_explore"
+          "permalink": "dataset_explore",
+          "assignments": [
+            {
+              "controller": "root",
+              "action": "explore_data_show",
+              "http_method": "GET"
+            }
+          ]
         },
         {
           "title": "Time Series Dashboard",
           "summary": "",
-          "permalink": "time_series_dashboard"
+          "permalink": "time_series_dashboard",
+          "assignments": [
+            {
+              "controller": "time_series",
+              "action": "show",
+              "http_method": "GET"
+            }
+          ]
         },
         {
           "type": "page",
           "title": "Time Series Explore Data",
           "summary": "",
-          "permalink": "time_series_explore"
+          "permalink": "time_series_explore",
+          "assignments": [
+            {
+              "controller": "time_series",
+              "action": "explore",
+              "http_method": "GET"
+            }
+          ]
         },
         {
           "title": "Instructions",
           "summary": "",
-          "permalink": "instructions"
+          "permalink": "instructions",
+          "assignments": [
+            {
+              "controller": "root",
+              "action": "instructions",
+              "http_method": "GET"
+            }
+          ]
         },
         {
           "title": "API",
           "summary": "",
-          "permalink": "api"
+          "permalink": "api",
+          "assignments": [
+            {
+              "controller": "api",
+              "action": "index",
+              "http_method": "GET"
+            }
+          ]
         },
         {
           "title": "Contact",
           "summary": "",
-          "permalink": "contact"
+          "permalink": "contact",
+          "assignments": [
+            {
+              "controller": "root",
+              "action": "contact",
+              "http_method": "GET"
+            }
+          ]
         }
       ]
     },
@@ -230,12 +546,26 @@
         {
           "title": "Create Account",
           "summary": "",
-          "permalink": "create_account"
+          "permalink": "create_account",
+          "assignments": [
+            {
+              "controller": "users/sessions",
+              "action": "new",
+              "http_method": "GET"
+            }
+          ]
         },
         {
           "title": "User Settings",
           "summary": "",
-          "permalink": "settings"
+          "permalink": "settings",
+          "assignments": [
+            {
+              "controller": "settings",
+              "action": "index",
+              "http_method": "GET"
+            }
+          ]
         }
       ]
     }
