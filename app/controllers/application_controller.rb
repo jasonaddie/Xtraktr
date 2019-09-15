@@ -53,6 +53,8 @@ logger.debug "////////////////////////// BROWSER = #{@user_agent}"
 
 
 	def set_locale
+logger.debug "@@@@@ #{params[:controller]}; #{params[:action]}"
+
     if params[:locale] and I18n.available_locales.include?(params[:locale].to_sym)
       I18n.locale = params[:locale]
     else

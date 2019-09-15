@@ -71,6 +71,18 @@ module LoadHelpContent
     page.help_section_id = parent_section.id
     page.sort_order = sort_order
     page.public = true
+
+    if hash['assignments'].present?
+      puts ">>>>> adding #{hash['assignments'].length} assignments"
+      hash['assignments'].each do |assignment|
+        page.help_page_assignments.build(
+          controller: assignment['controller'],
+          action: assignment['action'],
+          http_method: assignment['http_method']
+        )
+      end
+    end
+
     page.save
   end
 
