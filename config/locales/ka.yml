@@ -62,6 +62,9 @@ ka:
       help_page:
         one: Help Page
         other: Help Pages
+      help_page_assignment:
+        one: Page Assignment
+        other: Page Assignments
     attributes:
       user:
         email: "ელ. ფოსტა"
@@ -328,6 +331,11 @@ ka:
         public_at: "გამოქვეყნებულია"
         updated_at: "ბოლო განახლება"
         help_section_id: Help Section
+      help_page_assignment:
+        help_page_id: Help Page
+        controller: Controller
+        action: Action
+        http_method: HTTP Method
     hints:
       dataset:
         title: "თქვენი მონაცემების სახელწოდება"
@@ -468,6 +476,10 @@ ka:
         public: "Select 'Yes' to make the Help Page available to the world"
         sort_order: The order the help pages should appear within the help section
         help_section_id: The Help Section that this Help Page will appear under
+      help_page_assignment:
+        controller: "The controller name. If the controller is under the Admin section, use: 'admin/controller_name'."
+        action: The action name.
+        http_method: GET, POST, PUT, PATCH, DELETE
   errors:
     messages:
       required_field: "სავალდებულო ველი"
@@ -836,6 +848,8 @@ ka:
       edit_description: "აღწერის რედაქტირება"
       view_group_items: "ამ ჯგუფში შემავალი ერთეულების ნახვა"
       assign_weight: "მიაკუთვნეთ შეწონვა"
+      add_assignment: Add Page Assignment
+      remove_assignment: Remove Page Assignment
     titles:
       edit: "შეცვლა %{model}"
       save: "შენახვა %{model}"
@@ -1093,6 +1107,10 @@ ka:
         title: "ახალი მომხმარებელი"
       show:
         title: "მომხმარებლის დეტალები"
+    help_pages:
+      form:
+        assignments: Page Assignments
+        assignments_intro: Use this section to indicate which web pages should have links to this help text.
   devise:
     mailer:
       reset_password_instructions:

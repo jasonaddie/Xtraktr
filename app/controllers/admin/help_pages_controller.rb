@@ -32,7 +32,7 @@ class Admin::HelpPagesController < ApplicationController
     @help_page = HelpPage.new
 
     @css.push("help_section.css")
-    @js.push("help_section.js")
+    @js.push("help_section.js", 'cocoon.js')
 
     set_tabbed_translation_form_settings
 
@@ -47,7 +47,7 @@ class Admin::HelpPagesController < ApplicationController
     @help_page = HelpPage.find(params[:id])
     set_tabbed_translation_form_settings
     @css.push("help_section.css")
-    @js.push("help_section.js")
+    @js.push("help_section.js", 'cocoon.js')
   end
 
   # POST /help_pages
@@ -61,7 +61,7 @@ class Admin::HelpPagesController < ApplicationController
         format.json { render json: @help_page, status: :created, location: @help_page }
       else
         @css.push("help_section.css")
-        @js.push("help_section.js")
+        @js.push("help_section.js", 'cocoon.js')
         set_tabbed_translation_form_settings
         format.html { render action: "new" }
         format.json { render json: @help_page.errors, status: :unprocessable_entity }
@@ -80,7 +80,7 @@ class Admin::HelpPagesController < ApplicationController
         format.json { head :no_content }
       else
         @css.push("help_section.css")
-        @js.push("help_section.js")
+        @js.push("help_section.js", 'cocoon.js')
         set_tabbed_translation_form_settings
         format.html { render action: "edit" }
         format.json { render json: @help_page.errors, status: :unprocessable_entity }

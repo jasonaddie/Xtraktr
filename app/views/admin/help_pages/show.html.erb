@@ -1,4 +1,12 @@
 <%- model_class = HelpPage -%>
+<%- a_model_class = HelpPageAssignment -%>
+<%-
+  label_key = "mongoid.attributes.help_page."
+  hint_key = "mongoid.hints.help_page."
+  a_label_key = "mongoid.attributes.help_page_assignment."
+  a_hint_key = "mongoid.hints.help_page_assignment."
+-%>
+
 <% title t '.title', :default => model_class.model_name.human %>
 
 
@@ -38,6 +46,39 @@
 
 <p><strong><%= model_class.human_attribute_name(:public_at) %>:</strong>
 <%= l @help_page.public_at, format: :day_first if @help_page.public_at %></p>
+
+<p><strong><%= a_model_class.model_name.human(:count => 2) %>:</strong>
+</p>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>
+        <%= a_model_class.human_attribute_name(:controller) %>
+      </th>
+      <th>
+        <%= a_model_class.human_attribute_name(:action) %>
+      </th>
+      <th>
+        <%= a_model_class.human_attribute_name(:http_method) %>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @help_page.help_page_assignments.each do |assignment| %>
+      <tr>
+        <td>
+          <%= assignment.controller %>
+        </td>
+        <td>
+          <%= assignment.action %>
+        </td>
+        <td>
+          <%= assignment.http_method %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <p><strong><%= model_class.human_attribute_name(:content) %>:</strong></p>
 <div class="tinymce_format">
