@@ -29,4 +29,13 @@ class HelpPageAssignment
   validates_presence_of :http_method
   validates_inclusion_of :http_method, in: %w( GET POST PUT PATCH DELETE )
 
+  #############################
+
+  def self.with_values(controller, action, http_method)
+    where(
+      controller: controller,
+      action: action,
+      http_method: http_method
+    )
+  end
 end

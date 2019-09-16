@@ -97,4 +97,11 @@ class HelpPage
     where(help_section_id: help_section_id)
   end
 
+  # get record that is assigned to a specific page
+  def self.with_assignment(controller, action, http_method)
+    find(HelpPageAssignment.with_values(controller, action, http_method)
+        .only(:help_page_id)
+        .pluck(:help_page_id)
+    )
+  end
 end
