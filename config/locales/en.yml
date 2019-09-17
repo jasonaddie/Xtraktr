@@ -855,6 +855,7 @@ en:
       save: "Save %{model}"
       new: "New %{model}"
       delete: "Delete %{model}"
+      learn_more: Read the support information about this page
   app:
     language:
       en: English

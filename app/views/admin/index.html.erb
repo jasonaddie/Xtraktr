@@ -1,5 +1,7 @@
 <% title t('.title') %>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
   <% if current_user.role? @site_admin_role %>
      <div class="col-sm-4">
    		<ul class="standard">

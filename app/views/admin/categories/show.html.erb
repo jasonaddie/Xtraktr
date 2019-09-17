@@ -6,7 +6,7 @@
   <%= link_to t('.back', :default => t("helpers.links.back")),
               admin_categories_path, :class => 'btn btn-default'  %>
   <%= link_to '',
-              edit_admin_category_path(@category), 
+              edit_admin_category_path(@category),
               :title => t('helpers.links.edit'),
               :class => 'btn btn-edit' %>
   <%= link_to '',
@@ -17,6 +17,8 @@
               :class => 'btn btn-delete' %>
   <%= link_to t('helpers.links.admin'), admin_path, :class => 'btn btn-default' %>
 </div>
+
+<%= render :partial => 'shared/link_to_help_page' %>
 
 <p><strong><%= model_class.human_attribute_name(:name) %>:</strong>
 <%= @category.name %></p>

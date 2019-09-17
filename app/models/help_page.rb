@@ -54,6 +54,12 @@ class HelpPage
             language: Language.get_name(default_language),
             msg: I18n.t('errors.messages.blank')) )
       end
+      if self.summary_translations[default_language].blank?
+        errors.add(:base, I18n.t('errors.messages.translation_default_lang',
+            field_name: self.class.human_attribute_name('summary'),
+            language: Language.get_name(default_language),
+            msg: I18n.t('errors.messages.blank')) )
+      end
     end
   end
 
@@ -103,5 +109,20 @@ class HelpPage
         .only(:help_page_id)
         .pluck(:help_page_id)
     )
+  end
+
+  #############################
+
+  # merge the section title with the page title
+  def title_with_section
+    x = ''
+
+    if self.help_section.present?
+      x << self.help_section.title
+      x << ' - '
+    end
+    x << self.title
+
+    return x
   end
 end
