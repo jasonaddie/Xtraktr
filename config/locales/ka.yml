@@ -850,6 +850,8 @@ ka:
       assign_weight: "მიაკუთვნეთ შეწონვა"
       add_assignment: Add Page Assignment
       remove_assignment: Remove Page Assignment
+      support: Support
+      learn_more: Learn More...
     titles:
       edit: "შეცვლა %{model}"
       save: "შენახვა %{model}"

@@ -23,7 +23,7 @@
       "sections": [
         {
           "title": "Edit Text on Site",
-          "summary": "",
+          "summary": "Use this section to manage the text on the site (i.e., instructions, contact, disclaimer, etc).",
           "permalink": "site_text",
           "pages": [
             {

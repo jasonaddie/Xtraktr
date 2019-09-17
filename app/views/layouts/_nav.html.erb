@@ -93,6 +93,12 @@
                     <%= t('helpers.links.admin') %>
                     <% end %></li>
                 <% end %>
+                <% if current_user.role?(@data_editor_role) %>
+                  <li><%= link_to support_path  do %>
+                    <i class="menu_support"></i>
+                    <%= t('helpers.links.support') %>
+                    <% end %></li>
+                <% end %>
               </ul>
             </div>
             <div>
