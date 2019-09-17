@@ -8,6 +8,8 @@
   <%= link_to t('helpers.links.admin'), admin_path, :class => 'btn btn-default' if current_user.role? User::ROLES[:admin] %>
 </div>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <table id="shapeset-datatable" class="table table-striped display">
   <thead>
     <tr>
@@ -35,7 +37,7 @@
         <td><%= l shapeset.created_at, format: :date_only %></td>
         <td>
           <%= link_to '',
-                      edit_admin_shapeset_path(shapeset), 
+                      edit_admin_shapeset_path(shapeset),
                       :title => t('helpers.links.edit'),
                       :class => 'btn btn-edit btn-xs' %>
           <%= link_to '',

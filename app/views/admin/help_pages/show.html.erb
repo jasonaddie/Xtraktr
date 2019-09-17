@@ -26,6 +26,8 @@
   <%= link_to t('helpers.links.admin'), admin_path, :class => 'btn btn-default' %>
 </div>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <p><strong><%= model_class.human_attribute_name(:help_section_id) %>:</strong>
 <%= build_help_section_breadcrumb_text(@help_page.help_section) if @help_page.help_section_id? %></p>
 

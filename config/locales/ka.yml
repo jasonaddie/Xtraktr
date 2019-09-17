@@ -857,6 +857,7 @@ ka:
       save: "შენახვა %{model}"
       new: "ახალი %{model}"
       delete: "წაშლა %{model}"
+      learn_more: Read the support information about this page
   app:
     language:
       en: English
