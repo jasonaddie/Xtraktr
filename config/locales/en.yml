@@ -848,6 +848,8 @@ en:
       assign_weight: Assign Weight
       add_assignment: Add Page Assignment
       remove_assignment: Remove Page Assignment
+      support: Support
+      learn_more: Learn More...
     titles:
       edit: "Edit %{model}"
       save: "Save %{model}"

@@ -9,6 +9,8 @@
   :class => 'btn btn-default' %>
 </div>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <table class="table table-striped display">
   <thead>
     <tr>
@@ -24,7 +26,7 @@
         <td><%= page.title %></td>
         <td>
           <%= link_to '',
-                      edit_admin_page_content_path(page), 
+                      edit_admin_page_content_path(page),
                       :title => t('helpers.links.edit'),
                       :class => 'btn btn-xs btn-edit' %>
           <%= link_to '',

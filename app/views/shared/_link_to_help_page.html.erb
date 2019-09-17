@@ -1,0 +1,22 @@
+<%
+  # based on the controller, action and method,
+  # see if there is a help page that is assigned to this page
+  # - do not need to get help page if controller is support for that
+  #   is the help section
+
+  if params[:controller] != 'support'
+    @assigned_help_page = HelpPage.without(:content).with_assignment(params[:controller], params[:action], request.method).first
+  end
+
+  if @assigned_help_page.present? && @assigned_help_page.help_section.present?
+%>
+
+<p class="assigned-help-page">
+  <%= @assigned_help_page.summary %>
+  <%= link_to support_page_path(@assigned_help_page.help_section.permalink_with_ancestors, @assigned_help_page.permalink), target: :blank, class: 'btn btn-primary btn-xs' do %>
+    <i class="menu_support"></i>
+    <%= t('helpers.links.learn_more') %>
+  <% end %>
+</p>
+
+<% end %>
