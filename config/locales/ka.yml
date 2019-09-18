@@ -321,6 +321,7 @@ ka:
         public_at: "გამოქვეყნებულია"
         updated_at: "ბოლო განახლება"
         parent_id: Parent Section
+        permalink_with_ancestors: Section URL
       help_page:
         permalink: "პერმალინკი"
         title: "სახელწოდება"

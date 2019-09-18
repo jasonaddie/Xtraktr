@@ -11,13 +11,12 @@
 
 <%= render :partial => 'shared/link_to_help_page' %>
 
-<table class="table table-striped display help-sections">
+<table class="table table-striped display" id="help-pages-datatable">
   <thead>
     <tr>
+      <th><%= model_class.human_attribute_name(:help_section_id) %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:summary) %></th>
-      <th><%= model_class.human_attribute_name(:help_section_id) %></th>
-      <th><%= model_class.human_attribute_name(:permalink) %></th>
       <th><%= model_class.human_attribute_name(:public) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -25,10 +24,9 @@
   <tbody>
     <% @help_pages.each do |help_page| %>
       <tr>
+        <td><%= build_help_section_breadcrumb_text(help_page.help_section) if help_page.help_section_id %></td>
         <td><%= link_to help_page.title, admin_help_page_path(help_page) %></td>
         <td><%= help_page.summary %></td>
-        <td><%= build_help_section_breadcrumb_text(help_page.help_section) if help_page.help_section_id %></td>
-        <td><%= help_page.permalink %></td>
         <td><%= format_public_status(help_page.public) %></td>
         <td>
           <%= link_to '',

@@ -16,7 +16,6 @@
     <tr>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:summary) %></th>
-      <th><%= model_class.human_attribute_name(:permalink) %></th>
       <th><%= model_class.human_attribute_name(:permalink_with_ancestors) %></th>
       <th><%= model_class.human_attribute_name(:public) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -29,7 +28,6 @@
         <% level = help_section.ancestry.present? ? help_section.path_ids.length+1 : 1 %>
         <td class="l<%= level %>"><%= help_section.title %></td>
         <td><%= help_section.summary %></td>
-        <td><%= help_section.permalink %></td>
         <td><%= help_section.permalink_with_ancestors %></td>
         <td><%= format_public_status(help_section.public) %></td>
         <td>

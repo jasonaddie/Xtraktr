@@ -321,6 +321,7 @@ en:
         public_at: Released At
         updated_at: Last Updated At
         parent_id: Parent Section
+        permalink_with_ancestors: Section URL
       help_page:
         permalink: Permalink
         title: Title

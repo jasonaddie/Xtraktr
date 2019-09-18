@@ -74,4 +74,19 @@ $(document).ready(function(){
   });
 
 
+  $('#help-pages-datatable').dataTable({
+    "dom": '<"top"fli>t<"bottom"p><"clear">',
+    "order": [[0, 'asc'], [1, 'asc']],
+    "language": {
+      "url": gon.datatable_i18n_url,
+      "searchPlaceholder": gon.datatable_search
+    },
+    "columnDefs": [
+      { orderable: false, targets: [-1] }
+    ],
+    "pagingType": "full_numbers"
+  });
+
+
+
 });

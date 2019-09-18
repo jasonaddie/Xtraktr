@@ -9,6 +9,8 @@ class Admin::HelpPagesController < ApplicationController
   def index
     @help_pages = HelpPage.sorted
 
+    @js.push('search.js')
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @help_pages }
