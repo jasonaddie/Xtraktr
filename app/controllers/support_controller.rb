@@ -9,6 +9,8 @@ class SupportController < ApplicationController
     # get all root section
     @root_sections = HelpSection.roots.sorted.is_public
 
+    @css.push('support.css')
+
     respond_to do |format|
       format.html
     end
@@ -17,6 +19,8 @@ class SupportController < ApplicationController
   def section
     # help_section is set in the get_section private method
 
+    @css.push('support.css')
+
     respond_to do |format|
       format.html
     end
@@ -24,6 +28,8 @@ class SupportController < ApplicationController
 
   def page
     @help_page = HelpPage.is_public.in_help_section(@help_section.id).by_permalink(params[:page_id])
+
+    @css.push('support.css')
 
     if @help_page.present?
       respond_to do |format|
