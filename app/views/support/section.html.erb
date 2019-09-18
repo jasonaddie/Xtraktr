@@ -2,54 +2,53 @@
 <% sections = @help_section.children.is_public.sorted %>
 <% pages = @help_section.help_pages.is_public.sorted %>
 
-<!-- breadcrumb -->
-<div>
+<div class="support-breadcrumb">
   <%= link_to t('.support_home_page'), support_path %>
   <%
     bc = build_help_section_breadcrumb_links(@help_section.parent)
     if bc.present?
   %>
     >
-    <%= bc.html_safe %>
+    <%= bc.html_safe + " > #{@help_section.title}" %>
+  <% else %>
+    <%= " > #{@help_section.title}" %>
   <% end %>
 </div>
 
-<!-- summary -->
-<div>
+<div class="support-summary">
   <p><%= @help_section.summary %></p>
 </div>
 
 <% if pages.present? || sections.present? %>
-  <!-- sections -->
+
   <% if sections.present? %>
-    <div>
-      <h2><%= t('.sub_sections') %></h2>
+    <h2><%= t('.sub_sections') %></h2>
+    <ul class="support-lists support-subsections">
 
       <% sections.each do |section| %>
-        <div>
+        <li>
           <h3><%= link_to(section.title, support_section_path(section.permalink_with_ancestors)) %></h3>
           <p><%= section.summary %></p>
-        </div>
+        </li>
       <% end %>
-    </div>
+    </ul>
   <% end %>
 
-  <!-- pages -->
   <% if pages.present? %>
-    <div>
-      <h2><%= t('.pages') %></h2>
+    <h2><%= t('.pages') %></h2>
+    <ul class="support-lists support-pages">
 
       <% pages.each do |page| %>
-        <div>
+        <li>
           <h3><%= link_to(page.title, support_page_path(page.help_section.permalink_with_ancestors, page.permalink)) %></h3>
           <p><%= page.summary %></p>
-        </div>
+        </li>
       <% end %>
-    </div>
+    </ul>
   <% end %>
 
 <% else %>
 
-  <p><%= t('.no_content') %></p>
+  <p class="support-no-content"><%= t('.no_content') %></p>
 
 <% end %>

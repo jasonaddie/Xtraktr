@@ -1,29 +1,29 @@
 <% title t('.title', page: @help_page.title_with_section) %>
 
 <!-- breadcrumb -->
-<div>
+<div class="support-breadcrumb">
   <%= link_to t('.support_home_page'), support_path %>
   <%
     bc = build_help_section_breadcrumb_links(@help_page.help_section)
     if bc.present?
   %>
     >
-    <%= bc.html_safe %>
+    <%= bc.html_safe + " > #{@help_page.title}" %>
+  <% else %>
+    <%= " > #{@help_page.title}" %>
   <% end %>
 </div>
 
-<!-- summary -->
-<div>
+<div class="support-summary">
   <p><%= @help_page.summary %></p>
 </div>
 
-<!-- content -->
 <% if @help_page.content.present? %>
-  <div class="tinymce_format">
+  <div class="tinymce_format support-page-content">
     <%= simple_format_no_tags(@help_page.content, {}, {sanitize: false}) %>
   </div>
 <% else %>
 
-  <p><%= t('.no_content') %></p>
+  <p class="support-no-content"><%= t('.no_content') %></p>
 
 <% end %>
