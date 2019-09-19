@@ -29,6 +29,18 @@
               ]
             },
             {
+              "title": "Detail Page",
+              "summary": "Summary is coming soon...",
+              "permalink": "detail",
+              "assignments": [
+                {
+                  "controller": "questions",
+                  "action": "show",
+                  "http_method": "GET"
+                }
+              ]
+            },
+            {
               "title": "Form Page",
               "summary": "Summary is coming soon...",
               "permalink": "form",
@@ -387,8 +399,305 @@
       "summary": "Information about how to create a Time Series (i.e., panel) from existing Datasets in the system.",
       "permalink": "time_series",
       "sections": [
+        {
+          "title": "Edit Questions/Answers",
+          "summary": "Summary is coming soon...",
+          "permalink": "edit_qa",
+          "pages": [
+            {
+              "title": "Listing Page",
+              "summary": "Summary is coming soon...",
+              "permalink": "listing",
+              "assignments": [
+                {
+                  "controller": "time_series_questions",
+                  "action": "index",
+                  "http_method": "GET"
+                }
+              ]
+            },
+            {
+              "title": "Detail Page",
+              "summary": "Summary is coming soon...",
+              "permalink": "detail",
+              "assignments": [
+                {
+                  "controller": "time_series_questions",
+                  "action": "show",
+                  "http_method": "GET"
+                }
+              ]
+            },
+            {
+              "title": "Form Page",
+              "summary": "Summary is coming soon...",
+              "permalink": "form",
+              "assignments": [
+                {
+                  "controller": "time_series_questions",
+                  "action": "new",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "time_series_questions",
+                  "action": "edit",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "time_series_questions",
+                  "action": "create",
+                  "http_method": "POST"
+                },
+                {
+                  "controller": "time_series_questions",
+                  "action": "update",
+                  "http_method": "PUT"
+                }
+              ]
+            },
+            {
+              "title": "Automatically Assign Matching Questions",
+              "summary": "Summary is coming soon...",
+              "permalink": "auto_assign_questions",
+              "assignments": [
+                {
+                  "controller": "time_series",
+                  "action": "auto_assign_questions",
+                  "http_method": "GET"
+                }
+              ]
+            },
+            {
+              "title": "Mass Changes Via Spreadsheet",
+              "summary": "Summary is coming soon...",
+              "permalink": "mass_changes_spreadsheet",
+              "assignments": [
+                {
+                  "controller": "time_series_questions",
+                  "action": "mass_changes",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "time_series_questions",
+                  "action": "mass_changes",
+                  "http_method": "POST"
+                }
+              ]
+            },
+            {
+              "title": "Answer Mass Changes",
+              "summary": "Summary is coming soon...",
+              "permalink": "mass_changes_answers",
+              "assignments": [
+                {
+                  "controller": "time_series",
+                  "action": "mass_changes_answers",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "time_series",
+                  "action": "mass_changes_answers",
+                  "http_method": "POST"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Group Questions",
+          "summary": "Summary is coming soon...",
+          "permalink": "group",
+          "pages": [
+            {
+              "title": "Listing Page",
+              "summary": "Summary is coming soon...",
+              "permalink": "listing",
+              "assignments": [
+                {
+                  "controller": "time_series_groups",
+                  "action": "index",
+                  "http_method": "GET"
+                }
+              ]
+            },
+            {
+              "title": "Form Page",
+              "summary": "Summary is coming soon...",
+              "permalink": "form",
+              "assignments": [
+                {
+                  "controller": "time_series_groups",
+                  "action": "new",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "time_series_groups",
+                  "action": "edit",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "time_series_groups",
+                  "action": "create",
+                  "http_method": "POST"
+                },
+                {
+                  "controller": "time_series_groups",
+                  "action": "update",
+                  "http_method": "PUT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Sort Groups/Questions",
+          "summary": "Summary is coming soon...",
+          "permalink": "sort",
+          "pages": [
+            {
+              "title": "Listing Page",
+              "summary": "Summary is coming soon...",
+              "permalink": "listing",
+              "assignments": [
+                {
+                  "controller": "time_series",
+                  "action": "sort",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "time_series",
+                  "action": "sort",
+                  "http_method": "POST"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Weight Data",
+          "summary": "Summary is coming soon...",
+          "permalink": "weight_data",
+          "pages": [
+            {
+              "title": "Listing Page",
+              "summary": "Summary is coming soon...",
+              "permalink": "listing",
+              "assignments": [
+                {
+                  "controller": "time_series_weights",
+                  "action": "index",
+                  "http_method": "GET"
+                }
+              ]
+            },
+            {
+              "title": "Form Page",
+              "summary": "Summary is coming soon...",
+              "permalink": "form",
+              "assignments": [
+                {
+                  "controller": "time_series_weights",
+                  "action": "new",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "time_series_weights",
+                  "action": "edit",
+                  "http_method": "GET"
+                },
+                {
+                  "controller": "time_series_weights",
+                  "action": "create",
+                  "http_method": "POST"
+                },
+                {
+                  "controller": "time_series_weights",
+                  "action": "update",
+                  "http_method": "PUT"
+                }
+              ]
+            }
+          ]
+        }
       ],
       "pages": [
+        {
+          "title": "Listing Page",
+          "summary": "Summary is coming soon...",
+          "permalink": "listing",
+          "assignments": [
+            {
+              "controller": "time_series",
+              "action": "index",
+              "http_method": "GET"
+            }
+          ]
+        },
+        {
+          "title": "Settings (Form Page)",
+          "summary": "Summary is coming soon...",
+          "permalink": "form",
+          "assignments": [
+            {
+              "controller": "time_series",
+              "action": "new",
+              "http_method": "GET"
+            },
+            {
+              "controller": "time_series",
+              "action": "edit",
+              "http_method": "GET"
+            },
+            {
+              "controller": "time_series",
+              "action": "create",
+              "http_method": "POST"
+            },
+            {
+              "controller": "time_series",
+              "action": "update",
+              "http_method": "PUT"
+            }
+          ]
+        },
+        {
+          "title": "Explore Data (Time Series Dashboard)",
+          "summary": "Summary is coming soon...",
+          "permalink": "dashboard",
+          "show_in_subnavbar": true,
+          "assignments": [
+            {
+              "controller": "time_series",
+              "action": "show",
+              "http_method": "GET"
+            }
+          ]
+        },
+        {
+          "title": "Explore Data",
+          "summary": "Summary is coming soon...",
+          "permalink": "explore",
+          "show_in_subnavbar": true,
+          "assignments": [
+            {
+              "controller": "time_series",
+              "action": "explore",
+              "http_method": "GET"
+            }
+          ]
+        },
+        {
+          "title": "Highlights",
+          "summary": "Summary is coming soon...",
+          "permalink": "highlights",
+          "assignments": [
+            {
+              "controller": "time_series",
+              "action": "highlights",
+              "http_method": "GET"
+            }
+          ]
+        }
       ]
     },
     {
