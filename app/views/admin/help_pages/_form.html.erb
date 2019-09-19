@@ -48,6 +48,26 @@
           </select>
         </div>
       </div>
+      <div class="col-sm-4">
+        <div class="radio_buttons input optional form-group" id="help_page_show_in_subnavbar_input">
+          <label class="  control-label" for="help_page_show_in_subnavbar"><%= t(label_key + 'show_in_subnavbar') %><div class="help-inline" title="<%= t(hint_key + 'show_in_subnavbar') %>"><div>?</div></div>
+          </label>
+          <div class="radio">
+            <label class="choice" for="help_page_show_in_subnavbar_true">
+              <% checked = @help_page.show_in_subnavbar? ? 'checked=checked' : '' %>
+              <input <%= checked %> id="help_page_show_in_subnavbar_true" name="help_page[show_in_subnavbar]" type="radio" value="true" />
+              <%= t('formtastic.yes') %>
+            </label>
+          </div>
+          <div class="radio">
+            <label class="choice" for="help_page_show_in_subnavbar_false">
+              <% checked = @help_page.show_in_subnavbar? ? '' : 'checked=checked' %>
+              <input <%= checked %> id="help_page_show_in_subnavbar_false" name="help_page[show_in_subnavbar]" type="radio" value="false" />
+              <%= t('formtastic.no') %>
+            </label>
+          </div>
+        </div>
+      </div>
     </div>
   <% end %>
 

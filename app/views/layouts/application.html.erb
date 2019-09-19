@@ -38,8 +38,8 @@
                   <% end %>
               </div>
               <div class="col col-right">
-                <% if @is_dataset_admin %>
-                  <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
+                  <% if @is_dataset_admin %>
                     <% if @dataset.present? && @dataset.created_at.present? %>
                       <li class="dropdown" role="menuitem">
                         <%= render partial: 'layouts/dataset_menu', locals: {dataset: @dataset} %>
@@ -48,9 +48,7 @@
                     <li role="menuitem">
                       <%= link_to t('app.menu.all_datasets'), datasets_path %>
                     </li>
-                  </ul>
-                <% elsif @is_time_series_admin %>
-                  <ul class="nav navbar-nav navbar-right">
+                  <% elsif @is_time_series_admin %>
                     <% if @time_series.present? && @time_series.created_at.present? %>
                       <li class="dropdown" role="menuitem">
                         <%= render partial: 'layouts/time_series_menu', locals: {time_series: @time_series} %>
@@ -59,8 +57,10 @@
                     <li role="menuitem">
                       <%= link_to t('app.menu.all_time_series'), time_series_index_path %>
                     </li>
-                  </ul>
-                <% end %>
+                  <% end %>
+
+                  <%= render :partial => 'shared/link_to_help_page', locals: {in_navbar: true} %>
+                </ul>
               </div>
             </div>
           <% end %>

@@ -70,6 +70,8 @@ module LoadHelpContent
     page.permalink = hash['permalink']
     page.help_section_id = parent_section.id
     page.sort_order = sort_order
+    page.show_in_subnavbar = hash['show_in_subnavbar'] if hash['show_in_subnavbar'].present?
+
     page.public = true
 
     if hash['assignments'].present?
