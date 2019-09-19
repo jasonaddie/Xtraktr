@@ -9,8 +9,10 @@
               img_path = 'svg/xtraktr_logo.svg'
             end
           %>
-          <%= link_to root_path(:locale => I18n.locale),:class=>"navbar-brand #{link_class}" do %>
-            <%= image_tag img_path, :id => 'logo', :alt => t("app.common.#{@app_key_name}.app_name") %>
+          <%= link_to "https://www.unicef.org/georgia/#{I18n.locale == :ka ? 'ka' : ''}",
+                  :class=>"navbar-brand #{link_class}",
+                  title: t('.logo_title') do %>
+            <%= image_tag img_path, :id => 'logo', :alt => t('.logo_title') %>
           <% end %>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <span class="sr-only"><%= t('.toggle') %></span>
@@ -93,12 +95,6 @@
                     <%= t('helpers.links.admin') %>
                     <% end %></li>
                 <% end %>
-                <% if current_user.role?(@data_editor_role) %>
-                  <li><%= link_to support_path  do %>
-                    <i class="menu_support"></i>
-                    <%= t('helpers.links.support') %>
-                    <% end %></li>
-                <% end %>
               </ul>
             </div>
             <div>
@@ -125,12 +121,12 @@
               <div class="tbl">
                 <div class="top">
                   <ul class="nav in" id="side-menu">
-                    <li><%= link_to t('.back'), "https://www.unicef.org/georgia/#{I18n.locale == :ka ? 'ka' : ''}", class: 'unicef', :target => :blank %></li>
                     <li><%= link_to_sidebar root_path, 'home' %></li>
                     <li><%= link_to_sidebar explore_data_path, 'datasets' %></li>
                     <li><%= link_to_sidebar instructions_path, 'instructions' %></li>
                     <li><%= link_to_sidebar api_path, 'api' %></li>
                     <li><%= link_to_sidebar contact_path, 'contact' %></li>
+                    <li><%= link_to_sidebar support_path, 'support' %></li>
                   </ul>
                 </div>
                 <div class="bottom">

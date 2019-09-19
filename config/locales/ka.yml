@@ -1018,6 +1018,7 @@ ka:
       api: API
       instructions: "ინსტრუქცია"
       home: "მთავარი"
+      support: Support
       disclaimer: "შენიშვნა"
       powered_xtraktr: "შექმნილია <br />Xtraktr-ით"
       powered_xtraktr_title: "მონაცემები შექმნილია Xtraktr-ის პლატფორმის გამოყენებით. გაიგეთ მეტი და დაამატეთ თქვენი მონაცემები Xtraktr-ს."
@@ -1078,7 +1079,7 @@ ka:
   layouts:
     nav:
       toggle: "ნავიგაციის ჩართვა/გამორთვა"
-      back: UNICEF საქართველო
+      logo_title: UNICEF საქართველო
     explore_data:
       private_share_header: "პირადად გაზიარებული '%{title}'"
       private_share_explanation: "შეგიძლიათ დააკოპიროთ და გაუზიაროთ შემდეგი URL მას, ვინც გსურთ, რომ იხილოს '%{title}' იმ შემთხვევაშიც კი, თუ თქვენი მონაცემთა ცხრილი არ არის საჯარო. ამ ადამიანებს ექნებათ საშუალება, გაეცნონ თქვენს მონაცემებს, მაგრამ ვერ შეძლებენ მის შეცვლას და შესწორებას."
