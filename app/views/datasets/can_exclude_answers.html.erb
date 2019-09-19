@@ -2,6 +2,8 @@
 <%- model_class_a = Answer -%>
 <% title t('.title') %>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <% questions = @dataset.questions.for_analysis %>
 <% if questions.present? %>
 
@@ -34,13 +36,13 @@
             <tr>
               <td>
                 <%
-                check_id = "dataset_questions_attributes_#{question_index}_answers_attributes_#{answer_index}_can_exclude" 
+                check_id = "dataset_questions_attributes_#{question_index}_answers_attributes_#{answer_index}_can_exclude"
                 %>
-                <input id="<%= "dataset_questions_attributes_#{question_index}_answers_attributes_#{answer_index}_id" %>" 
-                      name="<%= "dataset[questions_attributes][#{question_index}][answers_attributes][#{answer_index}][id]" %>" 
+                <input id="<%= "dataset_questions_attributes_#{question_index}_answers_attributes_#{answer_index}_id" %>"
+                      name="<%= "dataset[questions_attributes][#{question_index}][answers_attributes][#{answer_index}][id]" %>"
                       type="hidden" value="<%= answer.id %>">
-                <input id="<%= check_id %>" 
-                      name="<%= "dataset[questions_attributes][#{question_index}][answers_attributes][#{answer_index}][can_exclude]" %>" 
+                <input id="<%= check_id %>"
+                      name="<%= "dataset[questions_attributes][#{question_index}][answers_attributes][#{answer_index}][can_exclude]" %>"
                       type="checkbox" value="true" <%= answer.can_exclude == true ? 'checked=checked' : ''%>>
               </td>
               <td>

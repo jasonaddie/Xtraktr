@@ -2,6 +2,8 @@
 
 <% title t('.title') %>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <% if @dataset.has_warnings? %>
   <div id="dataset-warnings" class="tabs style1">
     <ul class="nav nav-tabs" role="tablist">

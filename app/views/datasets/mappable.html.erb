@@ -1,8 +1,10 @@
 <% title t('.title') %>
-<%- 
+<%-
   label_key_model = "mongoid.models."
   label_key = "mongoid.attributes.question."
 -%>
+
+<%= render :partial => 'shared/link_to_help_page' %>
 
 <p>
   <%= t('.explanation') %>
@@ -33,7 +35,7 @@
             <td><%= format_boolean_flag(question.has_map_adjustable_max_range?) %></td>
             <td>
               <%= link_to '',
-                          mappable_form_edit_dataset_path(:id => @dataset, :question_id => question.id), 
+                          mappable_form_edit_dataset_path(:id => @dataset, :question_id => question.id),
                           :title => t('helpers.links.edit'),
                           :class => 'btn btn-edit btn-xs' %>
               <%= link_to '',

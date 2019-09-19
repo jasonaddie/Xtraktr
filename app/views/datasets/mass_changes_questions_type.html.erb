@@ -1,6 +1,8 @@
 <%- model_class = Question -%>
 <% title t('.title') %>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <% if @dataset.questions.with_code_answers.present? %>
   <%= form_tag mass_changes_questions_type_dataset_path(@dataset), id: 'mass_change_form', class: 'form-data-loader', :"data-view-chart-path" => api_v3_dataset_question_data_path, :"data-id" => @dataset.id, :novalidate => true do %>
     <p><%= simple_format(t('.explanation')) %></p>
