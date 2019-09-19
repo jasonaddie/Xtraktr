@@ -343,7 +343,7 @@ div.message {
             display:inline-block;
             vertical-align:top;
             height:30px;
- 
+
             .dropdown-toggle {
               display: inline-block;
               background:rgba(60, 67, 82,0.05) url(/assets/svg/select_arrow.svg) no-repeat center right / 21px 7px;
@@ -361,7 +361,7 @@ div.message {
               box-shadow:none;
               border-radius: 0px;
               outline:none;
-              li 
+              li
               {
                 a {
                   font: 13px 'sourcesans_pro', 'sans-serif';
@@ -385,13 +385,30 @@ div.message {
 
       }
       &.col-right{
-        .navbar-nav > li > a{
-          font:14px 'sourcesans_pro', 'sans-serif';
-          font-weight:normal;
-          margin:0 12px 0 0;
-          padding:0;
-          color: @00adee;
-          line-height: 30px;
+        .navbar-nav > li {
+          & > a{
+            font:14px 'sourcesans_pro', 'sans-serif';
+            font-weight:normal;
+            margin:0 12px 0 0;
+            padding:0;
+            color: @00adee;
+            line-height: 30px;
+          }
+          &.support{
+            margin-left: 20px;
+            a{
+              padding: 0 5px;
+              background-color: @00adee;
+              color: #fff;
+              &:hover{
+                background-color: #fff;
+                color: @00adee;
+              }
+              img{
+                width: 20px;
+              }
+            }
+          }
         }
       }
     }

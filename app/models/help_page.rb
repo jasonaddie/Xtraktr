@@ -16,13 +16,14 @@ class HelpPage
   field :sort_order, type: Integer, default: 1
   field :public, type: Boolean, default: false
   field :public_at, type: Date
+  field :show_in_subnavbar, type: Boolean, default: false
 
   #############################
   accepts_nested_attributes_for :help_page_assignments, :reject_if => :all_blank, :allow_destroy => true
 
   attr_accessible :permalink, :title, :title_translations, :summary, :summary_translations,
                   :content, :content_translations, :help_section_id,
-                  :sort_order, :public, :public_at,
+                  :sort_order, :public, :public_at, :show_in_subnavbar
                   :help_page_assignments_attributes
 
   #############################

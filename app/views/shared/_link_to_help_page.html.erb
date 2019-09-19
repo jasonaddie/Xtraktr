@@ -4,20 +4,43 @@
   # - do not need to get help page if controller is support for that
   #   is the help section
 
+  # have the option to show the summary with an icon link (default)
+  # or just show a support link that is made for the sub-navbar
+  in_navbar ||= nil
+
+  logger.debug ">>>>>>> c = #{params[:controller]}, a = #{params[:action]}, m = #{request.method}"
+
   if params[:controller] != 'support'
     @assigned_help_page = HelpPage.without(:content).with_assignment(params[:controller], params[:action], request.method).first
   end
 
   if @assigned_help_page.present? && @assigned_help_page.summary.present? && @assigned_help_page.help_section.present?
+
 %>
 
-<div class="assigned-help-page">
-  <%= link_to support_page_path(@assigned_help_page.help_section.permalink_with_ancestors, @assigned_help_page.permalink), target: :blank,
-    title: t('helpers.titles.learn_more') do %>
-    <i class="support"></i>
+    <% if in_navbar == true %>
+      <% if @assigned_help_page.show_in_subnavbar? %>
+
+        <li role="menuitem" class="support">
+          <%= link_to support_page_path(@assigned_help_page.help_section.permalink_with_ancestors, @assigned_help_page.permalink), target: :blank,
+            title: t('helpers.titles.learn_more') do %>
+
+              <%= image_tag 'svg/question.svg' %>
+              <%= t('helpers.links.support') %>
+          <% end %>
+        </li>
+
+      <% end %>
+    <% else %>
+
+      <div class="assigned-help-page">
+        <%= link_to support_page_path(@assigned_help_page.help_section.permalink_with_ancestors, @assigned_help_page.permalink), target: :blank,
+          title: t('helpers.titles.learn_more') do %>
+          <i class="support"></i>
+        <% end %>
+        <%= @assigned_help_page.summary %>
+      </div>
+
+    <% end %>
+
   <% end %>
-  <%= @assigned_help_page.summary %>
-</div>
-
-
-<% end %>
