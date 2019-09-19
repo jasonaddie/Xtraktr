@@ -1,4 +1,5 @@
 <% title @dataset.title %>
 
+<%= render :partial => 'shared/link_to_help_page' %>
 
 <%= render :partial => 'shared/dashboard_data', locals: {show_share: false, show_private_questions: true, show_questions_no_answers: true} %>

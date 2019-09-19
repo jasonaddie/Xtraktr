@@ -2,6 +2,8 @@
 <%- model_class_a = Answer -%>
 <% title t('.title') %>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <% if @dataset.questions.with_code_answers.present? %>
 
   <%= form_tag mass_changes_answers_dataset_path(@dataset), id: 'frm-exclude-answers', class: 'form-data-loader form-dataset' do %>

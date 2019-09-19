@@ -1,9 +1,11 @@
 <% title t('.title') %>
-<%- 
+<%-
   label_key = "mongoid.attributes.question."
   hint_key = "mongoid.hints.mappable."
 -%>
 
+
+<%= render :partial => 'shared/link_to_help_page' %>
 
 <% if @not_mappable.present? %>
   <% if @shapesets.present? %>
@@ -63,7 +65,7 @@
         </div>
 
         <div class="form-group">
-          <%= submit_tag nil, :class => 'btn btn-primary' %> 
+          <%= submit_tag nil, :class => 'btn btn-primary' %>
           <%= link_to t('helpers.links.cancel'), mappable_dataset_path(@dataset), :class => 'btn btn-warning' %>
         </div>
       </div>

@@ -12,6 +12,8 @@
               :class => 'btn btn-edit' %>
 </div>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <div class="tabbed-translation-show">
   <ul class="row list-unstyled">
     <li class="col-sm-4">
@@ -22,7 +24,7 @@
     <li class="col-sm-4">
       <strong><%= model_class.human_attribute_name(:is_weight) %>:</strong>
       <br />
-      <%= format_boolean_flag(@question.is_weight) %>  
+      <%= format_boolean_flag(@question.is_weight) %>
     </li>
     <li class="col-sm-4">
       <strong><%= model_class.human_attribute_name(:has_code_answers) %>:</strong>

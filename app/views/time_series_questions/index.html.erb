@@ -1,6 +1,8 @@
 <%- model_class = TimeSeriesQuestion -%>
 <% title t('.title') %>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
   <p>
     <%= t('.explanation') %>
   </p>
@@ -49,7 +51,7 @@
           <% end %>
           <td>
             <%= link_to '',
-                      edit_time_series_question_path(@time_series, question), 
+                      edit_time_series_question_path(@time_series, question),
                       :title => t('helpers.links.edit'),
                       :class => 'btn btn-edit btn-xs' %>
             <%= link_to '',

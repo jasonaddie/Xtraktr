@@ -2,6 +2,8 @@
 <%- model_class_a = TimeSeriesAnswer -%>
 <% title t('.title') %>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
   <%= form_tag mass_changes_answers_time_series_path(@time_series), id: 'frm-exclude-answers', class: 'form-data-loader form-time-series' do %>
 
     <p>
