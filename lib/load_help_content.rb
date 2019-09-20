@@ -67,6 +67,7 @@ module LoadHelpContent
     page = HelpPage.new
     page.title = hash['title']
     page.summary = hash['summary']
+    page.content = hash['content'] if hash['content'].present?
     page.permalink = hash['permalink']
     page.help_section_id = parent_section.id
     page.sort_order = sort_order

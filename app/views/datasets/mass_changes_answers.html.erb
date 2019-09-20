@@ -8,10 +8,6 @@
 
   <%= form_tag mass_changes_answers_dataset_path(@dataset), id: 'frm-exclude-answers', class: 'form-data-loader form-dataset' do %>
 
-    <p>
-      <%= t('.explanation') %>
-    </p>
-
     <div class="data-loader-container">
 
       <div class="exclude-answers-save">
@@ -51,7 +47,7 @@
   <% end %>
 
 <% else %>
-  <p>
+  <p class="italic">
     <%= t('.no_questions') %>
   </p>
 <% end %>

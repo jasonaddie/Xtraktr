@@ -14,10 +14,6 @@
   <% end %>
 </div>
 
-<div class="support-summary">
-  <p><%= @help_page.summary %></p>
-</div>
-
 <% if @help_page.content.present? %>
   <div class="tinymce_format support-page-content">
     <%= simple_format_no_tags(@help_page.content, {}, {sanitize: false}) %>
