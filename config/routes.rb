@@ -187,8 +187,8 @@ BootstrapStarter::Application.routes.draw do
     # support pages
     # * = glob that allows any characters including /
     match '/support', :to => 'support#index', :as => :support, :via => :get
-    match '/support/*section_id/page/:page_id', :to => 'support#page', :as => :support_page, :via => :get
-    match '/support/*section_id', :to => 'support#section', :as => :support_section, :via => :get
+    match '/support/*guide_book_id/guide/:guide_id', :to => 'support#guide', :as => :support_guide, :via => :get
+    match '/support/*guide_book_id', :to => 'support#guide_book', :as => :support_guide_book, :via => :get
 
 
 		root :to => 'root#index'

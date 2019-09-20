@@ -9,7 +9,7 @@
   <ul class="support-lists support-subsections">
     <% @root_sections.each do |section| %>
       <li>
-        <h3><%= link_to(section.title, support_section_path(section.permalink_with_ancestors)) %></h3>
+        <h3><%= link_to(section.title, support_guide_book_path(section.permalink_with_ancestors)) %></h3>
         <p><%= section.summary %></p>
       </li>
     <% end %>
