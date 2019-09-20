@@ -23,13 +23,13 @@
     </div>
 
 <% else %>
-  <p>
+  <p class="italic">
     <%= t('.no_files') %>
   </p>
-  <p>
+  <p class="italic">
     <%= t('.no_files2') %>
   </p>
-  <p>
+  <p class="italic">
     <a href="<%= @dataset.datafile.url %>" class="btn btn-primary" target="_blank" title="<%= t('download_data_options.title.original') %>" data-placement="top"><%= t('download_data_options.text.original') %></a>
   </p>
 <% end %>

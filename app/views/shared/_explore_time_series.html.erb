@@ -21,7 +21,7 @@
         <div class="form-explore-filter-by">
           <%= label_tag 'filtered_by_code' do %>
             <%= t('.form.filtered_by_code') %><i class="q" title="<%= t('.instructions.filter') %>"></i>
-          <% end %>  
+          <% end %>
           <select data-live-search="true" data-width="100%" class="selectpicker-filter" data-container="body"  id="filtered_by_code" name="filtered_by_code">
             <option value=""><%= t('.form.no_filter') %></option>
             <%# generate_explore_time_series_options(@items, @time_series, selected_code: @filtered_by_code, disabled_code: @question_code, skip_content: true) %>
@@ -33,7 +33,7 @@
           <div class="form-explore-weight-by">
             <%= label_tag 'weighted_by_code' do %>
               <%= t('.form.weighted_by_code') %><i class="q" title="<%= t('.instructions.weight') %>"></i>
-            <% end %>  
+            <% end %>
             <select data-live-search="true" data-width="100%" class="selectpicker-weight" data-container="body"  id="weighted_by_code" name="weighted_by_code">
               <% @time_series.weights.each do |weight| %>
                 <%
@@ -146,7 +146,7 @@
       </div>
     </div>
   <% else %>
-    <p><%= t('.no_data', title: @time_series.title) %></p>
+    <p class="italic"><%= t('.no_data', title: @time_series.title) %></p>
   <% end %>
 </div>
 
