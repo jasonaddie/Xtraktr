@@ -2,15 +2,15 @@
   "sections":
   [
     {
-      "title": "General Information",
+      "title": "Getting Started",
       "summary": "Information that you need to know about preparing your data to load into the system.",
       "permalink": "general",
       "for_admin_only": true
     },
     {
-      "title": "Datasets",
+      "title": "Manage Datasets",
       "summary": "Information about how to upload a dataset file and manage all of the possible settings.",
-      "permalink": "datasets",
+      "permalink": "manage_datasets",
       "for_admin_only": true,
       "sections": [
         {
@@ -402,9 +402,9 @@
       ]
     },
     {
-      "title": "Time Series",
+      "title": "Manage Time Series",
       "summary": "Information about how to create a Time Series (i.e., panel) from existing Datasets in the system.",
-      "permalink": "time_series",
+      "permalink": "manage_time_series",
       "for_admin_only": true,
       "sections": [
         {
@@ -1127,22 +1127,10 @@
       ]
     },
     {
-      "title": "Public Pages",
-      "summary": "Information about how to use the public pages (i.e., search, view dataset meta data, explore a dataset, etc.)",
-      "permalink": "public",
+      "title": "Datasets",
+      "summary": "Information on how to search for a dataset, review dataset meta data, and explore the dataset data.",
+      "permalink": "datasets",
       "pages": [
-        {
-          "title": "Home",
-          "summary": "Summary is coming soon...",
-          "permalink": "home",
-          "assignments": [
-            {
-              "controller": "root",
-              "action": "index",
-              "http_method": "GET"
-            }
-          ]
-        },
         {
           "title": "Dataset Listing",
           "summary": "Summary is coming soon...",
@@ -1178,6 +1166,25 @@
               "http_method": "GET"
             }
           ]
+        }
+      ]
+    },
+    {
+      "title": "Time Series (Panels)",
+      "summary": "Information on how to find a time series, review time series meta data, and explore the time series data.",
+      "permalink": "time_series",
+      "pages": [
+        {
+          "title": "Time Series Listing",
+          "summary": "Summary is coming soon...",
+          "permalink": "time_series_listing",
+          "assignments": [
+            {
+              "controller": "root",
+              "action": "explore_time_series",
+              "http_method": "GET"
+            }
+          ]
         },
         {
           "title": "Time Series Dashboard",
@@ -1192,7 +1199,6 @@
           ]
         },
         {
-          "type": "page",
           "title": "Time Series Explore Data",
           "summary": "Summary is coming soon...",
           "permalink": "time_series_explore",
@@ -1200,42 +1206,6 @@
             {
               "controller": "time_series",
               "action": "explore",
-              "http_method": "GET"
-            }
-          ]
-        },
-        {
-          "title": "Instructions",
-          "summary": "Summary is coming soon...",
-          "permalink": "instructions",
-          "assignments": [
-            {
-              "controller": "root",
-              "action": "instructions",
-              "http_method": "GET"
-            }
-          ]
-        },
-        {
-          "title": "API",
-          "summary": "Summary is coming soon...",
-          "permalink": "api",
-          "assignments": [
-            {
-              "controller": "api",
-              "action": "index",
-              "http_method": "GET"
-            }
-          ]
-        },
-        {
-          "title": "Contact",
-          "summary": "Summary is coming soon...",
-          "permalink": "contact",
-          "assignments": [
-            {
-              "controller": "root",
-              "action": "contact",
               "http_method": "GET"
             }
           ]
