@@ -44,6 +44,7 @@ class HelpSection
   index ({ :sort_order => 1})
   index ({ :public => 1})
   index ({ :public_at => 1})
+  index ({ :for_admin_only => 1})
 
   #############################
   # Validations
@@ -141,6 +142,15 @@ class HelpSection
 
   def self.is_public
     where(public: true)
+  end
+
+  # either get all sections or limit to those that are only public
+  def self.restrict_by_user_role(public_only=true)
+    if public_only
+      where(for_admin_only: false)
+    else
+      any_in(for_admin_only: [true, false])
+    end
   end
 
   def self.sorted

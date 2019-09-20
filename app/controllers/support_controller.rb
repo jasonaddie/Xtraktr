@@ -1,13 +1,9 @@
 class SupportController < ApplicationController
-  before_filter :authenticate_user!
-  before_filter do |controller_instance|
-    controller_instance.send(:valid_role?, @site_admin_role)
-  end
   before_filter :get_section, except: [:index]
 
   def index
     # get all root section
-    @root_sections = HelpSection.roots.sorted.is_public
+    @root_sections = HelpSection.roots.sorted.is_public.restrict_by_user_role(public_only?)
 
     @css.push('support.css')
 
@@ -44,8 +40,12 @@ class SupportController < ApplicationController
 
   private
 
+  def public_only?
+    !(user_signed_in? && current_user.role?(@data_editor_role))
+  end
+
   def get_section
-    @help_section = HelpSection.is_public.by_permalink(params[:guide_book_id])
+    @help_section = HelpSection.is_public.restrict_by_user_role(public_only?).by_permalink(params[:guide_book_id])
 
     if @help_section.nil?
       flash[:info] =  t('app.msgs.does_not_exist')
