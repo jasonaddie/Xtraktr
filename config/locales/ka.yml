@@ -1249,6 +1249,7 @@ ka:
         max: The value you want to end with on the histogram chart. Default value is the maximum value in the data.
         view_active: View the question results in a chart
         view_disabled: You must select a data type in order to view the chart
+      no_preview: You must select a data type in order to view a chart of this question.
     mass_changes_answers:
       title: "პასუხების მასობრივი ცვლილებები"
       explanation: 'გამოიყენეთ ეს გვერდი იმის მისათითებლად, თუ რომელი პასუხები უნდა გამოირიცხოს ანალიზიდან და რომელი პასუხები შეიძლება იქნას გაანალიზებული, თუმცა შეიძლებოდეს გამორიცხვა, სურვილის შემთხვევაში  (მაგ., ასეთი პასუხები: "არ ვიცი", "უარი პასუხზე", ა.შ.) '
