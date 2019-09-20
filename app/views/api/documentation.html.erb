@@ -15,7 +15,7 @@
         <% end %>
       </select>
 
-      
+
     </div>
   </div>
   <div class="col-left">
@@ -29,7 +29,7 @@
         <%= simple_format_no_tags(@api_method.content, {}, {sanitize: false}) %>
       </div>
     <% else %>
-      <p>
+      <p class="italic">
         <%= t('.no_content') %>
       </p>
     <% end %>
@@ -51,7 +51,7 @@
             <div class="back"></div>
             <%= t('helpers.links.api_home') %>
       <% end %>
-      
+
     </div>
   </div>
 </div>

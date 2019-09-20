@@ -1,5 +1,5 @@
 <% if @page_content.present? %>
-  <%= title @page_content.title %>  
+  <%= title @page_content.title %>
   <div class="api article">
     <%= simple_format_no_tags(@page_content.content, {}, {sanitize: false}) %>
 
@@ -20,13 +20,13 @@
               <% end %>
             </ul>
           <% else %>
-            <p>
+            <p class="italic">
               <%= t('.no_methods') %>
             </p>
           <% end %>
         <% end %>
       <% else %>
-        <p>
+        <p class="italic">
           <%= t('.no_versions') %>
         </p>
       <% end %>

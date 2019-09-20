@@ -124,7 +124,7 @@
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade <%= highlight_active[:panel] %> masonry" id="highlights">
       <% if !@highlights.present? %>
-        <p>
+        <p class="italic">
           <%= t('.no_highlights') %>
         </p>
       <% end %>
@@ -137,7 +137,7 @@
         </div>
         <div class="up"></div>
       <% else %>
-        <p>
+        <p class="italic">
           <%= t('.no_methodology') %>
         </p>
       <% end %>
