@@ -15,7 +15,7 @@
         <%= f.input :sort_order, as: :number, hint: t(hint_key + 'sort_order'), min: 1, step: 5 %>
       </div>
       <div class="col-sm-4">
-        <div class="radio_buttons input optional form-group" id="help_section_public_input">
+        <div class="radio_buttons input optional form-group" id="help_section_`_input">
           <label class="  control-label" for="help_section_public"><%= t(label_key + 'public') %><div class="help-inline" title="<%= t(hint_key + 'public') %>"><div>?</div></div>
           </label>
           <div class="radio">
@@ -45,6 +45,26 @@
             <% default_value = @help_section.ancestry.present? ? @help_section.parent_id : nil %>
             <%= build_help_section_ordered_select_options(default_value, @help_section.id).html_safe %>
           </select>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="radio_buttons input optional form-group" id="help_section_for_admin_only_input">
+          <label class="  control-label" for="help_section_for_admin_only"><%= t(label_key + 'for_admin_only') %><div class="help-inline" title="<%= t(hint_key + 'for_admin_only') %>"><div>?</div></div>
+          </label>
+          <div class="radio">
+            <label class="choice" for="help_section_for_admin_only_true">
+              <% checked = @help_section.for_admin_only? ? 'checked=checked' : '' %>
+              <input <%= checked %> id="help_section_for_admin_only_true" name="help_section[for_admin_only]" type="radio" value="true" />
+              <%= t('formtastic.yes') %>
+            </label>
+          </div>
+          <div class="radio">
+            <label class="choice" for="help_section_for_admin_only_false">
+              <% checked = @help_section.for_admin_only? ? '' : 'checked=checked' %>
+              <input <%= checked %> id="help_section_for_admin_only_false" name="help_section[for_admin_only]" type="radio" value="false" />
+              <%= t('formtastic.no') %>
+            </label>
+          </div>
         </div>
       </div>
     </div>

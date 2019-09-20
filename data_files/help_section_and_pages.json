@@ -4,17 +4,20 @@
     {
       "title": "General Information",
       "summary": "Information that you need to know about preparing your data to load into the system.",
-      "permalink": "general"
+      "permalink": "general",
+      "for_admin_only": true
     },
     {
       "title": "Datasets",
       "summary": "Information about how to upload a dataset file and manage all of the possible settings.",
       "permalink": "datasets",
+      "for_admin_only": true,
       "sections": [
         {
           "title": "Edit Questions/Answers",
           "summary": "Summary is coming soon...",
           "permalink": "edit_qa",
+          "for_admin_only": true,
           "pages": [
             {
               "title": "Listing Page",
@@ -131,6 +134,7 @@
           "title": "Group Questions",
           "summary": "Summary is coming soon...",
           "permalink": "group",
+          "for_admin_only": true,
           "pages": [
             {
               "title": "Listing Page",
@@ -177,6 +181,7 @@
           "title": "Sort Groups/Questions",
           "summary": "Summary is coming soon...",
           "permalink": "sort",
+          "for_admin_only": true,
           "pages": [
             {
               "title": "Listing Page",
@@ -201,6 +206,7 @@
           "title": "Weight Data",
           "summary": "Summary is coming soon...",
           "permalink": "weight_data",
+          "for_admin_only": true,
           "pages": [
             {
               "title": "Listing Page",
@@ -247,6 +253,7 @@
           "title": "Make Mappable",
           "summary": "Summary is coming soon...",
           "permalink": "make_mappable",
+          "for_admin_only": true,
           "pages": [
             {
               "title": "Listing Page",
@@ -398,11 +405,13 @@
       "title": "Time Series",
       "summary": "Information about how to create a Time Series (i.e., panel) from existing Datasets in the system.",
       "permalink": "time_series",
+      "for_admin_only": true,
       "sections": [
         {
           "title": "Edit Questions/Answers",
           "summary": "Summary is coming soon...",
           "permalink": "edit_qa",
+          "for_admin_only": true,
           "pages": [
             {
               "title": "Listing Page",
@@ -507,6 +516,7 @@
           "title": "Group Questions",
           "summary": "Summary is coming soon...",
           "permalink": "group",
+          "for_admin_only": true,
           "pages": [
             {
               "title": "Listing Page",
@@ -553,6 +563,7 @@
           "title": "Sort Groups/Questions",
           "summary": "Summary is coming soon...",
           "permalink": "sort",
+          "for_admin_only": true,
           "pages": [
             {
               "title": "Listing Page",
@@ -577,6 +588,7 @@
           "title": "Weight Data",
           "summary": "Summary is coming soon...",
           "permalink": "weight_data",
+          "for_admin_only": true,
           "pages": [
             {
               "title": "Listing Page",
@@ -704,11 +716,13 @@
       "title": "Admin Section",
       "summary": "Information on how to manage the general admin settings like users, support page text, categories, etc.",
       "permalink": "admin",
+      "for_admin_only": true,
       "sections": [
         {
           "title": "Edit Text on Site",
           "summary": "Use this section to manage the text on the site (i.e., instructions, contact, disclaimer, etc).",
           "permalink": "site_text",
+          "for_admin_only": true,
           "pages": [
             {
               "title": "Listing Page",
@@ -767,6 +781,7 @@
           "title": "Categories",
           "summary": "Summary is coming soon...",
           "permalink": "categories",
+          "for_admin_only": true,
           "pages":[
             {
               "title": "Listing Page",
@@ -813,6 +828,7 @@
           "title": "Help Sections",
           "summary": "Summary is coming soon...",
           "permalink": "help_sections",
+          "for_admin_only": true,
           "pages":[
             {
               "title": "Listing Page",
@@ -859,6 +875,7 @@
           "title": "Help Pages",
           "summary": "Summary is coming soon...",
           "permalink": "help_pages",
+          "for_admin_only": true,
           "pages":[
             {
               "title": "Listing Page",
@@ -917,6 +934,7 @@
           "title": "API Version Documentation",
           "summary": "Summary is coming soon...",
           "permalink": "api_documentation",
+          "for_admin_only": true,
           "pages":[
             {
               "title": "API Version Listing Page",
@@ -1002,6 +1020,7 @@
           "title": "Shapesets",
           "summary": "Summary is coming soon...",
           "permalink": "shapesets",
+          "for_admin_only": true,
           "pages":[
             {
               "title": "Listing Page",
@@ -1048,6 +1067,7 @@
           "title": "Users",
           "summary": "Summary is coming soon...",
           "permalink": "users",
+          "for_admin_only": true,
           "pages":[
             {
               "title": "Listing Page",

@@ -18,6 +18,7 @@
       <th><%= model_class.human_attribute_name(:summary) %></th>
       <th><%= model_class.human_attribute_name(:permalink_with_ancestors) %></th>
       <th><%= model_class.human_attribute_name(:public) %></th>
+      <th><%= model_class.human_attribute_name(:for_admin_only) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -30,6 +31,7 @@
         <td><%= help_section.summary %></td>
         <td><%= help_section.permalink_with_ancestors %></td>
         <td><%= format_public_status(help_section.public) %></td>
+        <td><%= format_public_status(!help_section.for_admin_only) %></td>
         <td>
           <%= link_to '',
                       edit_admin_help_section_path(help_section),
