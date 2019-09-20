@@ -1029,7 +1029,7 @@ en:
         explore_time_series: Explore the time series data through charts and tables
         dataset_to_time_series: Explore this dataset as part of a time series
       admin_dataset:
-        explore_data: Explore Data
+        explore_data: Dashboard
         heading: Dataset Options
         settings: Settings
         qa: Edit Questions/Answers
@@ -1047,7 +1047,7 @@ en:
         sort: Sort Groups/Questions
         weights: Weight Data
       admin_time_series:
-        explore_data: Explore Data
+        explore_data: Dashboard
         heading: Time Series Options
         settings: Settings
         qa: Edit Questions/Answers

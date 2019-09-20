@@ -338,7 +338,7 @@
           ]
         },
         {
-          "title": "Explore Data (Dataset Dashboard)",
+          "title": "Dataset Dashboard",
           "summary": "Summary is coming soon...",
           "permalink": "dashboard",
           "show_in_subnavbar": true,
@@ -673,7 +673,7 @@
           ]
         },
         {
-          "title": "Explore Data (Time Series Dashboard)",
+          "title": "Time Series Dashboard",
           "summary": "Summary is coming soon...",
           "permalink": "dashboard",
           "show_in_subnavbar": true,
