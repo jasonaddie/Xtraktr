@@ -322,6 +322,7 @@ ka:
         updated_at: "ბოლო განახლება"
         parent_id: Parent Guide Book
         permalink_with_ancestors: Guide Book URL
+        for_admin_only: Only Admins can view this Guide Book
       help_page:
         permalink: "პერმალინკი"
         title: "სახელწოდება"
@@ -471,6 +472,7 @@ ka:
         public: "Select 'Yes' to make the Guide Book available to the world"
         sort_order: The order the Guide Books should appear
         parent_id: A Guide Book can belong to another Guide Book. If no Parent Guide Book is selected, then this Guide Book will appear at the root level.
+        for_admin_only: "Select 'Yes' to make the Guide Book limited to just Admins"
       help_page:
         permalink: Abbreviated Name Used in URL (e.g., datasets)
         title: Title of the Guide

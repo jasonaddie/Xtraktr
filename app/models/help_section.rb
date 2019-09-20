@@ -23,12 +23,14 @@ class HelpSection
   field :public, type: Boolean, default: false
   # when made public
   field :public_at, type: Date
+  # indicates if the user must an admin to view the section
+  field :for_admin_only, type: Boolean, default: false
 
   #############################
   accepts_nested_attributes_for :help_pages, :reject_if => :all_blank, :allow_destroy => true
 
   attr_accessible :permalink, :title, :title_translations, :summary, :summary_translations,
-                  :sort_order, :public, :public_at, :parent_id,
+                  :sort_order, :public, :public_at, :parent_id, :for_admin_only,
                   :help_pages_attributes
 
   attr_accessor :update_descendant_permalink_with_ancestors, :descendants_to_update

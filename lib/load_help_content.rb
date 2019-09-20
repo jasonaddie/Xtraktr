@@ -113,6 +113,7 @@ module LoadHelpContent
     section.parent_id = parent_section.id if parent_section.present?
     section.sort_order = sort_order
     section.public = true
+    section.for_admin_only = hash['for_admin_only'] if hash['for_admin_only'].present?
     section.save
 
     return section

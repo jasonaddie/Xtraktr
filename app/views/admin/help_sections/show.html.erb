@@ -38,6 +38,8 @@
 <p><strong><%= model_class.human_attribute_name(:public_at) %>:</strong>
 <%= l @help_section.public_at, format: :day_first if @help_section.public_at %></p>
 
+<p><strong><%= model_class.human_attribute_name(:for_admin_only) %>:</strong>
+<%= @help_section.for_admin_only %></p>
 
 
 
