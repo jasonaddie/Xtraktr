@@ -1,4 +1,5 @@
 <% title t('.title', section: @help_section.title) %>
+<% description @help_section.summary %>
 <% sections = @help_section.children.is_public.sorted %>
 <% pages = @help_section.help_pages.is_public.sorted %>
 
