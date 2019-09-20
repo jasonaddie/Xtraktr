@@ -51,7 +51,7 @@ module HelpSectionsHelper
     links = []
 
     if help_section.present?
-      links << link_to(help_section.title, support_section_path(help_section.permalink_with_ancestors))
+      links << link_to(help_section.title, support_guide_book_path(help_section.permalink_with_ancestors))
 
       if help_section.parent_id.present?
         links << build_breadcrumb_link_for_help_section(help_section.parent)

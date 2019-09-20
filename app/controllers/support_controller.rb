@@ -16,7 +16,7 @@ class SupportController < ApplicationController
     end
   end
 
-  def section
+  def guide_book
     # help_section is set in the get_section private method
 
     @css.push('support.css')
@@ -26,8 +26,8 @@ class SupportController < ApplicationController
     end
   end
 
-  def page
-    @help_page = HelpPage.is_public.in_help_section(@help_section.id).by_permalink(params[:page_id])
+  def guide
+    @help_page = HelpPage.is_public.in_help_section(@help_section.id).by_permalink(params[:guide_id])
 
     @css.push('support.css')
 
@@ -45,7 +45,7 @@ class SupportController < ApplicationController
   private
 
   def get_section
-    @help_section = HelpSection.is_public.by_permalink(params[:section_id])
+    @help_section = HelpSection.is_public.by_permalink(params[:guide_book_id])
 
     if @help_section.nil?
       flash[:info] =  t('app.msgs.does_not_exist')
