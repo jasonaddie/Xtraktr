@@ -1583,7 +1583,6 @@ ka:
     index:
       title: Support
       intro: TODO - write a brief intro for the support section...
-      main_sections: Support Sections
       no_sections: At this time, no support sections have been created. Please check back soon.
     section:
       title: 'Support Section: %{section}'
