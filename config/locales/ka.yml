@@ -454,7 +454,7 @@ ka:
       api_version:
         permalink: URL-ში გამოყენებული აბრევიატურა (მაგ., v1)
         title: API ვერსიის სახელწოდება
-        public: "მონიშნეთ 'დიახ', რათა API ვერსია საჯაროდ ხელმისაწვდომი გახდეს "
+        public: "მონიშნეთ 'დიახ', რათა API საჯაროდ ხელმისაწვდომი გახდეს "
       api_method:
         permalink: URL-ში გამოყენებული აბრევიატურა (მაგ., v1)
         title: API მეთოდის სახელწოდება
@@ -1101,7 +1101,7 @@ ka:
       page_contents: "საიტზე ტექსტის რედაქტირება"
       datasets: "მონაცემები"
       shapesets: "რუკის კონტურული ფორმები"
-      api_documentation: API ვერსიის დოკუმენტაცია
+      api_documentation: API დოკუმენტაცია
       download_api_requests: API-ის მოთხოვნათა ისტორიის ჩამოტვირთვა
       download_download_requests: "ჩამოტვირთვის მოთხოვნათა ისტორიის ჩამოტვირთვა"
       categories: "კატეგორიები"

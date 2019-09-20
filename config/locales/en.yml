@@ -454,7 +454,7 @@ en:
       api_version:
         permalink: Abbreviated Name Used in URL (e.g., v1)
         title: Title of the API Version
-        public: "Select 'Yes' to make the API Version documentation available to the world"
+        public: "Select 'Yes' to make the API documentation available to the world"
       api_method:
         permalink: Abbreviated Name Used in URL (e.g., v1)
         title: Title of API Method
@@ -1101,7 +1101,7 @@ en:
       page_contents: Edit Text on Site
       datasets: Datasets
       shapesets: Shapesets
-      api_documentation: API Version Documentation
+      api_documentation: API Documentation
       download_api_requests: Download API Request History
       download_download_requests: Download Download Request History
       categories: Categories
