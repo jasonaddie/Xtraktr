@@ -6,12 +6,7 @@
 
   original_title = (content_for?(:original_title) ? "#{strip_tags_nbsp(yield(:original_title))} | #{t("app.common.#{@app_key_name}.app_name")}" : title).html_safe
 
-  desc = I18n.t("app.common.#{@app_key_name}.app_description")
-  if @dataset.present? && @dataset.description.present?
-    desc = strip_tags_nbsp(@dataset.description)
-  elsif @time_series.present? && @time_series.class == 'TimeSeries' && @time_series.description.present?
-    desc = strip_tags_nbsp(@time_series.description)
-  end
+  desc = (content_for?(:description) ? strip_tags_nbsp(yield(:description)) : I18n.t("app.common.#{@app_key_name}.app_description")).html_safe
 -%>
 
     <meta charset="utf-8">
