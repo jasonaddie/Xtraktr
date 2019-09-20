@@ -2,10 +2,6 @@
 
 <%= render :partial => 'shared/link_to_help_page' %>
 
-<%= simple_format(t('.explanation')) %>
-
-<hr />
-
 <% if @items.present? %>
 
   <%= form_tag sort_time_series_path(@time_series), id: 'frm-time_series-sort', class: 'form-data-loader data-loader-container' do %>
@@ -128,6 +124,6 @@
 
 <% else %>
 
-  <p><%= t('.no_items') %></p>
+  <p class="italic"><%= t('.no_items') %></p>
 
 <% end %>

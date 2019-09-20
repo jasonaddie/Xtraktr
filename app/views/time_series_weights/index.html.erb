@@ -11,10 +11,6 @@
 
 <%= render :partial => 'shared/link_to_help_page' %>
 
-<%= simple_format t('.explanation') %>
-
-<hr />
-
 <% if @time_series.weights.present? %>
 
   <table id="weight-datatable" class="table table-striped display">
@@ -83,7 +79,7 @@
 
 <% else %>
 
-  <p>
+  <p class="italic">
     <%= t('.no_weights') %>
   </p>
 

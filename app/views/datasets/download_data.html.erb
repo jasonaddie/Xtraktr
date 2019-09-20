@@ -2,10 +2,6 @@
 
 <%= render :partial => 'shared/link_to_help_page' %>
 
-<%= simple_format(t('.instructions')) %>
-
-<hr />
-
 <% if @dataset.urls.present? && @dataset.urls.admin_codebook.present? %>
   <% if @dataset.reset_download_files? %>
     <div class="notification wide info">

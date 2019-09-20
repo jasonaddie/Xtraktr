@@ -3,10 +3,6 @@
 
 <%= render :partial => 'shared/link_to_help_page' %>
 
-  <p>
-    <%= t('.explanation') %>
-  </p>
-
   <div id="add-links">
     <%= link_to t('.btn_add_question'), new_time_series_question_path(@time_series), class: 'btn btn-primary', title: t('.btn_add_question_hint') %>
     <%= link_to t('.btn_automatic'), automatically_assign_questions_time_series_path(@time_series), class: 'btn btn-primary', title: t('.btn_automatic_hint') %>
@@ -68,7 +64,7 @@
 
 
 <% else %>
-  <p class="alert alert-warning">
+  <p class="italic">
     <%= t('.no_questions') %>
   </p>
 <% end %>

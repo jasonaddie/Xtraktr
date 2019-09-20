@@ -476,7 +476,7 @@ en:
       help_page:
         permalink: Abbreviated Name Used in URL (e.g., datasets)
         title: Title of the Guide
-        summary: A brief summary of this guide
+        summary: A brief summary of this guide that will appear on the Guide Book page. This text will not appear on the Guide page.
         public: "Select 'Yes' to make the Guide available to the world"
         sort_order: The order the Guides should appear within the Guide Book
         help_section_id: The Guide Book that this Guide will appear under
