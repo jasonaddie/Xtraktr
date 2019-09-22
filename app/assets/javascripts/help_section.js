@@ -1,5 +1,4 @@
 $(function() {
-console.log('help section js')
   // load the selectpicker libraries for an assignment row
   function load_assignment_row(this_row){
     console.log('-- load row')

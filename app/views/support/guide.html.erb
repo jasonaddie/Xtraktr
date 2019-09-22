@@ -1,7 +1,6 @@
 <% title t('.title', page: @help_page.title_with_section) %>
 <% description @help_page.summary %>
 
-<!-- breadcrumb -->
 <div class="support-breadcrumb">
   <%= link_to t('.support_home_page'), support_path %>
   <%
@@ -15,12 +14,20 @@
   <% end %>
 </div>
 
-<% if @help_page.content.present? %>
-  <div class="tinymce_format support-page-content">
-    <%= simple_format_no_tags(@help_page.content, {}, {sanitize: false}) %>
-  </div>
-<% else %>
 
-  <p class="support-no-content"><%= t('.no_content') %></p>
+<div class="support-col-left">
+  <% if @help_page.content.present? %>
+    <div class="tinymce_format support-page-content">
+      <%= simple_format_no_tags(@help_page.content, {}, {sanitize: false}) %>
+    </div>
+  <% else %>
 
-<% end %>
+    <p class="support-no-content"><%= t('.no_content') %></p>
+
+  <% end %>
+</div>
+<div class="support-col-right doc-links">
+  <h2><%= t('.in_this_guide') %></h2>
+  <ul>
+  </ul>
+</div>
