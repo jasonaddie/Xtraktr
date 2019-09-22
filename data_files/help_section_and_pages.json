@@ -3,13 +3,13 @@
   [
     {
       "title": "Getting Started",
-      "summary": "Information that you need to know about preparing your data to load into the system.",
+      "summary": "Learn what you need to know about preparing your data to load into the system.",
       "permalink": "general",
       "for_admin_only": true
     },
     {
       "title": "Dataset Management",
-      "summary": "Information about how to upload a dataset file and manage all of the possible settings.",
+      "summary": "Learn about how to upload a dataset file and manage all of the possible settings.",
       "permalink": "manage_datasets",
       "for_admin_only": true,
       "sections": [
@@ -414,7 +414,7 @@
     },
     {
       "title": "Time Series Management",
-      "summary": "Information about how to create a Time Series (i.e., panel) from existing Datasets in the system.",
+      "summary": "Learn about how to create a Time Series (i.e., panel) from existing Datasets in the system.",
       "permalink": "manage_time_series",
       "for_admin_only": true,
       "sections": [
@@ -732,7 +732,7 @@
     },
     {
       "title": "Admin Section",
-      "summary": "Information on how to manage the general admin settings like users, support page text, categories, etc.",
+      "summary": "Learn how to manage the general admin settings like users, support page text, categories, etc.",
       "permalink": "admin",
       "for_admin_only": true,
       "sections": [
@@ -1133,6 +1133,7 @@
         {
           "title": "Admin Home",
           "summary": "Summary is coming soon...",
+          "content": "<h2>this is a header</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id porta nibh venenatis cras sed felis. Feugiat vivamus at augue eget arcu. Lectus nulla at volutpat diam ut venenatis tellus in metus. Mauris cursus mattis molestie a iaculis at. Bibendum ut tristique et egestas quis ipsum suspendisse. Pharetra sit amet aliquam id. Id aliquet lectus proin nibh nisl. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec.</p><p>Tortor aliquam nulla facilisi cras. Pulvinar mattis nunc sed blandit libero. Amet nulla facilisi morbi tempus iaculis urna id. Lorem dolor sed viverra ipsum nunc aliquet. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Lectus sit amet est placerat in. Tempor orci eu lobortis elementum nibh tellus. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Dui id ornare arcu odio ut sem nulla pharetra. Faucibus a pellentesque sit amet porttitor eget dolor morbi. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit. Rutrum quisque non tellus orci ac auctor augue mauris. Nisi est sit amet facilisis magna. Cursus risus at ultrices mi tempus imperdiet nulla.</p><h2>this is another header</h2><p>Tortor aliquam nulla facilisi cras. Pulvinar mattis nunc sed blandit libero. Amet nulla facilisi morbi tempus iaculis urna id. Lorem dolor sed viverra ipsum nunc aliquet. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Lectus sit amet est placerat in. Tempor orci eu lobortis elementum nibh tellus. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Dui id ornare arcu odio ut sem nulla pharetra. Faucibus a pellentesque sit amet porttitor eget dolor morbi. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit. Rutrum quisque non tellus orci ac auctor augue mauris. Nisi est sit amet facilisis magna. Cursus risus at ultrices mi tempus imperdiet nulla.</p><h3>and one more header</h3><p>Tortor aliquam nulla facilisi cras. Pulvinar mattis nunc sed blandit libero. Amet nulla facilisi morbi tempus iaculis urna id. Lorem dolor sed viverra ipsum nunc aliquet. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Lectus sit amet est placerat in. Tempor orci eu lobortis elementum nibh tellus. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Dui id ornare arcu odio ut sem nulla pharetra. Faucibus a pellentesque sit amet porttitor eget dolor morbi. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit. Rutrum quisque non tellus orci ac auctor augue mauris. Nisi est sit amet facilisis magna. Cursus risus at ultrices mi tempus imperdiet nulla.</p><p>Tortor aliquam nulla facilisi cras. Pulvinar mattis nunc sed blandit libero. Amet nulla facilisi morbi tempus iaculis urna id. Lorem dolor sed viverra ipsum nunc aliquet. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Lectus sit amet est placerat in. Tempor orci eu lobortis elementum nibh tellus. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Dui id ornare arcu odio ut sem nulla pharetra. Faucibus a pellentesque sit amet porttitor eget dolor morbi. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit. Rutrum quisque non tellus orci ac auctor augue mauris. Nisi est sit amet facilisis magna. Cursus risus at ultrices mi tempus imperdiet nulla.</p><p>Tortor aliquam nulla facilisi cras. Pulvinar mattis nunc sed blandit libero. Amet nulla facilisi morbi tempus iaculis urna id. Lorem dolor sed viverra ipsum nunc aliquet. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Lectus sit amet est placerat in. Tempor orci eu lobortis elementum nibh tellus. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Dui id ornare arcu odio ut sem nulla pharetra. Faucibus a pellentesque sit amet porttitor eget dolor morbi. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit. Rutrum quisque non tellus orci ac auctor augue mauris. Nisi est sit amet facilisis magna. Cursus risus at ultrices mi tempus imperdiet nulla.</p>",
           "permalink": "home",
           "assignments": [
             {
@@ -1146,11 +1147,11 @@
     },
     {
       "title": "Dataset Exploration",
-      "summary": "Information on how to search for a dataset, review dataset meta data, explore the dataset data, share a dataset analysis result, and download the dataset.",
+      "summary": "Learn how to search for a dataset, review dataset meta data, explore the dataset data, share a dataset analysis result, and download the dataset.",
       "permalink": "datasets",
       "pages": [
         {
-          "title": "Dataset Listing",
+          "title": "Dataset Search",
           "summary": "Summary is coming soon...",
           "permalink": "dataset_listing",
           "assignments": [
@@ -1174,7 +1175,7 @@
           ]
         },
         {
-          "title": "Dataset Explore Data",
+          "title": "Explore Dataset Data",
           "summary": "Summary is coming soon...",
           "permalink": "dataset_explore",
           "assignments": [
@@ -1189,11 +1190,11 @@
     },
     {
       "title": "Time Series (Panels) Exploration",
-      "summary": "Information on how to find a time series, review time series meta data, explore the time series data, and share a time series analysis result.",
+      "summary": "Learn how to find a time series, review time series meta data, explore the time series data, and share a time series analysis result.",
       "permalink": "time_series",
       "pages": [
         {
-          "title": "Time Series Listing",
+          "title": "Finding a Time Series",
           "summary": "Summary is coming soon...",
           "permalink": "time_series_listing",
           "assignments": [
@@ -1217,7 +1218,7 @@
           ]
         },
         {
-          "title": "Time Series Explore Data",
+          "title": "Explore Time Series Data",
           "summary": "Summary is coming soon...",
           "permalink": "time_series_explore",
           "assignments": [
@@ -1232,7 +1233,7 @@
     },
     {
       "title": "User Accounts",
-      "summary": "Information about how to create a user account and edit the settings.",
+      "summary": "Learn about how to create a user account and edit the settings.",
       "permalink": "user",
       "pages": [
         {
