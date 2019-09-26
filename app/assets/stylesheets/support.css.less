@@ -73,9 +73,20 @@ h3{
   background-color:#f6f7f7;
 
   ul{
-    padding-left: 15px;
+    list-style: none;
+    padding-left: 0;
     li{
       line-height: 32px;
+      text-transform: capitalize;
+    }
+    & > li{
+      font-size: 20px;
+      & > ul{
+        padding-left: 15px;
+        li{
+          font-size: 16px;
+        }
+      }
     }
   }
 }
