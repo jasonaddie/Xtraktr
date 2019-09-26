@@ -106,18 +106,27 @@ h3{
 
 
 @media (min-width: 992px) {
-
+  .content-wrapper{
+    position: relative;
+  }
   .support-col-left{
     display:table-cell;
     vertical-align:top;
     border-right:1px solid #d6d6d6;
     padding: 30px;
+    width: ~"calc(100vw - 300px - 150px - 100px)";
   }
   .support-col-right{
     min-width:300px;
     display:table-cell;
     vertical-align:top;
     padding: 30px;
+    position: fixed;
+    right:55px;
+    top: 168px;
+    bottom: 0;
+    overflow-y: auto;
+
   }
   .doc-links { display:table-cell; }
 }
