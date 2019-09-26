@@ -32,5 +32,10 @@ $(function() {
     $in_guide.addClass('no-content')
   }
 
+  // animate scrolltop when click on sidebar link
+  $ul.find('a').on('click', function(){
+    var e = $(this.hash)
+    $('#page-wrapper').animate({scrollTop: (e.offset().top - 60)}, 1e3)
+  })
 
 });
