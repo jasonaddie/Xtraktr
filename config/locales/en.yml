@@ -1597,6 +1597,8 @@ en:
       title: 'Support Guide: %{page}'
       support_home_page: Support Home
       no_content: At this time, no content has been entered for this page. Please check back soon.
+      last_updated: "Guide last updated: %{date}"
+      in_this_guide: In This Guide
   shared:
     explore_data:
       no_matches: Your selections returned no data. Please try again with a different selection.

@@ -27,7 +27,12 @@
   <% end %>
 </div>
 <div class="support-col-right doc-links">
-  <h2><%= t('.in_this_guide') %></h2>
-  <ul>
-  </ul>
+  <div class="in-this-guide">
+    <h2><%= t('.in_this_guide') %></h2>
+    <ul>
+    </ul>
+  </div>
+  <div class="last-updated">
+    <%= t('.last_updated', date: l(@help_page.updated_at, format: :date_only)) %>
+  </div>
 </div>
