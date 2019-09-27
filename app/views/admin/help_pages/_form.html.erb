@@ -11,7 +11,7 @@
   <%= f.inputs do %>
     <div class="row">
       <div class="col-sm-4">
-        <%= f.input :permalink, hint: t(hint_key + 'permalink'), input_html: {size: 15} %>
+        <%= f.input :permalink, hint: t(hint_key + 'permalink'), input_html: {size: 15, :readonly => !current_user.role?(User::ROLES[:admin])} %>
       </div>
       <div class="col-sm-4">
         <%= f.input :sort_order, as: :number, hint: t(hint_key + 'sort_order'), min: 1, step: 5 %>
