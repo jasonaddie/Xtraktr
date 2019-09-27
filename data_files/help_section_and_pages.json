@@ -3,9 +3,21 @@
   [
     {
       "title": "Getting Started",
-      "summary": "Learn what you need to know about preparing your data to load into the system.",
+      "summary": "Learn what you need to know about the data portal and preparing your data to load into the system.",
       "permalink": "general",
-      "for_admin_only": true
+      "for_admin_only": true,
+      "pages": [
+        {
+          "title": "User Roles",
+          "summary": "The data portal has 4 user roles that control access to the admin, dataset, and time series management pages. This guide will explain the each role.",
+          "permalink": "roles"
+        },
+        {
+          "title": "Preparing Dataset Files",
+          "summary": "There are a few things you can do to prepare a dataset file so the data portal can process it with no problems.",
+          "permalink": "preparing_dataset_files"
+        }
+      ]
     },
     {
       "title": "Dataset Management",
