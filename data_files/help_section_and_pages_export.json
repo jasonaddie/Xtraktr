@@ -45,9 +45,9 @@
               ]
             },
             {
-              "title": "Detail Page",
+              "title": "View Page",
               "summary": "Summary is coming soon...",
-              "permalink": "detail",
+              "permalink": "view",
               "assignments": [
                 {
                   "controller": "questions",
@@ -449,9 +449,9 @@
               ]
             },
             {
-              "title": "Detail Page",
+              "title": "View Page",
               "summary": "Summary is coming soon...",
-              "permalink": "detail",
+              "permalink": "view",
               "assignments": [
                 {
                   "controller": "time_series_questions",
@@ -767,9 +767,9 @@
               ]
             },
             {
-              "title": "Detail Page",
+              "title": "View Page",
               "summary": "Summary is coming soon...",
-              "permalink": "detail",
+              "permalink": "view",
               "assignments": [
                 {
                   "controller": "admin/page_contents",
@@ -920,9 +920,9 @@
               ]
             },
             {
-              "title": "Detail Page",
+              "title": "View Page",
               "summary": "Summary is coming soon...",
-              "permalink": "detail",
+              "permalink": "view",
               "assignments": [
                 {
                   "controller": "admin/help_pages",
