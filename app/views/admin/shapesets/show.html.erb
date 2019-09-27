@@ -15,7 +15,7 @@
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm")) },
               :class => 'btn btn-delete' %>
-  <%= link_to t('helpers.links.admin'), admin_path, :class => 'btn btn-default' if current_user.role? User::ROLES[:admin] %>
+  <%= link_to t('helpers.links.admin'), admin_path, :class => 'btn btn-default' %>
 </div>
 
 <%= render :partial => 'shared/link_to_help_page' %>

@@ -53,7 +53,7 @@
 
   <p class="italic">
     <%= t('.no_shapes') %>
-    <% if current_user.role?(User::ROLES[:admin]) %>
+    <% if current_user.role?(User::ROLES[:site_admin]) %>
       <%= link_to t('.add_shapes'), admin_shapesets_path %>
     <% end %>
   </p>

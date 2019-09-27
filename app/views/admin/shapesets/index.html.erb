@@ -5,7 +5,7 @@
   <%= link_to t('.new', :default => t("helpers.links.new")),
               new_admin_shapeset_path,
               :class => 'btn btn-primary' %>
-  <%= link_to t('helpers.links.admin'), admin_path, :class => 'btn btn-default' if current_user.role? User::ROLES[:admin] %>
+  <%= link_to t('helpers.links.admin'), admin_path, :class => 'btn btn-default' %>
 </div>
 
 <%= render :partial => 'shared/link_to_help_page' %>

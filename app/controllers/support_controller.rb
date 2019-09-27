@@ -42,7 +42,7 @@ class SupportController < ApplicationController
   private
 
   def public_only?
-    !(user_signed_in? && current_user.role?(@data_editor_role))
+    !(user_signed_in? && current_user.role?(@site_admin_role))
   end
 
   def get_section
