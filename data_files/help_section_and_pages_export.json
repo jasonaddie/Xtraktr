@@ -755,8 +755,9 @@
           "pages": [
             {
               "title": "Listing Page",
-              "summary": "Summary is coming soon...",
+              "summary": "Edit Text on Site is where you can update the text for the contact page, disclaimer, license, etc. On this page, you can see a list of all of the possible text records in the data portal.",
               "permalink": "listing",
+              "content": "<h2>Introduction</h2>\r\n<p>Edit Text on Site is where you can update the text for the contact page, disclaimer, license, etc. On this page, you can see a list of all of the possible text records in the data portal.</p>\r\n<p>To add a new record, click on the blue 'New' button in the gray bar at the top of the screen. <strong>Note</strong> - only people with the <em>Admin</em> role can add a record, so if you are not an <em>Admin</em>, you will not see this button.</p>\r\n<p>[image]</p>\r\n<p>To view the text, click on one of links in the first column Unique Name.</p>\r\n<p>[image]</p>\r\n<p>To edit the text, click on the blue pencil icon in the last column Actions.</p>\r\n<p>[image]</p>\r\n<p>To delete the text, click on the red 'x' icon in the last column Actions. <strong>Note</strong> - only people with the <em>Admin</em> role can delete a record, so if you are not an <em>Admin</em>, you will not see this icon.</p>\r\n<p>[image]</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/site_text\">Enter Text on Site guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/site_text/guide/view\">View Page</a></li>\r\n<li><a href=\"/en/support/admin/site_text/guide/form\">Form Page</a></li>\r\n</ul>",
               "assignments": [
                 {
                   "controller": "admin/page_contents",
