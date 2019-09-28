@@ -782,7 +782,7 @@
               "title": "Listing Page",
               "summary": "Edit Text on Site is where you can update the text for the contact page, disclaimer, license, etc. On this page, you can see a list of all of the possible text records in the data portal.",
               "permalink": "listing",
-              "content": "<h2>Introduction</h2>\r\n<p>Edit Text on Site is where you can update the text for the contact page, disclaimer, license, etc. On this page, you can see a list of all of the possible text records in the data portal.</p>\r\n<p>To add a new record, click on the blue 'New' button in the gray bar at the top of the screen. <strong>Note</strong> - only people with the <em>Admin</em> role can add a record, so if you are not an <em>Admin</em>, you will not see this button.</p>\r\n<p>[image]</p>\r\n<p>To view the text, click on one of links in the first column Unique Name.</p>\r\n<p>[image]</p>\r\n<p>To edit the text, click on the blue pencil icon in the last column Actions.</p>\r\n<p>[image]</p>\r\n<p>To delete the text, click on the red 'x' icon in the last column Actions. <strong>Note</strong> - only people with the <em>Admin</em> role can delete a record, so if you are not an <em>Admin</em>, you will not see this icon.</p>\r\n<p>[image]</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/site_text\">Enter Text on Site guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/site_text/guide/view\">View Page</a></li>\r\n<li><a href=\"/en/support/admin/site_text/guide/form\">Form Page</a></li>\r\n</ul>",
+              "content": "<h2>Introduction</h2>\r\n<p>Edit Text on Site is where you can update the text for the contact page, disclaimer, license, etc. On this page, you can see a list of all of the possible text records in the data portal.</p>\r\n<p>To add a new record, click on the blue 'New' button in the gray bar at the top of the page. <strong>Note</strong> - only people with the <em>Admin</em> role can add a record, so if you are not an <em>Admin</em>, you will not see this button.</p>\r\n<p>[image]</p>\r\n<p>To view the text, click on one of links in the first column Unique Name.</p>\r\n<p>[image]</p>\r\n<p>To edit the text, click on the blue pencil icon in the last column Actions.</p>\r\n<p>[image]</p>\r\n<p>To delete the text, click on the red 'x' icon in the last column Actions. <strong>Note</strong> - only people with the <em>Admin</em> role can delete a record, so if you are not an <em>Admin</em>, you will not see this icon.</p>\r\n<p>[image]</p>\r\n<h2>Columns</h2>\r\n<ul>\r\n<li><strong>Unique Name</strong> - This name is used to request the desired text for a page. This text is never visible on the data portal.</li>\r\n<li><strong>Title</strong> - This is the title of the text. This title may ore may not be shown in the data portal.</li>\r\n<li><strong>Actions</strong> - This is where you will find the buttons to edit and delete a record.</li>\r\n</ul>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/site_text\">Enter Text on Site guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/site_text/guide/view\">View Page</a></li>\r\n<li><a href=\"/en/support/admin/site_text/guide/form\">Form Page</a></li>\r\n</ul>",
               "assignments": [
                 {
                   "controller": "admin/page_contents",
@@ -793,8 +793,9 @@
             },
             {
               "title": "View Page",
-              "summary": "Summary is coming soon...",
+              "summary": "View all of the information in the data portal for a Edit Text record",
               "permalink": "view",
+              "content": "<h2>Introduction</h2>\r\n<p>View all of the information in the data portal for a Edit Text record. This page has a basic layout listing each form field with a bold form field label and it's value after it.</p>\r\n<p>[image]</p>\r\n<p>To edit the text, click on the blue pencil icon in the gray bar at the top of the page.</p>\r\n<p>[image]</p>\r\n<p>To delete the text, click on the red 'x' icon in the gray bar at the top of the page</p>\r\n<p>[image]</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/site_text\">Enter Text on Site guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/site_text/guide/listing\">Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/site_text/guide/form\">Form Page</a></li>\r\n</ul>",
               "assignments": [
                 {
                   "controller": "admin/page_contents",
@@ -805,8 +806,9 @@
             },
             {
               "title": "Form Page",
-              "summary": "Summary is coming soon...",
+              "summary": "Add/Edit an Edit Text record",
               "permalink": "form",
+              "content": "<h2>Introduction</h2>\r\n<p>Add/Edit an Edit Text record.</p>\r\n<p>The Unique Name field is only editable to people with the <em>Admin</em> role. If you are not an <em>Admin</em>, this field will be locked.</p>\r\n<h2>Before Getting Started</h2>\r\n<p>There is a <a href=\"http://localhost:3000/en/support/general/forms\">Form guide book</a> that you should review so that you understand error messages, where to find form field hints, how to enter translations, etc.</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/site_text\">Enter Text on Site guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/site_text/guide/listing\">Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/site_text/guide/view\">View Page</a></li>\r\n</ul>",
               "assignments": [
                 {
                   "controller": "admin/page_contents",
