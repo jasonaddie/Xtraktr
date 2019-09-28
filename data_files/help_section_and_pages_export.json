@@ -1,10 +1,35 @@
 {
   "sections": [
     {
-      "title": "Getting Started",
-      "summary": "ASDFASDF Learn what you need to know about the data portal and preparing your data to load into the system.",
+      "title": "General Information",
+      "summary": "What you need to know about the data portal and preparing your data to load into the system.",
       "permalink": "general",
       "for_admin_only": true,
+      "sections": [
+        {
+          "title": "Forms",
+          "summary": "Information to help you get the most out of the forms.",
+          "permalink": "forms",
+          "for_admin_only": true,
+          "pages": [
+            {
+              "title": "Entering English and Georgian Content",
+              "summary": "Summary is coming soon...",
+              "permalink": "translations"
+            },
+            {
+              "title": "Validation Errors",
+              "summary": "Summary is coming soon...",
+              "permalink": "errors"
+            },
+            {
+              "title": "Inline Help",
+              "summary": "Summary is coming soon...",
+              "permalink": "help"
+            }
+          ]
+        }
+      ],
       "pages": [
         {
           "title": "User Roles",
