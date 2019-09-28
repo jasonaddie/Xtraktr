@@ -22,6 +22,8 @@ class Admin::HelpPagesController < ApplicationController
   def show
     @help_page = HelpPage.find(params[:id])
 
+    @css.push('support_tinymce.css')
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @help_page }

@@ -8,7 +8,7 @@ default:
   toolbar_items_size: 'small'
   toolbar1: "cut copy paste searchreplace | undo redo | removeformat | fullscreen code"
   toolbar2: "formatselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | outdent indent blockquote | link unlink anchor | uploadimage | hr | table"
-  content_css: /css/tinymce.css
+  content_css: ['/css/tinymce.css', '/assets/support_tinymce.css']
   paste_auto_cleanup_on_paste: true
   paste_remove_spans: true
   paste_strip_class_attributes: 'mso'

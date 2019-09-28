@@ -25,7 +25,7 @@ class SupportController < ApplicationController
   def guide
     @help_page = HelpPage.is_public.in_help_section(@help_section.id).by_permalink(params[:guide_id])
 
-    @css.push('support.css')
+    @css.push('support.css', 'support_tinymce.css')
     @js.push('anchor.min.js', 'support.js')
 
     if @help_page.present?
