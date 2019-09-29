@@ -9,6 +9,8 @@ class Admin::CategoriesController < ApplicationController
   def index
     @categories = Category.sorted
 
+    @css.push('categories.css')
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @categories }
@@ -19,6 +21,8 @@ class Admin::CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     @category = Category.find(params[:id])
+
+    @css.add('categories.css')
 
     respond_to do |format|
       format.html # show.html.erb

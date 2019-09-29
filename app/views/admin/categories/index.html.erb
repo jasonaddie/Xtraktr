@@ -2,9 +2,11 @@
 <% title t '.title', :default => model_class.model_name.human(:count => 2) %>
 
 <div class="form-group form-group-admin-buttons">
-  <%= link_to t('.new', :default => t("helpers.links.new")),
-              new_admin_category_path,
-              :class => 'btn btn-primary' %>
+  <% if current_user.role?(User::ROLES[:admin]) %>
+    <%= link_to t('.new', :default => t("helpers.links.new")),
+                new_admin_category_path,
+                :class => 'btn btn-primary' %>
+  <% end %>
   <%= link_to t('helpers.links.admin'), admin_path,
   :class => 'btn btn-default' %>
 </div>
@@ -16,7 +18,7 @@
     <tr>
       <th></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:permalink) %></th>
+      <th><%= model_class.human_attribute_name(:sort_order) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -24,10 +26,10 @@
     <% @categories.each do |category| %>
       <tr>
         <td>
-          <%= image_tag "/assets/svg/categories/#{category.permalink}.svg" %>
+          <div class='img category-form <%= "#{category.permalink}" %>'></div>
         </td>
         <td><%= category.name %></td>
-        <td><%= category.permalink %></td>
+        <td><%= category.sort_order %></td>
         <td>
           <%= link_to '',
                       edit_admin_category_path(category),

@@ -25,6 +25,7 @@
 
 <p><strong><%= model_class.human_attribute_name(:permalink) %>:</strong>
 <%= @category.permalink %></p>
+<div class='img category-form <%= "#{@category.permalink}" %>'></div>
 
 <p><strong><%= model_class.human_attribute_name(:sort_order) %>:</strong>
 <%= @category.sort_order %></p>
