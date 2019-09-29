@@ -836,7 +836,7 @@
         },
         {
           "title": "Categories",
-          "summary": "Use this section to manage the categories that can be assigned to datsets and time series and that people can use to find data they are interested in.",
+          "summary": "Use this section to manage the Categories that can be assigned to datsets and time series and that people can use to find data they are interested in.",
           "permalink": "categories",
           "for_admin_only": true,
           "pages": [
@@ -885,14 +885,15 @@
         },
         {
           "title": "Guide Books",
-          "summary": "Summary is coming soon...",
+          "summary": "Use this section to manage the Guide Books that appear in the Support section.",
           "permalink": "guide_books",
           "for_admin_only": true,
           "pages": [
             {
               "title": "Listing Page",
-              "summary": "Summary is coming soon...",
+              "summary": "Guide Books is where you can manage the information and hierarchy of the books that Guides can be assigned to. On this page, you can see a list of all of the Guide Books that are in the data portal.",
               "permalink": "listing",
+              "content": "<h2>Introduction</h2>\r\n<p>Guide Books is where you can manage the information and hierarchy of the books that Guides can be assigned to.These Guide Books are available to users in the <a href=\"/en/support\" target=\"_blank\">Support section</a>.</p>\r\n<p>On this page, you can see a list of all of the Guide Books that are in the data portal.</p>\r\n<h2>Column Explanations</h2>\r\n<ul>\r\n<li><strong>Title</strong> - The name of the guide book. <br />\r\n<ul>\r\n<li>Guide Books that are a part of another Guide Book will have the title indented to help show you the overall Guide Book hierarchy.</li>\r\n</ul>\r\n</li>\r\n<li><strong>Summary</strong> - A brief summary of the guide book.</li>\r\n<li><strong>Guide Book URL</strong> - The URL to the guide book in the Support section (i.e., /en/support/manage_datasets)</li>\r\n<li><strong>Make Available to the Public</strong> - Whether or not the guide book should be shown in the Support section.</li>\r\n<li><strong>Only Admins can view this Guide Book</strong> - Whether not not the guide book is visible to the world or just Admins in the Support section.</li>\r\n<li><strong>Actions</strong> - This is where you will find the buttons to edit and delete a record.</li>\r\n</ul>\r\n<h2>Row Order</h2>\r\n<p>The Guide Book rows are sorted in the order indicated by the Sort Order field and is the same order the Guide Books will appear in the <a href=\"/en/support\" target=\"_blank\">Support section</a>.</p>\r\n<p>If a Guide Book has a collection of Guide Books assigned to it, then all of those children Guide Books will be ordered by the Sort Order field within the parent Guide Book.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_listing_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>New - click to create a new Guide Book record.&nbsp;</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Table Columns</h3>\r\n<p><img src=\"/guide_images/guide_book_listing_table.png\" alt=\"Table column links\" /></p>\r\n<ul>\r\n<li>Blue pencil icon in the Actions column - click to edit the Guide Book record</li>\r\n<li>Red X icon in the Actions column - click to delete the Guide Book record,&nbsp;</li>\r\n</ul>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/guide_books\">Guide Book guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/guide_books/guide/form\">Form Page</a></li>\r\n</ul>",
               "assignments": [
                 {
                   "controller": "admin/help_sections",
@@ -903,8 +904,9 @@
             },
             {
               "title": "Form Page",
-              "summary": "Summary is coming soon...",
+              "summary": "Add/Edit a Guide Book record",
               "permalink": "form",
+              "content": "<h2>Introduction</h2>\r\n<p>Add/Edit an Guide Book record.</p>\r\n<p>The Parent Guide Book field is used to indicate if the Guide Book is part of another Guide Book (i.e., the Edit Text on Site belongs to the Admin Section guide book). If the Guide book has no parent, then leave this field blank. If the field already has a value click on the 'x' icon to remove the selection. </p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_form_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of Guide Book records</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Form Buttons</h3>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/guide_book_form_form.png\" alt=\"Form buttons\" /></p>\r\n<ul>\r\n<li>Update Guide Book - click to save the Guide Book record</li>\r\n<li>Reset - click to reset the form fields. If this is a new record all form fields will be empty. If you are editing an existing record, the form fields will be reset to the values they had when the page loaded.</li>\r\n<li>Cancel - click to ignore any changes and go back to the Listing Page</li>\r\n</ul>\r\n<h2>Before Getting Started</h2>\r\n<p>There is a <a href=\"http://localhost:3000/en/support/general/forms\">Form guide book</a> that you should review so that you understand error messages, where to find form field hints, how to enter translations, etc.</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/guide_books\">Guide Book guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/guide_books/guide/listing\">Listing Page</a></li>\r\n</ul>",
               "assignments": [
                 {
                   "controller": "admin/help_sections",
