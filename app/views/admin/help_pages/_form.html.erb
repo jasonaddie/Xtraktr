@@ -177,10 +177,12 @@
     <tfoot>
       <tr>
         <td colspan="4">
-          <%= link_to_add_association t('helpers.links.add_assignment'), f, :help_page_assignments,
-              :class => 'btn btn-success',
-              :'data-association-insertion-node' => 'table#help-page-assignments',
-              :'data-association-insertion-method' => 'append' %>
+          <% if current_user.role?(User::ROLES[:admin]) %>
+            <%= link_to_add_association t('helpers.links.add_assignment'), f, :help_page_assignments,
+                :class => 'btn btn-success',
+                :'data-association-insertion-node' => 'table#help-page-assignments',
+                :'data-association-insertion-method' => 'append' %>
+          <% end %>
         </td>
       </tr>
     </tfoot>

@@ -7,7 +7,7 @@ class Admin::HelpPagesController < ApplicationController
   # GET /help_pages
   # GET /help_pages.json
   def index
-    @help_pages = HelpPage.sorted
+    @help_pages = HelpPage.all
 
     @js.push('search.js')
 

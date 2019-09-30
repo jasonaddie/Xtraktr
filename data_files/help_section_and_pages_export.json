@@ -795,7 +795,7 @@
               "title": "View Page",
               "summary": "View all of the information in the data portal for a Edit Text record",
               "permalink": "view",
-              "content": "<h2>Introduction</h2>\r\n<p>View all of the information in the data portal for a Edit Text record. This page has a basic layout listing each form field with a bold form field label and it's value after it.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/edit_text_view_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of Edit Text records</li>\r\n<li>Blue pencil icon - click to edit the Edit Text record</li>\r\n<li>Red X icon - click to delete the Edit Text record</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/site_text\">Enter Text on Site guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/site_text/guide/listing\">Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/site_text/guide/form\">Form Page</a></li>\r\n</ul>",
+              "content": "<h2>Introduction</h2>\r\n<p>View all of the information in the data portal for a Edit Text record. This page has a basic layout listing each form field with a bold form field label, followed by it's value.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/edit_text_view_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of Edit Text records</li>\r\n<li>Blue pencil icon - click to edit the Edit Text record</li>\r\n<li>Red X icon - click to delete the Edit Text record</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/site_text\">Enter Text on Site guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/site_text/guide/listing\">Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/site_text/guide/form\">Form Page</a></li>\r\n</ul>",
               "assignments": [
                 {
                   "controller": "admin/page_contents",
@@ -885,7 +885,7 @@
         },
         {
           "title": "Guide Books",
-          "summary": "Use this section to manage the Guide Books that appear in the Support section.",
+          "summary": "Use this section to manage the Guide Books that appear in the Support section. A Guide Book is a collection of guides on a particular subject.",
           "permalink": "guide_books",
           "for_admin_only": true,
           "pages": [
@@ -934,14 +934,15 @@
         },
         {
           "title": "Guides",
-          "summary": "Summary is coming soon...",
+          "summary": "Use this section to manage the Guides that appear in the Support section. A guide explains information about a particular page or subject in the data portal.",
           "permalink": "guides",
           "for_admin_only": true,
           "pages": [
             {
               "title": "Listing Page",
-              "summary": "Summary is coming soon...",
+              "summary": "Guides is where you can manage the explanations about a specific page or a subject in the data portal. On this page, you can see a list of all of the Guides that are in the data portal along with which Guide Book they are assigned to.",
               "permalink": "listing",
+              "content": "<h2>Introduction</h2>\r\n<p>Guides is where you can manage the explanations about a specific page or a subject in the data portal. On this page, you can see a list of all of the Guides that are in the data portal along with which Guide Book they are assigned to.</p>\r\n<h2>Column Explanations</h2>\r\n<ul>\r\n<li><strong>Guide Book</strong> - This name of the Guide Book that the Guide is assigned to.</li>\r\n<li><strong>Title</strong> - The name of the guide.</li>\r\n<li><strong>Summary</strong> - A brief summary of the guide.</li>\r\n<li><strong>Make Available to the Public</strong> - Whether or not the guide should be shown in the Support section.</li>\r\n<li><strong>Actions</strong> - This is where you will find the buttons to edit and delete a record.</li>\r\n</ul>\r\n<h2>Row Order</h2>\r\n<p>The rows are sorted by the Guide Book and then the title of the Guide.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_listing_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>New - click to create a new Guide record.&nbsp;</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Table Columns</h3>\r\n<p><img src=\"/guide_images/guide_listing_table.png\" alt=\"Table column links\" /></p>\r\n<ul>\r\n<li>Link in Title column - click to view the Guide record</li>\r\n<li>Blue pencil icon in the Actions column - click to edit the Guide record</li>\r\n<li>Red X icon in the Actions column - click to delete the Guide record,&nbsp;</li>\r\n</ul>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/guides\">Guide guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/guides/guide/view\">View Page</a></li>\r\n<li><a href=\"/en/support/admin/guides/guide/form\">Form Page</a></li>\r\n</ul>",
               "assignments": [
                 {
                   "controller": "admin/help_pages",
@@ -952,8 +953,9 @@
             },
             {
               "title": "View Page",
-              "summary": "Summary is coming soon...",
+              "summary": "View all of the information in the data portal for a Guide record",
               "permalink": "view",
+              "content": "<h2>Introduction</h2>\r\n<p>View all of the information in the data portal for a Guide record. This page has a basic layout listing each form field with a bold form field label, followed by it's value.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/edit_text_view_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of Guide records</li>\r\n<li>Blue pencil icon - click to edit the Guide record</li>\r\n<li>Red X icon - click to delete the Guide record</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/guides\">Guides guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/guides/guide/listing\">Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/guides/guide/form\">Form Page</a></li>\r\n</ul>",
               "assignments": [
                 {
                   "controller": "admin/help_pages",
@@ -964,8 +966,9 @@
             },
             {
               "title": "Form Page",
-              "summary": "Summary is coming soon...",
+              "summary": "Add/Edit an Edit Text record",
               "permalink": "form",
+              "content": "<h2>Introduction</h2>\r\n<p>Add/Edit an Edit Text record.</p>\r\n<p>The Unique Name field is only editable to people with the <em>Admin</em> role. If you are not an <em>Admin</em>, this field will be locked.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_form_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of Edit Text records</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Form Buttons</h3>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/edit_text_form_form.png\" alt=\"Form buttons\" /></p>\r\n<ul>\r\n<li>Update Text for Pages - click to save the Edit Text record</li>\r\n<li>Reset - click to reset the form fields. If this is a new record all form fields will be empty. If you are editing an existing record, the form fields will be reset to the values they had when the page loaded.</li>\r\n<li>Cancel - click to ignore any changes and go back to the Listing Page</li>\r\n</ul>\r\n<h2>Before Getting Started</h2>\r\n<p>There is a <a href=\"http://localhost:3000/en/support/general/forms\">Form guide book</a> that you should review so that you understand error messages, where to find form field hints, how to enter translations, etc.</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/site_text\">Enter Text on Site guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/site_text/guide/listing\">Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/site_text/guide/view\">View Page</a></li>\r\n</ul>",
               "assignments": [
                 {
                   "controller": "admin/help_pages",
