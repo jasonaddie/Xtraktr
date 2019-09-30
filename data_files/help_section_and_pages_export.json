@@ -1129,14 +1129,15 @@
         },
         {
           "title": "Users",
-          "summary": "Summary is coming soon...",
+          "summary": "Use this section to manage the data portal Users. You can add a new user or edit an existing user (i.e., change password, update email, etc).",
           "permalink": "users",
           "for_admin_only": true,
           "pages": [
             {
               "title": "Listing Page",
-              "summary": "Summary is coming soon...",
+              "summary": "Use this section to manage the data portal Users. You can add a new user or edit an existing user (i.e., change password, update email, etc). On this page, you can see a list of all of the users that are in the data portal.",
               "permalink": "listing",
+              "content": "<h2>Introduction</h2>\r\n<p>Categories is where you can manage the categories that can be assigned to datasets and time series. These categories are provided as a way to allow users to filter the datasets and users can select a category on the <a href=\"/en\" target=\"_blank\">home page</a> and the <a href=\"/en/datasets\" target=\"_blank\">datasets listing page</a>.</p>\r\n<p>On this page, you can see a list of all of the categories that are in the data portal.</p>\r\n<h2>Column Explanations</h2>\r\n<ul>\r\n<li><strong>Name</strong> - The name of the category and the corresponding category icon.</li>\r\n<li><strong>Sort Order</strong> - The order in which the categories will be shown to the users.</li>\r\n<li><strong>Actions</strong> - This is where you will find the buttons to edit and delete a record.</li>\r\n</ul>\r\n<h2>Row Order</h2>\r\n<p>The rows are sorted in the order indicated by the Sort Order field and is the same order the categories will appear on the <a href=\"/en\" target=\"_blank\">home page</a> and the <a href=\"/en/datasets\" target=\"_blank\">datasets listing page</a>.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_listing_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>New - click to create a new Category record. <strong>Note</strong> - only people with the <em>Admin</em> role can add a record, so if you are not an <em>Admin</em>, you will not see this button.</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Table Columns</h3>\r\n<p><img src=\"/guide_images/category_listing_table.png\" alt=\"Table column links\" /></p>\r\n<ul>\r\n<li>Blue pencil icon in the Actions column - click to edit the Category record</li>\r\n<li>Red X icon in the Actions column - click to delete the Category record,&nbsp;</li>\r\n</ul>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/categories\">Category guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/categories/guide/form\">Form Page</a></li>\r\n</ul>",
               "assignments": [
                 {
                   "controller": "admin/users",
@@ -1147,8 +1148,9 @@
             },
             {
               "title": "Form Page",
-              "summary": "Summary is coming soon...",
+              "summary": "Add/Edit a User record",
               "permalink": "form",
+              "content": "<h2>Introduction</h2>\r\n<p>Add/Edit an User record.</p>\r\n<p>The URL to Category field is used to indicate which icon to use for this category. It is highly advised that you do not change this value.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_form_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of Category records</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Form Buttons</h3>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/category_form_form.png\" alt=\"Form buttons\" /></p>\r\n<ul>\r\n<li>Update Category - click to save the Category record</li>\r\n<li>Reset - click to reset the form fields. If this is a new record all form fields will be empty. If you are editing an existing record, the form fields will be reset to the values they had when the page loaded.</li>\r\n<li>Cancel - click to ignore any changes and go back to the Listing Page</li>\r\n</ul>\r\n<h2>Before Getting Started</h2>\r\n<p>There is a <a href=\"http://localhost:3000/en/support/general/forms\">Form guide book</a> that you should review so that you understand error messages, where to find form field hints, how to enter translations, etc.</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/categories\">Category guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/categories/guide/listing\">Listing Page</a></li>\r\n</ul>",
               "assignments": [
                 {
                   "controller": "admin/users",
