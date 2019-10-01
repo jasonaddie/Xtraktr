@@ -996,14 +996,15 @@
         },
         {
           "title": "API Documentation",
-          "summary": "Summary is coming soon...",
+          "summary": "Use this section to manage the API documentation.",
           "permalink": "api_documentation",
           "for_admin_only": true,
           "pages": [
             {
               "title": "API Version Listing Page",
-              "summary": "Summary is coming soon...",
+              "summary": "API Version is where you can manage the API documentation. On this page, you can see a list of all the API Version and API Method records in the data portal.",
               "permalink": "version_listing",
+              "content": "<h2>Introduction</h2>\r\n<p>API Version is where you can manage the API documentation. On this page, you can see a list of all the API Version and API Method records in the data portal.</p>\r\n<h3>API Method</h3>\r\n<p>An API Method allows a person to get specific information from the data portal (i.e., catalog of datasets, dataset details, dataset analysis, etc). The API Method documentation indicates the following:</p>\r\n<ul>\r\n<li>the URL to access the method</li>\r\n<li>a list of required parameters, if any</li>\r\n<li>a list of optional parameters, if any</li>\r\n<li>what is returned when the method is called</li>\r\n<li>examples of calling the method with parameters and what information is returned</li>\r\n</ul>\r\n<h3>API Version</h3>\r\n<p>An API Version is a collection of API Methods. When a major change occurs to the data portal features, a new API version should be created with a new set of API methods that can use the new major change.</p>\r\n<h2>Column Explanations</h2>\r\n<ul>\r\n<li><strong>Title</strong> - This is the title of the text. This title may ore may not be shown in the data portal.</li>\r\n<li><strong>Permalink</strong> - The URL to the API Version in the API section (i.e., /en/api/v1)</li>\r\n<li><strong>Make Available to the Public</strong> - Whether or not the API Version should be released to the world.</li>\r\n<li><strong>Methods</strong> - A list of all the methods in this version</li>\r\n<li><strong>Actions</strong> - This is where you will find the buttons to edit and delete a record.</li>\r\n</ul>\r\n<h2>Row Order</h2>\r\n<p>The rows are sorted by the Title.</p>\r\n<p>In each row, the Method column has a listing of all API Methods in the API Version. The API Methods are sorted in the order indicated by the API Method Sort Order field and is the same order the API Methods will appear on the <a href=\"/en/api\" target=\"_blank\">API page</a>.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_listing_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>New - click to create a new API Version record.&nbsp;</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Table Columns</h3>\r\n<p><img src=\"/guide_images/api_version_listing_table.png\" alt=\"Table column links\" /></p>\r\n<ul>\r\n<li>New button in the Method column - click to add a API Method record to the API Version</li>\r\n<li>Link in Method column - click to view the API Method record</li>\r\n<li>Blue pencil icon in the Actions column - click to edit the API Version record</li>\r\n<li>Red X icon in the Actions column - click to delete the API Version record</li>\r\n</ul>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/api_documentation\">API Documentation guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/version_form\">API Version Form Page</a></li>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/method_view\">API Method View Page</a></li>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/method_form\">API Method Form Page</a></li>\r\n</ul>",
               "assignments": [
                 {
                   "controller": "admin/api_versions",
@@ -1014,8 +1015,9 @@
             },
             {
               "title": "API Version Form Page",
-              "summary": "Summary is coming soon...",
+              "summary": "Add/Edit an API Version record",
               "permalink": "version_form",
+              "content": "<h2>Introduction</h2>\r\n<p>Add/Edit an API Version record.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_form_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of API Version records</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Form Buttons</h3>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/api_version_form_form.png\" alt=\"Form buttons\" /></p>\r\n<ul>\r\n<li>Update API Version - click to save the API Version record</li>\r\n<li>Reset - click to reset the form fields. If this is a new record all form fields will be empty. If you are editing an existing record, the form fields will be reset to the values they had when the page loaded.</li>\r\n<li>Cancel - click to ignore any changes and go back to the Listing Page</li>\r\n</ul>\r\n<h2>Before Getting Started</h2>\r\n<p>There is a <a href=\"/en/support/general/forms\">Form guide book</a> that you should review so that you understand error messages, where to find form field hints, how to enter translations, etc.</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/api_documentation\">API Documentation guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/version_listing\">API Version Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/method_view\">API Method View Page</a></li>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/method_form\">API Method Form Page</a></li>\r\n</ul>\r\n<p>&nbsp;</p>",
               "assignments": [
                 {
                   "controller": "admin/api_versions",
@@ -1040,9 +1042,10 @@
               ]
             },
             {
-              "title": "API Method Detail Page",
-              "summary": "Summary is coming soon...",
-              "permalink": "method_detail",
+              "title": "API Method View Page",
+              "summary": "View all of the information in the data portal for an API Method record",
+              "permalink": "method_view",
+              "content": "<h2>Introduction</h2>\r\n<p>View all of the information in the data portal for an API Method record. This page has a basic layout listing each form field with a bold form field label, followed by it's value.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/edit_text_view_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of API Version records</li>\r\n<li>Blue pencil icon - click to edit the API Method record</li>\r\n<li>Red X icon - click to delete the API Method record</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/api_documentation\">API Documentation guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/version_listing\">API Version Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/version_form\">API Version Form Page</a></li>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/method_form\">API Method Form Page</a></li>\r\n</ul>\r\n<p>&nbsp;</p>",
               "assignments": [
                 {
                   "controller": "admin/api_methods",
@@ -1053,8 +1056,9 @@
             },
             {
               "title": "API Method Form Page",
-              "summary": "Summary is coming soon...",
+              "summary": "Add/Edit an API Method record",
               "permalink": "method_form",
+              "content": "<h2>Introduction</h2>\r\n<p>Add/Edit an API Method record.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_form_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of API Version records</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Form Buttons</h3>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/api_method_form_form.png\" alt=\"Form buttons\" /></p>\r\n<ul>\r\n<li>Update API Method - click to save the API Method record</li>\r\n<li>Reset - click to reset the form fields. If this is a new record all form fields will be empty. If you are editing an existing record, the form fields will be reset to the values they had when the page loaded.</li>\r\n<li>Cancel - click to ignore any changes and go back to the Listing Page</li>\r\n</ul>\r\n<h2>Before Getting Started</h2>\r\n<p>There is a <a href=\"/en/support/general/forms\">Form guide book</a> that you should review so that you understand error messages, where to find form field hints, how to enter translations, etc.</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/api_documentation\">API Documentation guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/version_listing\">API Version Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/version_form\">API Version Form Page</a></li>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/method_view\">API Method View Page</a></li>\r\n</ul>\r\n<p>&nbsp;</p>",
               "assignments": [
                 {
                   "controller": "admin/api_methods",
