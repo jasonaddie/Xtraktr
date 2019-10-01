@@ -2,12 +2,12 @@
 <% title t '.title', :default => t('helpers.titles.edit', :model => model_class.model_name.human,
                                  :default => "Edit #{model_class.model_name.human}") %>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <div class="form-group form-group-admin-buttons">
   <%= link_to t('helpers.links.list'), dataset_weights_path,
   :class => 'btn btn-default' %>
 </div>
-
-<%= render :partial => 'shared/link_to_help_page' %>
 
 <%= render :partial => 'form' %>
 

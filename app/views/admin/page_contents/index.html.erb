@@ -1,6 +1,8 @@
 <%- model_class = PageContent -%>
 <% title t '.title', :default => model_class.model_name.human(:count => 2) %>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <div class="form-group form-group-admin-buttons">
   <% if current_user.role?(User::ROLES[:admin]) %>
     <%= link_to t('.new', :default => t("helpers.links.new")),
@@ -10,8 +12,6 @@
   <%= link_to t('helpers.links.admin'), admin_path,
   :class => 'btn btn-default' %>
 </div>
-
-<%= render :partial => 'shared/link_to_help_page' %>
 
 <table class="table table-striped display">
   <thead>

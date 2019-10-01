@@ -1,14 +1,14 @@
 <%- model_class = Shapeset -%>
 <% title t '.title', :default => model_class.model_name.human(:count => 2) %>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <div class="form-group form-group-admin-buttons">
   <%= link_to t('.new', :default => t("helpers.links.new")),
               new_admin_shapeset_path,
               :class => 'btn btn-primary' %>
   <%= link_to t('helpers.links.admin'), admin_path, :class => 'btn btn-default' %>
 </div>
-
-<%= render :partial => 'shared/link_to_help_page' %>
 
 <table id="shapeset-datatable" class="table table-striped display">
   <thead>

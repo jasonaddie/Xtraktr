@@ -1,11 +1,11 @@
 <%- model_class = TimeSeriesWeight -%>
 <% title t '.title', :default => t('helpers.titles.new', :model => model_class.model_name.human,
                                  :default => "New #{model_class.model_name.human}") %>
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <div class="form-group form-group-admin-buttons">
   <%= link_to t('helpers.links.list'), time_series_weights_path,
   :class => 'btn btn-default' %>
 </div>
-
-<%= render :partial => 'shared/link_to_help_page' %>
 
 <%= render :partial => 'form' %>

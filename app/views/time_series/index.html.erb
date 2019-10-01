@@ -1,13 +1,13 @@
 <%- model_class = TimeSeries -%>
 <% title t '.title', :default => model_class.model_name.human(:count => 2) %>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <div class="form-group form-group-admin-buttons">
   <%= link_to t('.new', :default => t("helpers.links.new")),
               new_time_series_path,
               :class => 'btn btn-primary' %>
 </div>
-
-<%= render :partial => 'shared/link_to_help_page' %>
 
 <table id="time-series-datatable" class="table table-striped display">
   <thead>

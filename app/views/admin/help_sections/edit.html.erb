@@ -1,14 +1,14 @@
 <%- model_class = HelpSection -%>
 <% title t '.title', :default => t('helpers.titles.edit', :model => model_class.model_name.human,
                                  :default => "Edit #{model_class.model_name.human}") %>
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <div class="form-group form-group-admin-buttons">
   <%= link_to t('helpers.links.list'), admin_help_sections_path,
   :class => 'btn btn-default' %>
   <%= link_to t('helpers.links.admin'), admin_path,
   :class => 'btn btn-default' %>
 </div>
-
-<%= render :partial => 'shared/link_to_help_page' %>
 
 <%= render :partial => 'form' %>
 

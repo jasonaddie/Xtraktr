@@ -3,6 +3,8 @@
 <% title t '.title', question: @question.text %>
 
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <div class="form-group form-group-admin-buttons">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               dataset_questions_path, :class => 'btn btn-default'  %>
@@ -11,8 +13,6 @@
               :title => t('helpers.links.edit'),
               :class => 'btn btn-edit' %>
 </div>
-
-<%= render :partial => 'shared/link_to_help_page' %>
 
 <div class="tabbed-translation-show">
   <ul class="row list-unstyled">

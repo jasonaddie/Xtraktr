@@ -3,13 +3,13 @@
   label_key = "mongoid.attributes.time_series_weight."
 -%>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <div class="form-group form-group-admin-buttons">
   <%= link_to t('.new', :default => t("helpers.links.new")),
               new_time_series_weight_path,
               :class => 'btn btn-primary' %>
 </div>
-
-<%= render :partial => 'shared/link_to_help_page' %>
 
 <% if @time_series.weights.present? %>
 

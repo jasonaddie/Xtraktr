@@ -1,6 +1,8 @@
 <%- model_class = User -%>
 <% title t '.title', :default => model_class.model_name.human %>
 
+<%= render :partial => 'shared/link_to_help_page' %>
+
 <div class="form-group form-group-admin-buttons">
   <%= link_to t('helpers.links.list'),
               admin_users_path, :class => 'btn btn-default'  %>
@@ -17,8 +19,6 @@
 	<%= link_to t('helpers.links.admin'), admin_path,
   :class => 'btn btn-default' %>
 </div>
-
-<%= render :partial => 'shared/link_to_help_page' %>
 
 <p>
   <strong><%= model_class.human_attribute_name(:email) %>:</strong>
