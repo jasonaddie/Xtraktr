@@ -20,7 +20,7 @@
             },
             {
               "title": "Required Fields and Validation Errors",
-              "summary": "This guide will show how to identify required fields and how to understand validation errors",
+              "summary": "This guide will show how to identify required fields and how to understand validation errors.",
               "permalink": "errors",
               "content": "<h2>Introduction</h2>\r\n<p>This guide will show how to identify required fields and how to understand validation errors.</p>\r\n<h2>Required Fields</h2>\r\n<p>Required fields are indicated by a red * located just after the form field label like the following:</p>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/form_hint_icon.png\" alt=\"Required form field\" /></p>\r\n<p>Below is another example that has fields that are both required and not required:</p>\r\n<p><img class=\"form-buttons-three-lines\" src=\"/guide_images/form_fields.png\" alt=\"Required and not required form fields\" /></p>\r\n<p>The following fields are marked as required with the red *:</p>\r\n<ul>\r\n<li>Data File</li>\r\n<li>Languages of Dataset</li>\r\n<li>Default Language</li>\r\n</ul>\r\n<p>The following fields are not required:</p>\r\n<ul>\r\n<li>Date Started Gathering Data</li>\r\n<li>Date Finished Gathering Data</li>\r\n<li>Date Released</li>\r\n</ul>\r\n<h2>Validation Errors</h2>\r\n<p>If there are any errors when you submit a form, they will be shown at the top of the page, like the following:</p>\r\n<p><img class=\"form-buttons-two-lines\" src=\"/guide_images/form_errors_msg.png\" alt=\"Validation error messages\" /></p>\r\n<p>The error messages will list the fields that have a problem and indicate what the problem is. For instance, in the above screenshot, the message says that the Data Fiile and English Title cannot be blank, which means that they are required.</p>\r\n<p>Not providing a value for a required field will probably be the most common error. Other possible errors will be if you enter an invalid URL, enter an invalid email address, or upload a file that is not of the correct type (i.e., you upload a word document instead the expected PDF file).</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/general/forms\">Forms guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/general/forms/guide/translations\">Entering English and Georgian Content</a></li>\r\n<li><a href=\"/en/support/general/forms/guide/hints\">Form Field Hints</a></li>\r\n</ul>"
             },
@@ -49,7 +49,7 @@
     },
     {
       "title": "Dataset Management",
-      "summary": "Learn about how to upload a dataset file and manage all of the possible settings.",
+      "summary": "Learn how to upload a dataset file and manage all of the possible settings.",
       "permalink": "manage_datasets",
       "for_admin_only": true,
       "sections": [
@@ -361,7 +361,7 @@
         },
         {
           "title": "Settings (Form Page)",
-          "summary": "Add/Edit a Dataset record",
+          "summary": "Add/Edit a Dataset record.",
           "permalink": "form",
           "assignments": [
             {
@@ -453,7 +453,7 @@
     },
     {
       "title": "Time Series Management",
-      "summary": "Learn about how to create a Time Series (i.e., panel) from existing Datasets in the system.",
+      "summary": "Learn how to create a Time Series (i.e., panel) from existing Datasets in the system.",
       "permalink": "manage_time_series",
       "for_admin_only": true,
       "sections": [
@@ -796,7 +796,7 @@
             },
             {
               "title": "View Page",
-              "summary": "View all of the information in the data portal for a Edit Text record",
+              "summary": "View all of the information in the data portal for a Edit Text record.",
               "permalink": "view",
               "content": "<h2>Introduction</h2>\r\n<p>View all of the information in the data portal for a Edit Text record. This page has a basic layout listing each form field with a bold form field label, followed by it's value.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/edit_text_view_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of Edit Text records</li>\r\n<li>Blue pencil icon - click to edit the Edit Text record</li>\r\n<li>Red X icon - click to delete the Edit Text record</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/site_text\">Enter Text on Site guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/site_text/guide/listing\">Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/site_text/guide/form\">Form Page</a></li>\r\n</ul>",
               "assignments": [
@@ -809,7 +809,7 @@
             },
             {
               "title": "Form Page",
-              "summary": "Add/Edit an Edit Text record",
+              "summary": "Add/Edit an Edit Text record.",
               "permalink": "form",
               "content": "<h2>Introduction</h2>\r\n<p>Add/Edit an Edit Text record.</p>\r\n<p>The Unique Name field is only editable to people with the <em>Admin</em> role. If you are not an <em>Admin</em>, this field will be locked.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_form_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of Edit Text records</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Form Buttons</h3>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/edit_text_form_form.png\" alt=\"Form buttons\" /></p>\r\n<ul>\r\n<li>Update Text for Pages - click to save the Edit Text record</li>\r\n<li>Reset - click to reset the form fields. If this is a new record all form fields will be empty. If you are editing an existing record, the form fields will be reset to the values they had when the page loaded.</li>\r\n<li>Cancel - click to ignore any changes and go back to the Listing Page</li>\r\n</ul>\r\n<h2>Before Getting Started</h2>\r\n<p>There is a <a href=\"/en/support/general/forms\">Form guide book</a> that you should review so that you understand error messages, where to find form field hints, how to enter translations, etc.</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/site_text\">Enter Text on Site guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/site_text/guide/listing\">Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/site_text/guide/view\">View Page</a></li>\r\n</ul>",
               "assignments": [
@@ -858,7 +858,7 @@
             },
             {
               "title": "Form Page",
-              "summary": "Add/Edit a Category record",
+              "summary": "Add/Edit a Category record.",
               "permalink": "form",
               "content": "<h2>Introduction</h2>\r\n<p>Add/Edit an Category record.</p>\r\n<p>The URL to Category field is used to indicate which icon to use for this category. It is highly advised that you do not change this value.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_form_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of Category records</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Form Buttons</h3>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/category_form_form.png\" alt=\"Form buttons\" /></p>\r\n<ul>\r\n<li>Update Category - click to save the Category record</li>\r\n<li>Reset - click to reset the form fields. If this is a new record all form fields will be empty. If you are editing an existing record, the form fields will be reset to the values they had when the page loaded.</li>\r\n<li>Cancel - click to ignore any changes and go back to the Listing Page</li>\r\n</ul>\r\n<h2>Before Getting Started</h2>\r\n<p>There is a <a href=\"/en/support/general/forms\">Form guide book</a> that you should review so that you understand error messages, where to find form field hints, how to enter translations, etc.</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/categories\">Category guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/categories/guide/listing\">Listing Page</a></li>\r\n</ul>",
               "assignments": [
@@ -907,7 +907,7 @@
             },
             {
               "title": "Form Page",
-              "summary": "Add/Edit a Guide Book record",
+              "summary": "Add/Edit a Guide Book record.",
               "permalink": "form",
               "content": "<h2>Introduction</h2>\r\n<p>Add/Edit an Guide Book record.</p>\r\n<p>The Parent Guide Book field is used to indicate if the Guide Book is part of another Guide Book (i.e., the Edit Text on Site belongs to the Admin Section guide book). If the Guide book has no parent, then leave this field blank. If the field already has a value click on the 'x' icon to remove the selection. </p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_form_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of Guide Book records</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Form Buttons</h3>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/guide_book_form_form.png\" alt=\"Form buttons\" /></p>\r\n<ul>\r\n<li>Update Guide Book - click to save the Guide Book record</li>\r\n<li>Reset - click to reset the form fields. If this is a new record all form fields will be empty. If you are editing an existing record, the form fields will be reset to the values they had when the page loaded.</li>\r\n<li>Cancel - click to ignore any changes and go back to the Listing Page</li>\r\n</ul>\r\n<h2>Before Getting Started</h2>\r\n<p>There is a <a href=\"/en/support/general/forms\">Form guide book</a> that you should review so that you understand error messages, where to find form field hints, how to enter translations, etc.</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/guide_books\">Guide Book guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/guide_books/guide/listing\">Listing Page</a></li>\r\n</ul>",
               "assignments": [
@@ -956,7 +956,7 @@
             },
             {
               "title": "View Page",
-              "summary": "View all of the information in the data portal for a Guide record",
+              "summary": "View all of the information in the data portal for a Guide record.",
               "permalink": "view",
               "content": "<h2>Introduction</h2>\r\n<p>View all of the information in the data portal for a Guide record. This page has a basic layout listing each form field with a bold form field label, followed by it's value.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/edit_text_view_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of Guide records</li>\r\n<li>Blue pencil icon - click to edit the Guide record</li>\r\n<li>Red X icon - click to delete the Guide record</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/guides\">Guides guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/guides/guide/listing\">Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/guides/guide/form\">Form Page</a></li>\r\n</ul>",
               "assignments": [
@@ -969,7 +969,7 @@
             },
             {
               "title": "Form Page",
-              "summary": "Add/Edit an Guide record",
+              "summary": "Add/Edit an Guide record.",
               "permalink": "form",
               "content": "<h2>Introduction</h2>\r\n<p>Add/Edit a Guide record.</p>\r\n<h3>Show Guide Link in Sub-Navbar field</h3>\r\n<p>The Show Guide Link in Sub-Navbar field is used to indicate where on the data portal page the Guide summary and link to the Guide page should be shown. A value of 'No' means that the Guide summary will appear at the top of the page like the following:</p>\r\n<p><img src=\"/guide_images/guide_form_subnavbar_no.png\" alt=\"Support link at the top of the page\" /></p>\r\n<p>A value of 'Yes' means that instead of showing the Guide summary at the top of the page, just a link to the Guide page will appear on the right side of the sub-navbar (i.e., the blue Support link). The sub-navbar appears just below the main navbar and is only used on the following pages:</p>\r\n<ul>\r\n<li>Dataset dashboard page</li>\r\n<li>Dataset explore page</li>\r\n<li>Time series dashboard page</li>\r\n<li>Time series explore page</li>\r\n</ul>\r\n<p><img src=\"/guide_images/guide_form_subnavbar_yes.png\" alt=\"Support link in the sub-navbar\" /></p>\r\n<h3>Page Assignments Section</h3>\r\n<p><img src=\"/guide_images/guide_form_assignments_enabled.png\" alt=\"Page Assignments section\" /></p>\r\n<p>The Page Assignments section is where you indicate which data portal pages will show a link to this guide. You can assign a guide to one or more pages. To add more assignments, click on the green 'Add Page Assignment' button. To delete an existing assignment record, click on the red X icon on the right side of the record row.</p>\r\n<p>This section is only editable to people with the <em>Admin</em> role. If you are not an <em>Admin</em>, this section will be locked like the following:</p>\r\n<p><img src=\"/guide_images/guide_form_assignments_locked.png\" alt=\"Disabled Page Assignments section\" /></p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_form_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of Guide records</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Form Buttons</h3>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/guide_form_form.png\" alt=\"Form buttons\" /></p>\r\n<ul>\r\n<li>Update Text for Pages - click to save the Guide record</li>\r\n<li>Reset - click to reset the form fields. If this is a new record all form fields will be empty. If you are editing an existing record, the form fields will be reset to the values they had when the page loaded.</li>\r\n<li>Cancel - click to ignore any changes and go back to the Listing Page</li>\r\n</ul>\r\n<h2>Before Getting Started</h2>\r\n<p>There is a <a href=\"/en/support/general/forms\">Form guide book</a> that you should review so that you understand error messages, where to find form field hints, how to enter translations, etc.</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/guides\">Guide guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/guides/guide/listing\">Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/guides/guide/view\">View Page</a></li>\r\n</ul>",
               "assignments": [
@@ -1018,7 +1018,7 @@
             },
             {
               "title": "API Version Form Page",
-              "summary": "Add/Edit an API Version record",
+              "summary": "Add/Edit an API Version record.",
               "permalink": "version_form",
               "content": "<h2>Introduction</h2>\r\n<p>Add/Edit an API Version record.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_form_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of API Version records</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Form Buttons</h3>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/api_version_form_form.png\" alt=\"Form buttons\" /></p>\r\n<ul>\r\n<li>Update API Version - click to save the API Version record</li>\r\n<li>Reset - click to reset the form fields. If this is a new record all form fields will be empty. If you are editing an existing record, the form fields will be reset to the values they had when the page loaded.</li>\r\n<li>Cancel - click to ignore any changes and go back to the Listing Page</li>\r\n</ul>\r\n<h2>Before Getting Started</h2>\r\n<p>There is a <a href=\"/en/support/general/forms\">Form guide book</a> that you should review so that you understand error messages, where to find form field hints, how to enter translations, etc.</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/api_documentation\">API Documentation guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/version_listing\">API Version Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/method_view\">API Method View Page</a></li>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/method_form\">API Method Form Page</a></li>\r\n</ul>\r\n<p>&nbsp;</p>",
               "assignments": [
@@ -1046,7 +1046,7 @@
             },
             {
               "title": "API Method View Page",
-              "summary": "View all of the information in the data portal for an API Method record",
+              "summary": "View all of the information in the data portal for an API Method record.",
               "permalink": "method_view",
               "content": "<h2>Introduction</h2>\r\n<p>View all of the information in the data portal for an API Method record. This page has a basic layout listing each form field with a bold form field label, followed by it's value.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/edit_text_view_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of API Version records</li>\r\n<li>Blue pencil icon - click to edit the API Method record</li>\r\n<li>Red X icon - click to delete the API Method record</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/api_documentation\">API Documentation guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/version_listing\">API Version Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/version_form\">API Version Form Page</a></li>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/method_form\">API Method Form Page</a></li>\r\n</ul>\r\n<p>&nbsp;</p>",
               "assignments": [
@@ -1059,7 +1059,7 @@
             },
             {
               "title": "API Method Form Page",
-              "summary": "Add/Edit an API Method record",
+              "summary": "Add/Edit an API Method record.",
               "permalink": "method_form",
               "content": "<h2>Introduction</h2>\r\n<p>Add/Edit an API Method record.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_form_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of API Version records</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Form Buttons</h3>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/api_method_form_form.png\" alt=\"Form buttons\" /></p>\r\n<ul>\r\n<li>Update API Method - click to save the API Method record</li>\r\n<li>Reset - click to reset the form fields. If this is a new record all form fields will be empty. If you are editing an existing record, the form fields will be reset to the values they had when the page loaded.</li>\r\n<li>Cancel - click to ignore any changes and go back to the Listing Page</li>\r\n</ul>\r\n<h2>Before Getting Started</h2>\r\n<p>There is a <a href=\"/en/support/general/forms\">Form guide book</a> that you should review so that you understand error messages, where to find form field hints, how to enter translations, etc.</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/api_documentation\">API Documentation guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/version_listing\">API Version Listing Page</a></li>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/version_form\">API Version Form Page</a></li>\r\n<li><a href=\"/en/support/admin/api_documentation/guide/method_view\">API Method View Page</a></li>\r\n</ul>\r\n<p>&nbsp;</p>",
               "assignments": [
@@ -1108,7 +1108,7 @@
             },
             {
               "title": "Form Page",
-              "summary": "Add/Edit a Shapeset record",
+              "summary": "Add/Edit a Shapeset record.",
               "permalink": "form",
               "content": "<h2>Introduction</h2>\r\n<p>Add/Edit an Shapeset record.</p>\r\n<h3>GeoJSON File field</h3>\r\n<p>GeoJSON is a <a href=\"https://en.wikipedia.org/wiki/GeoJSON\" target=\"_blank\">standard</a> for representing simple geographical features like points, lines, and polygons. These features can then be loaded on top of an interactive map to highlight shape boundaries like regions and districts.</p>\r\n<p>Typically, boundaries are maintained in a GIS application like QGIS. These GIS applications can then be used to export a GeoJSON file that can be loaded here.</p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_form_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of Shapeset records</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Form Buttons</h3>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/shapeset_form_form.png\" alt=\"Form buttons\" /></p>\r\n<ul>\r\n<li>Update Shapeset - click to save the Shapeset record</li>\r\n<li>Reset - click to reset the form fields. If this is a new record all form fields will be empty. If you are editing an existing record, the form fields will be reset to the values they had when the page loaded.</li>\r\n<li>Cancel - click to ignore any changes and go back to the Listing Page</li>\r\n</ul>\r\n<h2>Before Getting Started</h2>\r\n<p>There is a <a href=\"/en/support/general/forms\">Form guide book</a> that you should review so that you understand error messages, where to find form field hints, how to enter translations, etc.</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/shapesets\">Shapeset guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/shapesets/guide/listing\">Listing Page</a></li>\r\n</ul>",
               "assignments": [
@@ -1157,7 +1157,7 @@
             },
             {
               "title": "Form Page",
-              "summary": "Add/Edit a User record",
+              "summary": "Add/Edit a User record.",
               "permalink": "form",
               "content": "<h2>Introduction</h2>\r\n<p>Add/Edit an User record.</p>\r\n<p>This form is the same form that is used on the Create Account page and on the User Settings page. The only difference is that on this form you get to select the user role.</p>\r\n<h3>Role field</h3>\r\n<p>The Role field allows you to indicate which role a user can have. Please refer to the <a href=\"/en/support/general/guide/roles\">User Role guide</a> for a breakdown of what all of the roles are for.</p>\r\n<p>Users with a Site Admin role can assign the following roles: User, Data Editor, and Site Admin.</p>\r\n<p><img class=\"drop-downs\" src=\"/guide_images/user_form_role_siteadmin.png\" alt=\"The role drop down for a site admin user\" /></p>\r\n<p>Users with an Admin role can assign the following roles: User, Data Editor, Site Admin, and Admin.</p>\r\n<p><img class=\"drop-downs\" src=\"/guide_images/user_form_role_admin.png\" alt=\"The role drop down for an admin user\" /></p>\r\n<h2>Page Actions</h2>\r\n<p>Below is a list of links and buttons that you can click on this page.</p>\r\n<h3>Gray Bar</h3>\r\n<p><img class=\"gray-bar\" src=\"/guide_images/common_form_gray.png\" alt=\"Gray bar buttons\" /></p>\r\n<ul>\r\n<li>View All - click to go back to the listing of User records</li>\r\n<li>Admin Section - click to go back to the page that lists all of the sections in the Admin Section</li>\r\n</ul>\r\n<h3>Form Buttons</h3>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/user_form_form.png\" alt=\"Form buttons\" /></p>\r\n<ul>\r\n<li>Update User - click to save the User record</li>\r\n<li>Reset - click to reset the form fields. If this is a new record all form fields will be empty. If you are editing an existing record, the form fields will be reset to the values they had when the page loaded.</li>\r\n<li>Cancel - click to ignore any changes and go back to the Listing Page</li>\r\n</ul>\r\n<h2>Before Getting Started</h2>\r\n<p>There is a <a href=\"/en/support/general/forms\">Form guide book</a> that you should review so that you understand error messages, where to find form field hints, how to enter translations, etc.</p>\r\n<h2>Next Steps</h2>\r\n<p>Below are links to other guides in the <a href=\"/en/support/admin/categories\">Category guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/admin/categories/guide/listing\">Listing Page</a></li>\r\n</ul>",
               "assignments": [
@@ -1246,8 +1246,8 @@
       ]
     },
     {
-      "title": "Time Series (Panels) Exploration",
-      "summary": "Learn how to find a time series, review time series meta data, explore the time series data, and share a time series analysis result.",
+      "title": "Time Series Exploration",
+      "summary": "Learn how to find a time series (i.e., panel), review time series meta data, explore the time series data, and share a time series analysis result.",
       "permalink": "time_series",
       "pages": [
         {
@@ -1290,7 +1290,7 @@
     },
     {
       "title": "User Accounts",
-      "summary": "Learn about how to create a user account and edit the settings.",
+      "summary": "Learn how to create a user account and edit the settings like email, password, notifications, and API access tokens.",
       "permalink": "user",
       "pages": [
         {
@@ -1310,7 +1310,7 @@
           "title": "User Settings",
           "summary": "This guide goes through how to edit the user settings from when you created the account (i.e., name, email, password, notifications, etc). along with how to create API access tokens.",
           "permalink": "settings",
-          "content": "<h2>Introduction</h2>\r\n<p>The User Settings page allows you to do two things:</p>\r\n<ol>\r\n<li>Settings - edit your user settings like name, email, password, notifications, etc</li>\r\n<li>API Access Tokens - create an API access token so you can use the data portal's API</li>\r\n</ol>\r\n<h2>Settings</h2>\r\n<p>The form under the settings tab is the exact same form that you used when you <a href=\"/en/support/user/guide/create_account\">created an account</a>. You can use this form to change your email, password, notification settings, etc.</p>\r\n<h2>API Access Tokens</h2>\r\n<p>The data portal has an <a href=\"/en/api\" target=\"_blank\">API</a> (application programming interface) which means any developer can create an app that can programmatically access the data in the portal data and use it for their own purpose. For example, think of all of the weather apps that are out there. There are only a few services that actually track the weather and these apps use an API to get the weather and then show it in some unique way that their users will like.</p>\r\n<p>In order to use the data portal API, you must create an access token so that UNICEF knows who is using the API. To get an access token, simply click on red Get API Access Token button.</p>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/account_api_button.png\" alt=\"Button to create an API access token\" /></p>\r\n<p>After you click on this button, your access token will appear in a table below the button.</p>\r\n<p><img class=\"form-buttons-two-lines\" src=\"/guide_images/account_api_token.png\" alt=\"An API access token\" /></p>\r\n<p>Now that you have an access token, please refer to the <a href=\"/en/api\">API documentation</a> on how to make API calls.</p>\r\n<h3>Next Steps</h3>\r\n<p>Below are links to other guides in the <a href=\"/en/support/user\">User Account guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/user/guide/create_account\">Create Account</a></li>\r\n</ul>",
+          "content": "<h2>Introduction</h2>\r\n<p>The User Settings page allows you to do two things:</p>\r\n<ol>\r\n<li><strong>Settings</strong> - edit your user settings like name, email, password, notifications, etc</li>\r\n<li><strong>API Access Tokens</strong> - create an API access token so you can use the data portal's API</li>\r\n</ol>\r\n<h2>Settings</h2>\r\n<p>The form under the settings tab is the exact same form that you used when you <a href=\"/en/support/user/guide/create_account\">created an account</a>. You can use this form to change your email, password, notification settings, etc.</p>\r\n<h2>API Access Tokens</h2>\r\n<p>The data portal has an <a href=\"/en/api\" target=\"_blank\">API</a> (application programming interface) which means any developer can create an app that can programmatically access the data in the portal data and use it for their own purpose. For example, think of all of the weather apps that are out there. There are only a few services that actually track the weather and these apps use an API to get the weather and then show it in some unique way that their users will like.</p>\r\n<p>In order to use the data portal API, you must create an access token so that UNICEF knows who is using the API. To get an access token, simply click on red Get API Access Token button.</p>\r\n<p><img class=\"form-buttons\" src=\"/guide_images/account_api_button.png\" alt=\"Button to create an API access token\" /></p>\r\n<p>After you click on this button, your access token will appear in a table below the button.</p>\r\n<p><img class=\"form-buttons-two-lines\" src=\"/guide_images/account_api_token.png\" alt=\"An API access token\" /></p>\r\n<p>Now that you have an access token, please refer to the <a href=\"/en/api\">API documentation</a> on how to make API calls.</p>\r\n<h3>Next Steps</h3>\r\n<p>Below are links to other guides in the <a href=\"/en/support/user\">User Account guide book</a>:</p>\r\n<ul>\r\n<li><a href=\"/en/support/user/guide/create_account\">Create Account</a></li>\r\n</ul>",
           "assignments": [
             {
               "controller": "settings",
