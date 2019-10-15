@@ -428,7 +428,7 @@ logger.debug "////////////////////////// BROWSER = #{@user_agent}"
           permalink = options['time_series_id'] if permalink.blank?
           language = options["language"].present? ? options["language"] : TimeSeries.get_default_language(options['time_series_id'])
           # create link to dashboard
-          output[:dashboard_link] = use_admin_link.to_s == 'true' ? time_series_url(path) : explore_time_series_dashboard_url(permalink)
+          output[:dashboard_link] = use_admin_link.to_s == 'true' ? time_series_url(permalink) : explore_time_series_dashboard_url(permalink)
 
           # create link to this item
           options['id'] = permalink
