@@ -173,6 +173,7 @@ BootstrapStarter::Application.routes.draw do
 		match '/datasets', :to => 'root#explore_data', :as => :explore_data, :via => :get
 		match '/datasets/:id', :to => 'root#explore_data_dashboard', :as => :explore_data_dashboard, :via => :get
     match '/datasets/:id/explore', :to => 'root#explore_data_show', :as => :explore_data_show, :via => :get
+    match "/time_series" => redirect("/datasets")
     match '/time_series', :to => 'root#explore_time_series', :as => :explore_time, :via => :get
     match '/time_series/:id', :to => 'root#explore_time_series_dashboard', :as => :explore_time_series_dashboard, :via => :get
     match '/time_series/:id/explore', :to => 'root#explore_time_series_show', :as => :explore_time_series_show, :via => :get

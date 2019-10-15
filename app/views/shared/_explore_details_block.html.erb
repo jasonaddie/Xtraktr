@@ -19,7 +19,7 @@
               <div class="name-code"></div>
             </div>
             <%
-              is_dataset ||= true # todo this
+              is_dataset = is_dataset.nil? ? true : is_dataset
               if is_dataset %>
               <div class="details-data-type" data-categorical="<%= t("app.common.categorical") %>" data-numerical="<%= t("app.common.numerical") %>">
                 <div class="k"><%= t('app.common.data_type') %>:</div>
@@ -33,7 +33,7 @@
                     <%= t("app.common.descriptive_statistics." + x) %>:
                     <span></span>
                   </li>
-                <% } %>                
+                <% } %>
                 </ul>
               </div>
             <% end %>
