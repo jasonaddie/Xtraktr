@@ -70,7 +70,7 @@
     </div>
 
     <div class="form-group">
-      <%= submit_tag nil, :class => 'btn btn-primary' %>
+      <%= submit_tag t('helpers.submit.update', model: t('.submit_text')), :class => 'btn btn-primary' %>
       <%= link_to t('helpers.links.cancel'), mappable_dataset_path(@dataset), :class => 'btn btn-warning' %>
     </div>
   </div>
