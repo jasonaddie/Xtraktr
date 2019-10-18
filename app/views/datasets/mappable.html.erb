@@ -8,9 +8,12 @@
 
 <% if @shapeset_count > 0 %>
 
-  <div>
-    <%= link_to t('.add_map_question'), mappable_form_dataset_path(@dataset), :class => 'btn btn-success' %>
+  <div class="form-group form-group-admin-buttons">
+    <%= link_to t('.new', :default => t("helpers.links.new")),
+                mappable_form_dataset_path(@dataset),
+                :class => 'btn btn-primary' %>
   </div>
+
 
   <% if @mappable.present? %>
 
