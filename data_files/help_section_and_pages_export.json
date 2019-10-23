@@ -471,7 +471,7 @@
       "sections": [
         {
           "title": "Edit Questions/Answers",
-          "summary": "Summary is coming soon...",
+          "summary": "Use this section to edit the question and answer settings and text, either by hand or through spreadsheet files.",
           "permalink": "edit_qa",
           "for_admin_only": true,
           "pages": [
@@ -579,7 +579,7 @@
         },
         {
           "title": "Group Questions",
-          "summary": "Summary is coming soon...",
+          "summary": "Use this section to put similar questions together in a group. You can also create a subgroup of questions.",
           "permalink": "group",
           "for_admin_only": true,
           "pages": [
@@ -628,7 +628,7 @@
         },
         {
           "title": "Sort Groups/Questions",
-          "summary": "Summary is coming soon...",
+          "summary": "Use this section to sort all groups and questions into the order that you desire.",
           "permalink": "sort",
           "for_admin_only": true,
           "pages": [
@@ -654,7 +654,7 @@
         },
         {
           "title": "Weight Data",
-          "summary": "Summary is coming soon...",
+          "summary": "Use this section to establish weights and assign questions to the weights.",
           "permalink": "weight_data",
           "for_admin_only": true,
           "pages": [
