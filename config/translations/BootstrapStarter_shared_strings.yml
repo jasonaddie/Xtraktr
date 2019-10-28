@@ -1,41 +1,91 @@
 ---
-- - en.mongoid.models.dataset
+- - en.mongoid.models.user.other
+  - en.admin.index.users
+  - en.admin.users.index.title
+- - en.mongoid.models.page_content.one
+  - en.mongoid.models.page_content.other
+- - en.mongoid.models.dataset.one
   - en.mongoid.attributes.agreement.dataset_id
   - en.mongoid.attributes.time_series_dataset.dataset_id
   - en.mongoid.attributes.time_series_weight_assignment.dataset_id
   - en.mongoid.attributes.time_series_dataset_question.dataset
   - en.mongoid.attributes.api_request.dataset_title
   - en.shared.explore_data.dataset_title
-- - en.mongoid.models.question
-  - en.mongoid.models.time_series_question
+- - en.mongoid.models.dataset.other
+  - en.mongoid.attributes.time_series.datasets
+  - en.app.menu.datasets
+  - en.admin.index.datasets
+  - en.time_series.form.header_datasets
+  - en.shared.dashboard_time_series.tabs.datasets
+- - en.mongoid.models.shapeset.other
+  - en.admin.index.shapesets
+- - en.mongoid.models.question.one
+  - en.mongoid.models.time_series_question.one
   - en.mongoid.attributes.question.text
   - en.mongoid.attributes.time_series_question.text
   - en.mongoid.attributes.time_series_dataset_question.text
   - en.app.common.question
   - en.datasets.highlights.question_code
   - en.time_series.highlights.question_code
-- - en.mongoid.models.time_series
+- - en.mongoid.models.question.other
+  - en.mongoid.models.time_series_question.other
+  - en.app.common.questions
+  - en.app.common.questions_count
+  - en.datasets.highlights.questions
+  - en.questions.mass_changes.questions.header
+  - en.time_series.highlights.questions
+  - en.time_series_questions.mass_changes.questions.header
+- - en.mongoid.models.time_series.one
+  - en.mongoid.models.time_series.other
   - en.mongoid.attributes.api_request.time_series_title
   - en.app.menu.time_series
   - en.shared.explore_time_series.time_series_title
-- - en.mongoid.models.time_series_answer
+- - en.mongoid.models.time_series_answer.one
   - en.mongoid.attributes.answer.text
   - en.mongoid.attributes.time_series_answer.text
-- - en.mongoid.models.api_version
+- - en.mongoid.models.time_series_answer.other
+  - en.app.common.answers
+  - en.questions.show.header_answers
+  - en.questions.form.header_answers
+  - en.questions.mass_changes.answers.header
+  - en.time_series_questions.form.header_answers
+  - en.time_series_questions.show.header_answers
+  - en.time_series_questions.mass_changes.answers.header
+- - en.mongoid.models.api_version.one
   - en.mongoid.attributes.api_request.api_version
-- - en.mongoid.models.category
+- - en.mongoid.models.api_key.other
+  - en.settings.index.tabs.api
+- - en.mongoid.models.category.one
   - en.app.buttons.category
-- - en.mongoid.models.category_mapper
+- - en.mongoid.models.category.other
+  - en.mongoid.models.category_mapper.one
+  - en.mongoid.models.category_mapper.other
   - en.mongoid.attributes.dataset.category_ids
   - en.mongoid.attributes.time_series.category_ids
   - en.app.buttons.categories
   - en.admin.index.categories
-- - en.mongoid.models.group
-  - en.mongoid.models.time_series_group
+- - en.mongoid.models.group.one
   - en.app.common.group
-- - en.mongoid.models.weight
-  - en.mongoid.models.time_series_weight
+- - en.mongoid.models.group.other
+  - en.mongoid.models.time_series_group.one
+  - en.mongoid.models.time_series_group.other
+- - en.mongoid.models.weight.one
+  - en.mongoid.models.time_series_weight.one
   - en.app.common.weight
+- - en.mongoid.models.weight.other
+  - en.mongoid.models.time_series_weight.other
+- - en.mongoid.models.help_section.one
+  - en.mongoid.attributes.help_page.help_section_id
+- - en.mongoid.models.help_section.other
+  - en.admin.index.help_sections
+  - en.support.guide_book.sub_sections
+- - en.mongoid.models.help_page.one
+  - en.mongoid.attributes.help_page_assignment.help_page_id
+- - en.mongoid.models.help_page.other
+  - en.admin.index.help_pages
+  - en.support.guide_book.pages
+- - en.mongoid.models.help_page_assignment.other
+  - en.admin.help_pages.form.assignments
 - - en.mongoid.attributes.user.email
   - en.mongoid.attributes.message.email
   - en.mongoid.attributes.agreement.email
@@ -72,6 +122,8 @@
   - en.mongoid.attributes.shapeset.title
   - en.mongoid.attributes.api_version.title
   - en.mongoid.attributes.api_method.title
+  - en.mongoid.attributes.help_section.title
+  - en.mongoid.attributes.help_page.title
   - en.root.explore_data.sort_by.title
   - en.root.explore_time_series.sort_by.title
 - - en.mongoid.attributes.page_content.content
@@ -100,6 +152,8 @@
   - en.mongoid.attributes.time_series.public
   - en.mongoid.attributes.api_version.public
   - en.mongoid.attributes.api_method.public
+  - en.mongoid.attributes.help_section.public
+  - en.mongoid.attributes.help_page.public
 - - en.mongoid.attributes.dataset.default_language
   - en.mongoid.attributes.shapeset.default_language
 - - en.mongoid.attributes.dataset.created_at
@@ -114,6 +168,7 @@
   - en.mongoid.attributes.time_series.updated_at
 - - en.mongoid.attributes.stats.data_records
   - en.app.common.count
+  - en.app.common.descriptive_statistics.number
 - - en.mongoid.attributes.question.code
   - en.mongoid.attributes.question.original_code
   - en.mongoid.attributes.time_series_question.code
@@ -130,8 +185,15 @@
 - - en.mongoid.attributes.question.no_questions
   - en.mongoid.attributes.answer.no_questions
   - en.datasets.mass_changes_questions.no_questions
+  - en.datasets.mass_changes_questions_type.no_questions
   - en.datasets.mass_changes_answers.no_questions
   - en.questions.index.no_questions
+- - en.mongoid.attributes.question.data_type
+  - en.app.common.data_type
+- - en.mongoid.attributes.question.data_types.categorical
+  - en.app.common.categorical
+- - en.mongoid.attributes.question.data_types.numerical
+  - en.app.common.numerical
 - - en.mongoid.attributes.answer.value
   - en.mongoid.attributes.time_series_answer.value
 - - en.mongoid.attributes.answer.can_exclude
@@ -141,6 +203,8 @@
   - en.mongoid.attributes.time_series_answer.sort_order
   - en.mongoid.attributes.api_method.sort_order
   - en.mongoid.attributes.category.sort_order
+  - en.mongoid.attributes.help_section.sort_order
+  - en.mongoid.attributes.help_page.sort_order
   - en.datasets.sort.headers.sort
   - en.time_series.sort.headers.sort
 - - en.mongoid.attributes.group.include_in_charts
@@ -172,17 +236,21 @@
   - en.mongoid.attributes.time_series_weight.all_questions
 - - en.mongoid.attributes.weight.codes
   - en.mongoid.attributes.time_series_weight.codes
-- - en.mongoid.attributes.time_series.datasets
-  - en.app.menu.datasets
-  - en.admin.index.datasets
-  - en.time_series.form.header_datasets
-  - en.shared.dashboard_time_series.tabs.datasets
+- - en.mongoid.attributes.report.summary
+  - en.mongoid.attributes.help_section.summary
+  - en.mongoid.attributes.help_page.summary
 - - en.mongoid.attributes.api_version.permalink
   - en.mongoid.attributes.api_method.permalink
+  - en.mongoid.attributes.help_section.permalink
+  - en.mongoid.attributes.help_page.permalink
 - - en.mongoid.attributes.api_version.public_at
   - en.mongoid.attributes.api_method.public_at
+  - en.mongoid.attributes.help_section.public_at
+  - en.mongoid.attributes.help_page.public_at
 - - en.mongoid.attributes.api_version.updated_at
   - en.mongoid.attributes.api_method.updated_at
+  - en.mongoid.attributes.help_section.updated_at
+  - en.mongoid.attributes.help_page.updated_at
 - - en.mongoid.hints.dataset.source_url
   - en.mongoid.hints.shapeset.source_url
 - - en.mongoid.hints.question.notes
@@ -198,6 +266,8 @@
   - en.mongoid.hints.time_series_answer.sort_order
 - - en.mongoid.hints.answer.default_text
   - en.mongoid.hints.time_series_answer.default_text
+- - en.mongoid.hints.numerical.title
+  - en.datasets.mass_changes_questions_type.hints.title
 - - en.mongoid.hints.group.title
   - en.mongoid.hints.time_series_group.title
 - - en.mongoid.hints.group.description
@@ -222,17 +292,22 @@
   - en.time_series_weights.form.unique_id_explanation
 - - en.mongoid.hints.api_version.permalink
   - en.mongoid.hints.api_method.permalink
+- - en.mongoid.hints.help_section.permalink
+  - en.mongoid.hints.help_page.permalink
 - - en.tabbed_translation_form.default_text
   - en.questions.form.default_text
   - en.time_series_questions.form.default_text
 - - en.explore_time_series.v1.na
   - en.explore_time_series.v2.na
+  - en.explore_time_series.v3.na
   - en.explore_data.v1.na
   - en.explore_data.v2.na
+  - en.explore_data.v3.na
   - en.shared.explore_data.na
   - en.shared.explore_time_series.na
 - - en.explore_time_series.v1.percent
   - en.explore_time_series.v2.percent
+  - en.explore_time_series.v3.percent
 - - en.explore_time_series.v1.subtitle.html.title
   - en.explore_data.v1.subtitle.html.title
 - - en.explore_time_series.v1.subtitle.html.title_filter
@@ -242,71 +317,148 @@
 - - en.explore_time_series.v1.subtitle.text.title_filter
   - en.explore_data.v1.subtitle.text.title_filter
 - - en.explore_time_series.v2.group.html.title
+  - en.explore_time_series.v3.group.html.title
   - en.explore_data.v1.title_group
   - en.explore_data.v2.group.html.title
+  - en.explore_data.v3.group.html.title
 - - en.explore_time_series.v2.group.text.title
   - en.explore_time_series.v2.subgroup.text.title
+  - en.explore_time_series.v3.group.text.title
+  - en.explore_time_series.v3.subgroup.text.title
   - en.explore_data.v2.group.text.title
   - en.explore_data.v2.subgroup.text.title
+  - en.explore_data.v3.group.text.title
+  - en.explore_data.v3.subgroup.text.title
 - - en.explore_time_series.v2.subgroup.html.title
+  - en.explore_time_series.v3.subgroup.html.title
   - en.explore_data.v1.title_subgroup
   - en.explore_data.v2.subgroup.html.title
+  - en.explore_data.v3.subgroup.html.title
 - - en.explore_time_series.v2.single.html.title
+  - en.explore_time_series.v3.single.html.title
   - en.explore_data.v1.single.html.title
   - en.explore_data.v2.single.html.title
+  - en.explore_data.v3.single.html.title
 - - en.explore_time_series.v2.single.html.title_filter
+  - en.explore_time_series.v3.single.html.title_filter
   - en.explore_data.v1.comparative.html.title_filter
   - en.explore_data.v1.comparative.html.map.title_filter
   - en.explore_data.v1.single.html.title_filter
   - en.explore_data.v2.comparative.html.title_filter
   - en.explore_data.v2.comparative.html.map.title_filter
   - en.explore_data.v2.single.html.title_filter
+  - en.explore_data.v3.comparative.html.title_filter
+  - en.explore_data.v3.comparative.html.map.title_filter
+  - en.explore_data.v3.single.html.title_filter
 - - en.explore_time_series.v2.single.html.title_filter_value
+  - en.explore_time_series.v3.single.html.title_filter_value
   - en.explore_data.v1.comparative.html.title_filter_value
   - en.explore_data.v1.comparative.html.map.title_filter_value
   - en.explore_data.v1.single.html.title_filter_value
   - en.explore_data.v2.comparative.html.title_filter_value
   - en.explore_data.v2.comparative.html.map.title_filter_value
   - en.explore_data.v2.single.html.title_filter_value
+  - en.explore_data.v3.comparative.html.title_filter_value
+  - en.explore_data.v3.comparative.html.map.title_filter_value
+  - en.explore_data.v3.single.html.title_filter_value
 - - en.explore_time_series.v2.single.text.title
+  - en.explore_time_series.v3.single.text.title
   - en.explore_data.v2.comparative.text.map.title
   - en.explore_data.v2.single.text.title
+  - en.explore_data.v3.comparative.text.map.title
+  - en.explore_data.v3.single.text.title
 - - en.explore_time_series.v2.single.text.title_filter
+  - en.explore_time_series.v3.single.text.title_filter
   - en.explore_data.v1.comparative.text.title_filter
   - en.explore_data.v1.comparative.text.map.title_filter
   - en.explore_data.v1.single.text.title_filter
   - en.explore_data.v2.comparative.text.title_filter
   - en.explore_data.v2.comparative.text.map.title_filter
   - en.explore_data.v2.single.text.title_filter
+  - en.explore_data.v3.comparative.text.title_filter
+  - en.explore_data.v3.comparative.text.map.title_filter
+  - en.explore_data.v3.single.text.title_filter
 - - en.explore_time_series.v2.single.text.title_filter_value
+  - en.explore_time_series.v3.single.text.title_filter_value
   - en.explore_data.v1.comparative.text.title_filter_value
   - en.explore_data.v1.comparative.text.map.title_filter_value
   - en.explore_data.v1.single.text.title_filter_value
   - en.explore_data.v2.comparative.text.title_filter_value
   - en.explore_data.v2.comparative.text.map.title_filter_value
   - en.explore_data.v2.single.text.title_filter_value
+  - en.explore_data.v3.comparative.text.title_filter_value
+  - en.explore_data.v3.comparative.text.map.title_filter_value
+  - en.explore_data.v3.single.text.title_filter_value
+- - en.explore_time_series.v2.subtitle.html.title
+  - en.explore_time_series.v3.subtitle.html.title
+- - en.explore_time_series.v2.subtitle.html.title_x_of_y
+  - en.explore_time_series.v3.subtitle.html.title_x_of_y
+- - en.explore_time_series.v2.subtitle.html.title_filter
+  - en.explore_time_series.v3.subtitle.html.title_filter
+- - en.explore_time_series.v2.subtitle.html.title_weighted
+  - en.explore_time_series.v3.subtitle.html.title_weighted
+- - en.explore_time_series.v2.subtitle.html.title_filter_weighted
+  - en.explore_time_series.v3.subtitle.html.title_filter_weighted
+- - en.explore_time_series.v2.subtitle.text.title
+  - en.explore_time_series.v3.subtitle.text.title
+- - en.explore_time_series.v2.subtitle.text.title_x_of_y
+  - en.explore_time_series.v3.subtitle.text.title_x_of_y
+- - en.explore_time_series.v2.subtitle.text.title_filter
+  - en.explore_time_series.v3.subtitle.text.title_filter
+- - en.explore_time_series.v2.subtitle.text.title_weighted
+  - en.explore_time_series.v3.subtitle.text.title_weighted
+- - en.explore_time_series.v2.subtitle.text.title_filter_weighted
+  - en.explore_time_series.v3.subtitle.text.title_filter_weighted
 - - en.explore_data.v1.hover_region
   - en.explore_data.v2.hover_region
+  - en.explore_data.v3.hover_region
   - en.shared.explore_data.hover_region
 - - en.explore_data.v1.percent
   - en.explore_data.v2.percent
+  - en.explore_data.v3.percent
   - en.app.common.percent
+  - en.datasets.mass_changes_questions_type.percent
   - en.shared.explore_data.percent
   - en.shared.explore_time_series.percent
 - - en.explore_data.v1.comparative.html.title
   - en.explore_data.v2.comparative.html.title
+  - en.explore_data.v3.comparative.html.title
 - - en.explore_data.v1.comparative.html.map.title
   - en.explore_data.v2.comparative.html.map.title
+  - en.explore_data.v3.comparative.html.map.title
 - - en.explore_data.v1.comparative.html.map.title_broken_down_by
   - en.explore_data.v2.comparative.html.map.title_broken_down_by
+  - en.explore_data.v3.comparative.html.map.title_broken_down_by
 - - en.explore_data.v1.comparative.text.title
   - en.explore_data.v2.comparative.text.title
+  - en.explore_data.v3.comparative.text.title
 - - en.explore_data.v1.comparative.text.map.title
   - en.explore_data.v1.single.text.title
+- - en.explore_data.v2.comparative.text.map.title_broken_down_by
+  - en.explore_data.v3.comparative.text.map.title_broken_down_by
+- - en.explore_data.v2.subtitle.html.title
+  - en.explore_data.v3.subtitle.html.title
+- - en.explore_data.v2.subtitle.html.title_filter
+  - en.explore_data.v3.subtitle.html.title_filter
+- - en.explore_data.v2.subtitle.html.title_weighted
+  - en.explore_data.v3.subtitle.html.title_weighted
+- - en.explore_data.v2.subtitle.html.title_filter_weighted
+  - en.explore_data.v3.subtitle.html.title_filter_weighted
+- - en.explore_data.v2.subtitle.text.title
+  - en.explore_data.v3.subtitle.text.title
+- - en.explore_data.v2.subtitle.text.title_filter
+  - en.explore_data.v3.subtitle.text.title_filter
+- - en.explore_data.v2.subtitle.text.title_weighted
+  - en.explore_data.v3.subtitle.text.title_weighted
+- - en.explore_data.v2.subtitle.text.title_filter_weighted
+  - en.explore_data.v3.subtitle.text.title_filter_weighted
 - - en.datatable.search
   - en.helpers.search
 - - en.datatable.csv.title
+  - en.app.buttons.csv.title
   - en.download_data_options.text.csv
+- - en.mailer.signature
+  - en.layouts.nav.logo_title
 - - en.helpers.links.admin
   - en.app.buttons.admin
 - - en.helpers.links.edit
@@ -340,21 +492,9 @@
   - en.shared.dashboard_time_series.tabs.download
 - - en.helpers.links.highlight_description_chart
   - en.helpers.links.highlight_description
-- - en.app.common.questions
-  - en.datasets.highlights.questions
-  - en.questions.mass_changes.questions.header
-  - en.time_series.highlights.questions
-  - en.time_series_questions.mass_changes.questions.header
-- - en.app.common.answers
-  - en.questions.show.header_answers
-  - en.questions.form.header_answers
-  - en.questions.mass_changes.answers.header
-  - en.time_series_questions.form.header_answers
-  - en.time_series_questions.show.header_answers
-  - en.time_series_questions.mass_changes.answers.header
-- - en.app.menu.explore_data
-  - en.app.menu.admin_dataset.explore_data
-  - en.app.menu.admin_time_series.explore_data
+- - en.helpers.links.support
+  - en.app.menu.support
+  - en.support.index.title
 - - en.app.menu.user_settings
   - en.settings.index.title
 - - en.app.menu.about_dataset
@@ -367,6 +507,8 @@
   - en.root.instructions.title
   - en.datasets.sort.form_header
   - en.time_series.sort.form_header
+- - en.app.menu.admin_dataset.explore_data
+  - en.app.menu.admin_time_series.explore_data
 - - en.app.menu.admin_dataset.settings
   - en.app.menu.admin_time_series.settings
   - en.settings.index.tabs.settings
@@ -384,6 +526,8 @@
   - en.app.menu.admin_time_series.mass_changes
 - - en.app.menu.admin_dataset.mass_changes_questions
   - en.datasets.mass_changes_questions.title
+- - en.app.menu.admin_dataset.mass_changes_questions_type
+  - en.datasets.mass_changes_questions_type.title
 - - en.app.menu.admin_dataset.mass_changes_answers
   - en.app.menu.admin_time_series.mass_changes_answers
   - en.datasets.mass_changes_answers.title
@@ -396,8 +540,6 @@
   - en.app.menu.admin_time_series.sort
 - - en.app.menu.admin_dataset.weights
   - en.app.menu.admin_time_series.weights
-- - en.admin.index.users
-  - en.admin.users.index.title
 - - en.root.index.no_datasets
   - en.root.explore_data.no_data
 - - en.root.index.no_time_series
@@ -410,6 +552,8 @@
   - en.root.explore_time_series.sort_by.this
 - - en.root.explore_data.sort_by.publish
   - en.root.explore_time_series.sort_by.publish
+- - en.root.explore_data.sort_by.relevant
+  - en.root.explore_time_series.sort_by.relevant
 - - en.root.explore_data.no_match
   - en.root.explore_data_datasets.no_match
 - - en.root.explore_time_series.title
@@ -426,6 +570,8 @@
   - en.datasets.mappable_form_edit.adjustable_range_p1
 - - en.datasets.mappable_form.adjustable_range_p2
   - en.datasets.mappable_form_edit.adjustable_range_p2
+- - en.datasets.mappable_form.submit_text
+  - en.datasets.mappable_form_edit.submit_text
 - - en.datasets.highlights.no_highlights
   - en.shared.dashboard_data.no_highlights
 - - en.datasets.highlights.broken_down_by_code
@@ -533,24 +679,43 @@
   - en.time_series_questions.index.no_questions
 - - en.time_series.highlights.no_highlights
   - en.shared.dashboard_time_series.no_highlights
+- - en.support.guide_book.support_home_page
+  - en.support.guide.support_home_page
 - - en.shared.explore_data.no_matches
   - en.shared.explore_time_series.no_matches
 - - en.shared.explore_data.no_data
   - en.shared.explore_time_series.no_data
 - - en.shared.explore_data.form.question_code
   - en.shared.explore_time_series.form.question_code
+- - en.shared.explore_data.form.no_question
+  - en.shared.explore_time_series.form.no_question
 - - en.shared.explore_data.form.submit
   - en.shared.explore_time_series.form.submit
 - - en.shared.explore_data.form.no_filter
   - en.shared.explore_time_series.form.no_filter
+- - en.shared.explore_data.form.no_weight
+  - en.shared.explore_time_series.form.no_weight
 - - en.shared.explore_data.jumpto.chart
   - en.shared.explore_time_series.jumpto.chart
+- - en.shared.explore_data.jumpto.hint.chart
+  - en.shared.explore_data.jumpto.hint.map_filtered
+  - en.shared.explore_time_series.jumpto.hint.chart
 - - en.shared.explore_data.tabs.chart
   - en.shared.explore_time_series.tabs.chart
 - - en.shared.explore_data.tabs.table
   - en.shared.explore_time_series.tabs.table
 - - en.shared.explore_data.tabs.details
   - en.shared.explore_time_series.tabs.details
+- - en.shared.explore_data.instructions.question
+  - en.shared.explore_time_series.instructions.question
+- - en.shared.explore_data.instructions.filter
+  - en.shared.explore_time_series.instructions.filter
+- - en.shared.explore_data.instructions.weight
+  - en.shared.explore_time_series.instructions.weight
+- - en.shared.explore_data.instructions.generate
+  - en.shared.explore_time_series.instructions.generate
+- - en.shared.explore_data.instructions.reset
+  - en.shared.explore_time_series.instructions.reset
 - - en.shared.dashboard_data.tabs.licensing
   - en.shared.dashboard_time_series.tabs.licensing
 - - en.shared.dashboard_data.filter.all
@@ -563,5 +728,7 @@
   - en.shared.dashboard_time_series.jumpto_group
 - - en.shared.embed.v1.title_site
   - en.shared.embed.v2.title_site
+  - en.shared.embed.v3.title_site
 - - en.shared.embed.v1.title_datalist
   - en.shared.embed.v2.title_datalist
+  - en.shared.embed.v3.title_datalist
