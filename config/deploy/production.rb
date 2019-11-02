@@ -1,7 +1,7 @@
 ##################################
 ##### SET THESE VARIABLES ########
 ##################################
-server "unicef.forset.ge", :web, :app, :db, primary: true # server where app is located
+server "data.unicef.ge", :web, :app, :db, primary: true # server where app is located
 set :application, "Unicef-Data-Portal" # unique name of application
 set :user, "deploy"# name of user on server
 set :ngnix_conf_file_loc, "production/nginx.conf" # location of nginx conf file
