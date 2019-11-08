@@ -76,6 +76,7 @@ $(document).ready(function(){
 
     // selectpicker
     $('select.selectpicker-weights').selectpicker();
+    $('select.selectpicker-assignment-dataset').selectpicker();
 
     // make sure the correct fields are shown
     set_is_default_change(true);

@@ -108,7 +108,7 @@
                 <%= f_dataset_assignment.input :dataset_id, as: :hidden %>
               </td>
               <td>
-                <%= f_dataset_assignment.input :code_unique_id, as: :select, collection: @questions[dataset_assignment.dataset_id.to_s].map{|x| [x.code_with_text, x.original_code]}, include_blank: true, label: false, input_html: {class: 'selectpicker assignment-dataset', :'data-width' => '72%', :'data-live-search' => true} %>
+                <%= f_dataset_assignment.input :code_unique_id, as: :select, collection: @questions[dataset_assignment.dataset_id.to_s].map{|x| [x.code_with_text, x.original_code]}, include_blank: true, label: false, input_html: {class: 'selectpicker selectpicker-assignment-dataset', :'data-width' => '72%', :'data-live-search' => true} %>
               </td>
             </tr>
           <% end %>
