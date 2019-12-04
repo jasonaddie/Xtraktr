@@ -70,9 +70,8 @@ $(document).ready(function (){
   });
 
 
-
-  $(datatable).on("change", "input", function () {
-    var t = $(this),
+  function update_checked_items($this){
+    var t = $this,
       type = null,
       id = t.attr("data-id"),
       orig = t.attr("data-orig") == "true",
@@ -91,6 +90,10 @@ $(document).ready(function (){
     else {
       delete data[type][id];
     }
+  }
+
+  $(datatable).on("change", "input", function () {
+    update_checked_items($(this))
   });
 
   // if data-state = all, select all questions that match the current filter
@@ -103,8 +106,11 @@ $(document).ready(function (){
       type = t.attr("data-type");
 
     $(datatable.$("tr", {"filter": "applied"}))
-      .find("td input[type='checkbox']." + type + "-input")
-      .prop("checked", state_all).trigger("change");
+      .find("td input[type='checkbox']." + type + "-input").each(function(){
+        $(this).prop("checked", state_all);
+        update_checked_items($(this));
+      })
+
 
     t.attr("data-state", state_all ? "none" : "all" );
     return false;

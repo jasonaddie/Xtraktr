@@ -40,7 +40,8 @@ $(document).ready(function(){
     var rows_length = rows.length;
     var state_all = $(this).attr('data-state') == 'all';
     for(i;i<rows_length;i++){
-      $(rows[i]).prop('checked', state_all).trigger('change');
+      $(rows[i]).prop('checked', state_all);
+      update_checked_items($(rows[i]));
     }
     if (state_all){
       $(this).attr('data-state', 'none');
@@ -102,24 +103,24 @@ $(document).ready(function(){
     highlight_move_after_row();
   });
 
+  function update_checked_items($this){
+    var t = $this;
+    var row_index = t.closest('tr').index();
+    var select_index = datatable.page.info().start + row_index;
+
+    if(t.is(':checked')){
+      $('li:eq(' + select_index + ')', list_id).hide();
+      t.closest('tr').addClass('to-move');
+    }else{
+      $('li:eq(' + select_index + ')', list_id).show();
+      t.closest('tr').removeClass('to-move');
+    }
+  }
+
   // when checkbox state changes, update the drop down to make sure the correct items are showing
   // - have to adjust table index to account for pagination so select correct item in drop down
   table_id.on('change', ':checkbox', function(){
-    console.log("---------");
-    var row_index = $(this).closest('tr').index();
-    var select_index = datatable.page.info().start + row_index;
-
-
-    console.log("index = " + select_index);
-    if($(this).is(':checked')){
-      console.log("- hiding");
-      $('li:eq(' + select_index + ')', list_id).hide();
-      $(this).closest('tr').addClass('to-move');
-    }else{
-      console.log("- showing");
-      $('li:eq(' + select_index + ')', list_id).show();
-      $(this).closest('tr').removeClass('to-move');
-    }
+    update_checked_items($(this))
   });
 
   // when move items submit btn clicked,

@@ -166,7 +166,7 @@ $(document).ready(function (){
             });
             if(t.closed || nc) {
               chart = new Highcharts.Chart({
-           
+
                 chart: {
                   renderTo: $("#preview .chart")[0],
                   type: "column",
@@ -502,10 +502,8 @@ $(document).ready(function (){
       }
     });
 
-    $(datatable).on("change", "input, select", function (e) { // callback for input fields change
-      e.stopPropagation();
-      e.stopImmediatePropagation();
-      var t = $(this),
+    function update_checked_items($this){
+      var t = $this,
         td = t.closest("td"),
         tr = td.closest("tr"),
         code = tr.attr("id"), old_value, new_value;
@@ -540,13 +538,23 @@ $(document).ready(function (){
       else {
         preview.show(code, true);
       }
+    }
+
+    $(datatable).on("change", "input, select", function (e) { // callback for input fields change
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      update_checked_items($(this))
     });
 
     $("a.btn-select-all").click(function (){ // callback on all checkbox click in header of table for categorical type it will switch all questions to be categorical
       var t = $(this),
         state_all = t.attr("data-state") == "all";
 
-      $(datatable.$("tr", {"filter": "applied"})).find("td input.numerical[value='1']").prop("checked", state_all).trigger("change");
+      $(datatable.$("tr", {"filter": "applied"}))
+        .find("td input[type='checkbox']." + type + "-input").each(function(){
+          $(this).prop("checked", state_all);
+          update_checked_items($(this));
+        })
 
       t.attr("data-state", state_all ? "none" : "all" );
       return false;
@@ -681,7 +689,7 @@ $(document).ready(function (){
         tr.find(tmp + "[type]']").val(),
         tr.find(tmp + "[width]']").val(),
         tr.find(tmp + "[min]']").val(),
-        tr.find(tmp + "[max]']").val() ].map(function (d){ return d=+d; });         
+        tr.find(tmp + "[max]']").val() ].map(function (d){ return d=+d; });
       out.push(Math.floor(out[3]/out[2]) * out[2]); // calculating  min_range = floor(min/width) * width
       out.push(Math.ceil(out[4]/out[2]) * out[2]);  // calculating  max_range = ceil(max/width) * width
       out.push((out[6]-out[5])/out[2]);             // calculating  size = (max_range-min_range)/width
