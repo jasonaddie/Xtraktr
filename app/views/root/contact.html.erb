@@ -11,15 +11,16 @@
       <%= f.input :subject, :label => false, :placeholder => model_class.human_attribute_name(:subject).upcase, input_html: {size: 75} %>
       <%= f.input :message, required: true, :as => :text, :input_html => {:class => 'autogrow', :rows => 7} %>
     <% end %>
+    <%= recaptcha_tags callback: 'enableContactButton' %>
     <div>
-      <%= f.submit t(".send"), :class => 'submit-message' %>
+      <%= f.submit t(".send"), :class => 'submit-message disabled', disabled: true %>
     </div>
   <% end %>
   </div>
   <div class="col">
     <div class="email">
       <div class="figure"></div>
-      <div class="text"><%= mail_to "tbilisi@unicef.org", nil, :encode => "hex", :subject => t('mailer.contact.contact_form.subject') %></div> 
+      <div class="text"><%= mail_to "tbilisi@unicef.org", nil, :encode => "hex", :subject => t('mailer.contact.contact_form.subject') %></div>
     </div>
     <div class="phone">
       <div class="figure"></div>

@@ -56,6 +56,9 @@ gem 'descriptive_statistics', '~> 2.4.0', :require => 'descriptive_statistics/sa
 
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.2' # env variable management
 
+
+gem 'recaptcha', '~> 5.2', '>= 5.2.1' # manage recaptcha on contact page
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

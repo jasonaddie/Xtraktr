@@ -99,6 +99,9 @@ logger.debug "////////////////////////// BROWSER = #{@user_agent}"
     @public_question_count = Stats.public_question_count
 
     @xtraktr_url = "http://xtraktr.jumpstart.ge"
+
+    # indicate if recaptcha is being used on the page
+    @use_recaptcha = false
   end
 
 	def initialize_gon
