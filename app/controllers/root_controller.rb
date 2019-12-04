@@ -32,11 +32,12 @@ class RootController < ApplicationController
   def contact
     @page_content = PageContent.by_name('contact')
     @css.push('root.css')
+    @use_recaptcha = ENV['RECAPTCHA_KEY'].present?
 
     @message = Message.new
     if request.post?
       @message = Message.new(params[:message])
-      if @message.save
+      if verify_recaptcha(model: @message) && @message.save
         # send message
         ContactMailer.new_message(@message).deliver
         flash[:success] = I18n.t("app.msgs.message_sent")

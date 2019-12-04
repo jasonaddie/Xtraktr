@@ -58,6 +58,8 @@ gem 'dotenv-rails', '~> 2.7', '>= 2.7.2' # env variable management
 
 gem 'mongoid-ancestry', '~> 0.4.2' # have parent/child relationship
 
+gem 'recaptcha', '~> 5.2', '>= 5.2.1' # manage recaptcha on contact page
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

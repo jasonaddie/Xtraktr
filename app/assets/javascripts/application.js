@@ -134,7 +134,7 @@ $(document).ready(function () {
   });
 
   $(document).on('keyup.checkbox-radio-box', '.checkbox-box, .radio-box', function (e) {
-    if (e.keyCode === 32) {  // space      
+    if (e.keyCode === 32) {  // space
       $(this).find('label').trigger('click');
     }
   });
@@ -219,7 +219,7 @@ $(document).ready(function () {
   });
 
 
-  // Caption for selected tab is changed on tab selection from tab list. Caption is visible only for small devices. 
+  // Caption for selected tab is changed on tab selection from tab list. Caption is visible only for small devices.
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     $('.tab-caption').html($(e.target).text());
     tabToggle();
@@ -403,4 +403,9 @@ var is_touch = is_touch_device();
   }
 function isInteger (x) {
   return Math.round(x) === +x;
+}
+
+
+function enableContactButton(){
+  $('form.contact-form .submit-message').prop('disabled', false).removeClass('disabled');
 }
