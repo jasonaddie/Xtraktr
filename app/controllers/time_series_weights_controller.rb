@@ -190,7 +190,7 @@ private
         @questions[dataset_assignment.dataset_id.to_s] = dataset.dataset.questions.available_to_have_unique_ids
       end
 
-      gon.datatable_json = create_datatable_json(@time_series.questions, @weight.codes, @weight.id)
+      @datatable = create_datatable_json(@time_series.questions, @weight.codes, @weight.id)
 
     end
 
@@ -206,7 +206,7 @@ private
 
     questions.each do |question|
       json << {
-        checkbox: "<input name='time_series_weight[codes][]' type='checkbox' value='#{question.code}' #{weight_codes.include?(question.code) ? 'checked=\'checked\'' : ''}>",
+        is_checked: weight_codes.include?(question.code),
         code: question.code,
         text: question.text,
         other_weights: question.weight_titles(weight_id).join(', ')

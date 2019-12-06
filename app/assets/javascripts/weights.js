@@ -1,4 +1,5 @@
 var datatable;
+
 function set_is_default_change(page_load){
   if (page_load == undefined){
     page_load = false;
@@ -71,7 +72,6 @@ $(document).ready(function(){
     // datatable for exclude answers page
     datatable = $('#dataset-weight-questions').DataTable({
       "dom": '<"top"fli>t<"bottom"p><"clear">',
-      "data": gon.datatable_json,
       // "deferRender": true,
       "columns": [
         {"data":"checkbox", "orderDataType": "dom-checkbox"},
@@ -93,25 +93,25 @@ $(document).ready(function(){
         datatable.column($(this).closest('td').index()).search(this.value, true, false).draw();
     });
 
+
     // if data-state = all, select all questions that match the current filter
     // - if not filter -> then all questions are selected
     // else, desfelect all questions that match the current filter
     // - if not filter -> then all questions are deselected
     $('a.btn-select-all').click(function(){
-      if ($(this).attr('data-state') == 'all'){
-        $(datatable.$('tr', {"filter": "applied"})).find('td :checkbox').each(function () {
-          $(this).prop('checked', true);
-        });
-        $(this).attr('data-state', 'none');
-      }else{
-        $(datatable.$('tr', {"filter": "applied"})).find('td :checkbox').each(function () {
-          $(this).prop('checked', false);
-        });
-        $(this).attr('data-state', 'all');
-      }
+      var t = $(this),
+        state_all = t.attr("data-state") == "all"
 
+      $(datatable.$("tr", {"filter": "applied"}))
+        .find("td input[type='checkbox']").each(function(){
+          $(this).prop("checked", state_all);
+        })
+
+
+      t.attr("data-state", state_all ? "none" : "all" );
       return false;
     });
+
 
     // when form submits, get all checkboxes from datatable and then submit
     // - have to do this because loading data via js and so dom does not know about all inputs
@@ -124,7 +124,8 @@ $(document).ready(function(){
 
       // get all inputs from table and add to form
       datatable.$('input').each(function(){
-        $(this).clone().appendTo('#hidden-table-inputs', this);
+        // fix the name attribute so the values are saved
+        $(this).clone().attr('name', 'weight[codes][]').appendTo('#hidden-table-inputs', this);
       });
 
     });

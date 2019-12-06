@@ -143,6 +143,17 @@
           </tr>
         </tfoot>
         <tbody>
+          <% @datatable.each do |row| %>
+            <tr>
+              <td>
+                <input name='tmpWeight[codes][]' type='checkbox' value='<%= row[:code] %>' <%= row[:is_checked] ? 'checked=\'checked\'' : ''%>
+                  data-code="<%= row[:code] %>" data-original="<%= row[:is_checked] %>">
+              </td>
+              <td><%= row[:code] %></td>
+              <td><%= row[:text] %></td>
+              <td><%= row[:other_weights] %></td>
+            </tr>
+          <% end %>
         </tbody>
       </table>
 

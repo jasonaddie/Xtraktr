@@ -48,7 +48,7 @@ class WeightsController < ApplicationController
       end
 
       logger.debug "--------- #{@weight.inspect}"
-      gon.datatable_json = create_datatable_json(@dataset.questions, @weight.codes, @weight.id)
+      @datatable = create_datatable_json(@dataset.questions, @weight.codes, @weight.id)
 
       add_common_options
       #set_tabbed_translation_form_settings
@@ -70,7 +70,7 @@ class WeightsController < ApplicationController
 
     if @dataset.present?
       @weight = @dataset.weights.find(params[:id])
-      gon.datatable_json = create_datatable_json(@dataset.questions, @weight.codes, @weight.id)
+      @datatable = create_datatable_json(@dataset.questions, @weight.codes, @weight.id)
 
       add_common_options
       #set_tabbed_translation_form_settings
@@ -99,7 +99,7 @@ class WeightsController < ApplicationController
           format.html { redirect_to dataset_weights_path, flash: {success:  t('app.msgs.success_created', :obj => t('mongoid.models.weight.one'))} }
           format.json { render json: @weight, status: :created, location: @weight }
         else
-          gon.datatable_json = create_datatable_json(@dataset.questions, @weight.codes, @weight.id)
+          @datatable = create_datatable_json(@dataset.questions, @weight.codes, @weight.id)
 
           add_common_options
 
@@ -128,7 +128,7 @@ class WeightsController < ApplicationController
             format.html { redirect_to dataset_weights_path, flash: {success:  t('app.msgs.success_updated', :obj => t('mongoid.models.weight.one'))} }
             format.json { head :no_content }
           else
-            gon.datatable_json = create_datatable_json(@dataset.questions, @weight.codes, @weight.id)
+            @datatable = create_datatable_json(@dataset.questions, @weight.codes, @weight.id)
 
             add_common_options
 
@@ -192,7 +192,7 @@ private
 
     questions.each do |question|
       json << {
-        checkbox: "<input name='weight[codes][]' type='checkbox' value='#{question.code}' #{weight_codes.include?(question.code) ? 'checked=\'checked\'' : ''}>",
+        is_checked: weight_codes.include?(question.code),
         code: question.code,
         text: question.text,
         other_weights: question.weight_titles(weight_id).join(', ')

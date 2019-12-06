@@ -86,7 +86,6 @@ $(document).ready(function(){
     // datatable for exclude answers page
     datatable = $('#time-series-weight-questions').DataTable({
       "dom": '<"top"fli>t<"bottom"p><"clear">',
-      "data": gon.datatable_json,
       // "deferRender": true,
       "columns": [
         {"data":"checkbox", "orderDataType": "dom-checkbox"},
@@ -114,18 +113,16 @@ $(document).ready(function(){
     // else, desfelect all questions that match the current filter
     // - if not filter -> then all questions are deselected
     $('a.btn-select-all').click(function(){
-      if ($(this).attr('data-state') == 'all'){
-        $(datatable.$('tr', {"filter": "applied"})).find('td :checkbox').each(function () {
-          $(this).prop('checked', true);
-        });
-        $(this).attr('data-state', 'none');
-      }else{
-        $(datatable.$('tr', {"filter": "applied"})).find('td :checkbox').each(function () {
-          $(this).prop('checked', false);
-        });
-        $(this).attr('data-state', 'all');
-      }
+      var t = $(this),
+        state_all = t.attr("data-state") == "all"
 
+      $(datatable.$("tr", {"filter": "applied"}))
+        .find("td input[type='checkbox']").each(function(){
+          $(this).prop("checked", state_all);
+        })
+
+
+      t.attr("data-state", state_all ? "none" : "all" );
       return false;
     });
 
@@ -140,7 +137,7 @@ $(document).ready(function(){
 
       // get all inputs from table and add to form
       datatable.$('input').each(function(){
-        $(this).clone().appendTo('#hidden-table-inputs', this);
+        $(this).clone().attr('name', 'time_series_weight[codes][]').appendTo('#hidden-table-inputs', this);
       });
 
     });
