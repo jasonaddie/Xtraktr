@@ -16,7 +16,8 @@
             <th><%= model_class.human_attribute_name(:text) %></th>
             <th class="center">
               <%= model_class.human_attribute_name(:data_type_categorical) %>
-              <%= link_to '#', class: 'btn btn-default btn-xs btn-select-all', :'data-state' => 'all' do %>
+              <%= link_to '#', class: 'btn btn-default btn-xs btn-select-all',
+                  :'data-state' => 'all', :'data-type' => 'categorical' do %>
                 <span class="glyphicon glyphicon-ok" title="<%= t('helpers.links.select_all') %>"></span>
               <% end %>
             </th>

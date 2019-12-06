@@ -331,7 +331,7 @@ $(document).ready(function (){
         {"data":"question" },
         {"data":"data_type",
           render: function (data, type, full) {
-            return "<div"+(full.has_answers ? "" : " title='"+ gon.no_answer+"'")+"><input class='numerical' type='radio' value='1' name='question["+full.code +"][data_type]'" + (data == 1 ? " checked": "") + " data-o='"+data+"' "+(full.has_answers ? "" : " disabled") + "></div>";
+            return "<div"+(full.has_answers ? "" : " title='"+ gon.no_answer+"'")+"><input class='numerical categorical-input' type='radio' value='1' name='question["+full.code +"][data_type]'" + (data == 1 ? " checked": "") + " data-o='"+data+"' "+(full.has_answers ? "" : " disabled") + "></div>";
           },
           class: "c",
           "orderDataType": "dom-radio",
@@ -339,7 +339,7 @@ $(document).ready(function (){
         },
         {"data":"data_type",
           render: function (data, type, full) {
-            return "<div"+(full.has_data_without_answers ? "" : " title='"+ gon.no_data+"'")+"><input class='numerical' type='radio' value='2' name='question["+full.code +"][data_type]'" + (data == 2 ? " checked": "") + " data-o='"+data+"' "+(full.has_data_without_answers ? "" : " disabled") +"></div>";
+            return "<div"+(full.has_data_without_answers ? "" : " title='"+ gon.no_data+"'")+"><input class='numerical numerical-input' type='radio' value='2' name='question["+full.code +"][data_type]'" + (data == 2 ? " checked": "") + " data-o='"+data+"' "+(full.has_data_without_answers ? "" : " disabled") +"></div>";
           },
           class: "c",
           "orderDataType": "dom-radio",
@@ -548,12 +548,15 @@ $(document).ready(function (){
 
     $("a.btn-select-all").click(function (){ // callback on all checkbox click in header of table for categorical type it will switch all questions to be categorical
       var t = $(this),
-        state_all = t.attr("data-state") == "all";
+        state_all = t.attr("data-state") == "all",
+        type = t.attr("data-type");
 
       $(datatable.$("tr", {"filter": "applied"}))
-        .find("td input[type='checkbox']." + type + "-input").each(function(){
-          $(this).prop("checked", state_all);
-          update_checked_items($(this));
+        .find("td input[type='radio']." + type + "-input").each(function(){
+          if (!$(this).is(':disabled')){
+            $(this).prop("checked", state_all);
+            update_checked_items($(this));
+          }
         })
 
       t.attr("data-state", state_all ? "none" : "all" );
