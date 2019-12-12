@@ -19,7 +19,7 @@
             <div class='message notification <%= notification_translation(key) %>'>
               <div class='figure'></div>
               <div class='text'><%= msg %></div>
-              <div class='closeup'></div>      
+              <div class='closeup'></div>
             </div>
           <% end %>
 
@@ -83,5 +83,8 @@
     <%= render :partial => 'layouts/js' %>
 
     <%= render :partial => 'layouts/modal' %>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<%= ENV['XTRAKTR_ANALYTICS_ID'] %>"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </body>
 </html>
