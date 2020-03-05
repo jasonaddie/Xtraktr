@@ -109,29 +109,31 @@
             <tbody>
               <% @bad_answers.each do |item| %>
                 <% question = @dataset.questions.with_original_code(item) %>
-                <tr>
-                  <td>
-                    <%= question.original_code %>
-                  </td>
-                  <td>
-                    <%= question.text %>
-                  </td>
-                  <td>
-                    <%= question.data_type_name %>
-                  </td>
-                  <td>
-                    <%= question.answers.unique_values.select{|x| !x.nil?}.sort.join(', ') if question.answers.unique_values.present? %>
-                  </td>
-                  <td>
-                    <%= @dataset.data_items.unique_code_data(item).select{|x| !x.nil?}.sort.join(', ') if @dataset.data_items.unique_code_data(item).present? %>
-                  </td>
-                  <td>
-                    <%= link_to '',
-                              edit_dataset_question_path(@dataset, question),
-                              :title => t('helpers.links.edit_answers'),
-                              :class => 'btn btn-edit btn-xs' %>
-                  </td>
-                </tr>
+                <% if question %>
+                  <tr>
+                    <td>
+                      <%= question.original_code %>
+                    </td>
+                    <td>
+                      <%= question.text %>
+                    </td>
+                    <td>
+                      <%= question.data_type_name %>
+                    </td>
+                    <td>
+                      <%= question.answers.unique_values.select{|x| !x.nil?}.sort.join(', ') if question.answers.unique_values.present? %>
+                    </td>
+                    <td>
+                      <%= @dataset.data_items.unique_code_data(item).select{|x| !x.nil?}.sort.join(', ') if @dataset.data_items.unique_code_data(item).present? %>
+                    </td>
+                    <td>
+                      <%= link_to '',
+                                edit_dataset_question_path(@dataset, question),
+                                :title => t('helpers.links.edit_answers'),
+                                :class => 'btn btn-edit btn-xs' %>
+                    </td>
+                  </tr>
+                <% end %>
               <% end %>
             </tbody>
           </table>
