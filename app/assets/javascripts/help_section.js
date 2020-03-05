@@ -1,3 +1,4 @@
+
 $(function() {
   // load the selectpicker libraries for an assignment row
   function load_assignment_row(this_row){
