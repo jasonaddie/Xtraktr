@@ -30,25 +30,27 @@ class RootController < ApplicationController
   end
 
   def contact
-    @page_content = PageContent.by_name('contact')
-    @css.push('root.css')
-    @use_recaptcha = ENV['RECAPTCHA_KEY'].present?
+    redirect_to root_path
 
-    @message = Message.new
-    if request.post?
-      @message = Message.new(params[:message])
-      if verify_recaptcha(model: @message) && @message.save
-        # send message
-        ContactMailer.new_message(@message).deliver
-        flash[:success] = I18n.t("app.msgs.message_sent")
-        # reset the message object since msg was sent
-        @message = Message.new
-      end
-    end
+    # @page_content = PageContent.by_name('contact')
+    # @css.push('root.css')
+    # @use_recaptcha = ENV['RECAPTCHA_KEY'].present?
 
-    respond_to do |format|
-      format.html # index.html.erb
-    end
+    # @message = Message.new
+    # if request.post?
+    #   @message = Message.new(params[:message])
+    #   if verify_recaptcha(model: @message) && @message.save
+    #     # send message
+    #     ContactMailer.new_message(@message).deliver
+    #     flash[:success] = I18n.t("app.msgs.message_sent")
+    #     # reset the message object since msg was sent
+    #     @message = Message.new
+    #   end
+    # end
+
+    # respond_to do |format|
+    #   format.html # index.html.erb
+    # end
   end
 
   def disclaimer
